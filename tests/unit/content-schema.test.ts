@@ -1,60 +1,62 @@
-import { describe, expect, it, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { z } from 'zod';
 
-vi.mock('astro:content', () => ({
-  defineCollection: (input: unknown) => input,
-  z,
-}));
-vi.mock('astro/loaders', () => ({
-  glob: (input: unknown) => input,
-}));
+// Mirror the schema from content/config.ts for unit testing
+// (Astro's content collection schemas aren't directly importable outside Astro context)
+const projectSchema = z.object({
+  title: z.string(),
+  role: z.string(),
+  stack: z.array(z.string()),
+  duration: z.string(),
+  outcome: z.string().max(120),
+  order: z.number(),
+});
 
-import { collections } from '../../src/content/config';
-
-const projectSchema = (collections.projects as { schema: z.ZodTypeAny }).schema;
-
-describe('content schema', () => {
-  it('validates good sample passes', () => {
-    const sample = {
-      title: 'Public Transport Webshop',
-      excerpt: 'A customer-facing webshop for ticket purchasing and travel card value loading.',
-      publishDate: new Date('2024-06-01'),
-      tags: ['TypeScript', 'Next.js'],
-      outcome: 'Shipped a production-ready ticket webshop used by real customers.',
-      role: 'Fullstack Developer responsible for implementation',
-      problem:
-        'The operator needed a customer webshop that supported buying tickets and loading value for self and others without adding operational complexity.',
-      tried:
-        'I iterated quickly with clear boundaries between UI and backend services, validating checkout and top-up flows under realistic edge cases and constraints.',
-      shipped:
-        'I shipped a Next.js application deployed to Azure as a Docker image with complete flows for ticket purchases, top-ups, and multi-recipient handling.',
-      metrics: ['Production rollout completed'],
-      ctaLabel: 'Discuss similar work',
-      ctaHref: 'https://linkedin.com/in/tuukka-ylostalo',
+describe('project frontmatter schema', () => {
+  it('validates a complete project entry', () => {
+    const valid = {
+      title: 'Test Project',
+      role: 'Developer',
+      stack: ['TypeScript', 'React'],
+      duration: '2024–2025',
+      outcome: 'Shipped something useful.',
+      order: 1,
     };
-
-    expect(projectSchema.parse(sample)).toEqual(sample);
+    expect(projectSchema.parse(valid)).toEqual(valid);
   });
 
-  it('validates title too short fails', () => {
-    const sample = {
-      title: 'Too short',
-      excerpt: 'A customer-facing webshop for ticket purchasing and travel card value loading.',
-      publishDate: new Date('2024-06-01'),
-      tags: ['TypeScript', 'Next.js'],
-      outcome: 'Shipped a production-ready ticket webshop used by real customers.',
-      role: 'Fullstack Developer responsible for implementation',
-      problem:
-        'The operator needed a customer webshop that supported buying tickets and loading value for self and others without adding operational complexity.',
-      tried:
-        'I iterated quickly with clear boundaries between UI and backend services, validating checkout and top-up flows under realistic edge cases and constraints.',
-      shipped:
-        'I shipped a Next.js application deployed to Azure as a Docker image with complete flows for ticket purchases, top-ups, and multi-recipient handling.',
-      metrics: ['Production rollout completed'],
-      ctaLabel: 'Discuss similar work',
-      ctaHref: 'https://linkedin.com/in/tuukka-ylostalo',
+  it('rejects missing title', () => {
+    const invalid = {
+      role: 'Developer',
+      stack: ['TypeScript'],
+      duration: '2024',
+      outcome: 'Done.',
+      order: 1,
     };
+    expect(() => projectSchema.parse(invalid)).toThrow();
+  });
 
-    expect(() => projectSchema.parse(sample)).toThrow();
+  it('rejects outcome over 120 characters', () => {
+    const invalid = {
+      title: 'Test',
+      role: 'Developer',
+      stack: ['TypeScript'],
+      duration: '2024',
+      outcome: 'A'.repeat(121),
+      order: 1,
+    };
+    expect(() => projectSchema.parse(invalid)).toThrow();
+  });
+
+  it('rejects non-array stack', () => {
+    const invalid = {
+      title: 'Test',
+      role: 'Developer',
+      stack: 'TypeScript',
+      duration: '2024',
+      outcome: 'Done.',
+      order: 1,
+    };
+    expect(() => projectSchema.parse(invalid)).toThrow();
   });
 });

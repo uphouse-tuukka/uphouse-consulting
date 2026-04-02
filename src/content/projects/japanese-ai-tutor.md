@@ -1,19 +1,10 @@
 ---
 title: "Japanese AI Tutor"
-excerpt: "Built an AI language-learning MVP that adapts lessons to real goals and daily habit building."
-publishDate: 2025-09-01
-tags: ["SvelteKit", "TypeScript", "OpenAI", "Vercel"]
-outcome: "Delivered an MVP AI tutor app used daily for personalized language practice."
-role: "Solo Developer building product and AI workflows"
-problem: "Most language apps teach scripted phrases that do not match real travel or conversation needs, and they rarely adapt in a meaningful way to the learner's context or pace."
-tried: "I built a Duolingo-style structure but used AI as the tutor core, experimented with progression loops and habit mechanics, and treated the project as a practical lab for agent workflow patterns."
-shipped: "An MVP SvelteKit app where an AI tutor generates personalized lessons, tracks progress, and adjusts difficulty over time, deployed on Vercel with a full-stack implementation."
-metrics:
-  - "MVP in daily personal use"
-  - "AI-personalized lessons and progression"
-  - "Production deployment on Vercel"
-ctaLabel: "Explore AI product collaboration"
-ctaHref: "https://linkedin.com/in/tuukka-ylostalo"
+role: "Solo Developer"
+stack: ["SvelteKit 2", "Svelte 5", "TypeScript", "OpenAI", "TursoSQL", "Vercel"]
+duration: "2025–present"
+outcome: "Built an AI-powered language learning app with gamification."
+order: 3
 ---
 
 ## The problem

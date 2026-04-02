@@ -1,19 +1,10 @@
 ---
 title: "Public Transport Webshop"
-excerpt: "A ticketing webshop where customers can buy tickets and load travel card value for themselves or others."
-publishDate: 2024-06-01
-tags: ["TypeScript", "Next.js", "React", "Azure"]
-outcome: "Shipped a production ticket webshop used by real public transport customers."
-role: "Fullstack Developer and primary implementer"
-problem: "The operator needed a new customer-facing webshop for ticket purchases and travel card top-ups, including support for buying for other people, without adding operational complexity."
-tried: "I led day-to-day implementation across frontend and lightweight backend integration, prioritized clear domain boundaries, and kept flows resilient for payment and card-loading edge cases."
-shipped: "A production Next.js application deployed as a Docker image on Azure, covering ticket purchasing, value loading, and multi-recipient transactions with maintainable interfaces between UI and services."
-metrics:
-  - "Production rollout completed"
-  - "Supports ticket purchase and value loading"
-  - "Sustained by one primary developer over time"
-ctaLabel: "Discuss similar commerce work"
-ctaHref: "https://linkedin.com/in/tuukka-ylostalo"
+role: "Fullstack Developer"
+stack: ["TypeScript", "Next.js", "React", "Sass", "Azure"]
+duration: "2023–2024"
+outcome: "Shipped a customer-facing ticket purchasing app deployed on Azure."
+order: 1
 ---
 
 ## The problem

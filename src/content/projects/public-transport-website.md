@@ -1,19 +1,10 @@
 ---
 title: "Public Transport Website"
-excerpt: "Modernized a major transport website through migration, search rebuild, and reusable component architecture."
-publishDate: 2025-02-01
-tags: ["Next.js", "NestJS", "ElasticSearch", "Azure"]
-outcome: "Reduced frontend debt and launched a new search system used in production."
-role: "Fullstack Developer focused on platform modernization"
-problem: "The website needed ongoing feature delivery while carrying heavy technical debt, and the existing search experience no longer met user expectations for speed and relevance."
-tried: "I addressed debt and delivery together by planning migration slices, moving from Next.js pages to app router, and designing shared UI patterns while integrating ElasticSearch-backed search services."
-shipped: "A full Next.js 12-to-14 migration, a new site-wide ElasticSearch service, electronic forms capabilities, and a reusable component library that supported consistent implementation across teams."
-metrics:
-  - "Next.js 12 to 14 migration completed"
-  - "New production search service launched"
-  - "Component library adopted by broader team"
-ctaLabel: "Talk about platform migrations"
-ctaHref: "https://linkedin.com/in/tuukka-ylostalo"
+role: "Fullstack Developer"
+stack: ["TypeScript", "Next.js", "React", "NestJS", ".NET", "ElasticSearch", "Azure"]
+duration: "2024–2025"
+outcome: "Migrated Next.js 12 to 14, built search service and component library."
+order: 2
 ---
 
 ## The problem
