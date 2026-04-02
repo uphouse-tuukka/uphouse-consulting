@@ -1,4 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
+
 // theme-init logic extracted as a pure function for testing
 // The actual inline script in <head> will call this logic
 function getInitialTheme(
