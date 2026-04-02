@@ -2,6 +2,7 @@
 import SkipLink from '../components/SkipLink.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
 import { themeInitScript } from '../scripts/theme-init';
 import '../styles/global.css';
 
@@ -22,6 +23,7 @@ const { title, description = 'Software Developer based in Helsinki' } = Astro.pr
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script set:html={themeInitScript} />
+    <ViewTransitions />
   </head>
   <body class="bg-[var(--color-bg)] text-[var(--color-text)] leading-relaxed">
     <SkipLink />
@@ -32,11 +34,15 @@ const { title, description = 'Software Developer based in Helsinki' } = Astro.pr
     <Footer />
     <script>
       import { initThemeToggle } from '../scripts/theme-toggle';
-      initThemeToggle();
-    </script>
-    <script>
       import { initScrollFade } from '../scripts/scroll-fade';
+
+      initThemeToggle();
       initScrollFade();
+
+      document.addEventListener('astro:after-swap', () => {
+        initThemeToggle();
+        initScrollFade();
+      });
     </script>
   </body>
 </html>
