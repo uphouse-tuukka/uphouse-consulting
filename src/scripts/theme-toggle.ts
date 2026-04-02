@@ -1,15 +1,23 @@
 // Client-side toggle logic. Loaded as a small inline script or island.
+interface ThemeToggleElement extends HTMLElement {
+  __themeToggleHandler?: EventListener;
+}
+
 export function initThemeToggle(): void {
-  const toggle = document.getElementById('theme-toggle');
+  const toggle = document.getElementById('theme-toggle') as ThemeToggleElement | null;
   if (!toggle) return;
 
   function updateToggle(): void {
     const isLight = document.documentElement.classList.contains('light');
-    toggle!.textContent = isLight ? 'Dark' : 'Light';
-    toggle!.setAttribute('aria-pressed', isLight ? 'false' : 'true');
+    toggle.textContent = isLight ? 'Dark' : 'Light';
+    toggle.setAttribute('aria-pressed', isLight ? 'false' : 'true');
   }
 
-  toggle.addEventListener('click', () => {
+  if (toggle.__themeToggleHandler) {
+    toggle.removeEventListener('click', toggle.__themeToggleHandler);
+  }
+
+  const handleClick: EventListener = () => {
     const isCurrentlyLight = document.documentElement.classList.contains('light');
     if (isCurrentlyLight) {
       document.documentElement.classList.remove('light');
@@ -19,7 +27,10 @@ export function initThemeToggle(): void {
       try { localStorage.setItem('theme', 'light'); } catch(e) {}
     }
     updateToggle();
-  });
+  };
+
+  toggle.__themeToggleHandler = handleClick;
+  toggle.addEventListener('click', handleClick);
 
   updateToggle();
 }
