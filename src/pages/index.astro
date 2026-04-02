@@ -1,18 +1,12 @@
 ---
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tuukka Ylöstalo — Software Developer</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  </head>
-  <body class="bg-[var(--color-bg)] text-[var(--color-text)]">
-    <main class="max-w-[720px] mx-auto px-6">
-      <h1 class="text-4xl font-bold text-[var(--color-heading)] pt-16">Tuukka Ylöstalo</h1>
-      <p class="text-[var(--color-muted)]">Scaffold working. Tailwind + fonts loading.</p>
-    </main>
-  </body>
-</html>
+<BaseLayout title="Tuukka Ylöstalo — Software Developer">
+  <section class="pt-16 pb-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-heading)] leading-tight">
+      Tuukka Ylöstalo
+    </h1>
+    <p class="text-[var(--color-muted)] mt-1">Layout scaffold working.</p>
+  </section>
+</BaseLayout>
