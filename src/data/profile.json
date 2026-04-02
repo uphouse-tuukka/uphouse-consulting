@@ -1,0 +1,11 @@
+{
+  "name": "Tuukka Ylöstalo",
+  "title": "Software Developer",
+  "location": "Helsinki, Finland",
+  "bio": "Fullstack developer based in Helsinki. I push back on wasted effort and build what actually matters — for the users, the team, and the codebase.",
+  "email": "tuukka@example.com",
+  "socials": {
+    "github": "https://github.com/tuukka-ylostalo",
+    "linkedin": "https://linkedin.com/in/tuukka-ylostalo"
+  }
+}
