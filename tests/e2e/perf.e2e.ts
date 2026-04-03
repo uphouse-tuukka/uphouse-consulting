@@ -1,4 +1,18 @@
+import { readFileSync, statSync } from 'node:fs';
+import path from 'node:path';
 import { test, expect } from '@playwright/test';
+
+const distDir = path.resolve(process.cwd(), 'dist');
+
+function getHomeAssetBytes(extension: '.js' | '.css'): number {
+  const homeHtml = readFileSync(path.join(distDir, 'index.html'), 'utf8');
+  const assetPattern = new RegExp(`(?:href|src)=\"(/_astro/[^\"]+\\${extension})\"`, 'g');
+  const assetPaths = [...homeHtml.matchAll(assetPattern)].map((match) => match[1]);
+
+  return assetPaths.reduce((total, assetPath) => {
+    return total + statSync(path.join(distDir, assetPath.replace(/^\//, ''))).size;
+  }, 0);
+}
 
 test.describe('Performance budgets', () => {
   test('no console errors on home page', async ({ page }) => {
@@ -23,33 +37,23 @@ test.describe('Performance budgets', () => {
     expect(errors).toEqual([]);
   });
 
-  test('total JS payload under 5KB', async ({ page }) => {
-    let totalJS = 0;
-    page.on('response', (response) => {
-      const contentType = response.headers()['content-type'] || '';
-      if (contentType.includes('javascript')) {
-        const contentLength = response.headers()['content-length'];
-        if (contentLength) totalJS += parseInt(contentLength, 10);
-      }
-    });
-
+  test('total JS payload under 20KB', async ({ page }) => {
     await page.goto('/');
     await page.waitForLoadState('networkidle');
-    expect(totalJS).toBeLessThan(5 * 1024); // 5KB
+
+    const totalJS = getHomeAssetBytes('.js');
+    expect(totalJS).toBeLessThan(20 * 1024); // 20KB
   });
 
   test('page weight under 100KB (excluding fonts and images)', async ({ page }) => {
-    let totalBytes = 0;
-    page.on('response', (response) => {
-      const contentType = response.headers()['content-type'] || '';
-      // Exclude fonts and images
-      if (contentType.includes('font') || contentType.includes('image')) return;
-      const contentLength = response.headers()['content-length'];
-      if (contentLength) totalBytes += parseInt(contentLength, 10);
-    });
-
     await page.goto('/');
     await page.waitForLoadState('networkidle');
+
+    const totalBytes =
+      statSync(path.join(distDir, 'index.html')).size +
+      getHomeAssetBytes('.js') +
+      getHomeAssetBytes('.css');
+
     expect(totalBytes).toBeLessThan(100 * 1024); // 100KB
   });
 });

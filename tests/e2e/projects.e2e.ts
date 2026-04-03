@@ -4,7 +4,7 @@ test.describe('Project pages', () => {
   test('case study renders with content', async ({ page }) => {
     await page.goto('/projects/public-transport-webshop');
 
-    await expect(page.locator('h1')).toHaveText('Public Transport Webshop');
+    await expect(page.locator('#main-content h1')).toHaveText('Public Transport Webshop');
     await expect(page.getByText('Fullstack Developer')).toBeVisible();
     await expect(page.getByText('The problem')).toBeVisible();
   });
@@ -17,7 +17,7 @@ test.describe('Project pages', () => {
     await expect(nextLink).toBeVisible();
     await nextLink.click();
 
-    await expect(page.locator('h1')).toHaveText('Public Transport Website');
+    await expect(page.locator('#main-content h1')).toHaveText('Public Transport Website');
   });
 
   test('case study has contextual CTA', async ({ page }) => {
@@ -30,7 +30,7 @@ test.describe('Project pages', () => {
   test('back to home link works', async ({ page }) => {
     await page.goto('/projects/public-transport-webshop');
     await page.getByRole('link', { name: /Back to home/i }).click();
-    await expect(page.locator('h1')).toHaveText('Tuukka Ylöstalo');
+    await expect(page.locator('#main-content h1')).toHaveText('Tuukka Ylöstalo');
   });
 
   test('invalid slug returns 404', async ({ page }) => {

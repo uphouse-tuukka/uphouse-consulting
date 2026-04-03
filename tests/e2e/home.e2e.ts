@@ -4,7 +4,7 @@ test.describe('Home page', () => {
   test('renders hero with name, role, tagline, and CTA', async ({ page }) => {
     await page.goto('/');
 
-    await expect(page.locator('h1')).toHaveText('Tuukka Ylöstalo');
+    await expect(page.locator('#main-content h1')).toHaveText('Tuukka Ylöstalo');
     await expect(page.getByText('Software Developer')).toBeVisible();
     await expect(page.getByText('Less complexity, more software.')).toBeVisible();
 
