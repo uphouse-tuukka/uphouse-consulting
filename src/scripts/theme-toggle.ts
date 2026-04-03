@@ -4,6 +4,24 @@ interface ThemeToggleElement extends HTMLElement {
 }
 
 export function initThemeToggle(): void {
+  function syncThemeFromStorage(): void {
+    let storedTheme: string | null = null;
+    try {
+      storedTheme = localStorage.getItem('theme');
+    } catch (e) {}
+
+    if (storedTheme === 'light') {
+      document.documentElement.classList.add('light');
+      return;
+    }
+
+    if (storedTheme === 'dark') {
+      document.documentElement.classList.remove('light');
+    }
+  }
+
+  syncThemeFromStorage();
+
   const toggle = document.getElementById('theme-toggle') as ThemeToggleElement | null;
   if (!toggle) return;
 

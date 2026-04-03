@@ -41,6 +41,20 @@ test.describe('Dark mode', () => {
     await expect(toggle).toHaveText('Dark');
   });
 
+  test('persists light mode across client-side navigation', async ({ page }) => {
+    await page.goto('/');
+    const toggle = page.locator('#theme-toggle');
+
+    await toggle.click();
+    await expect(page.locator('html')).toHaveClass(/light/);
+    await expect(toggle).toHaveText('Dark');
+
+    await page.getByRole('link', { name: 'Public Transport Webshop' }).first().click();
+    await expect(page).toHaveURL(/\/projects\/public-transport-webshop/);
+    await expect(page.locator('html')).toHaveClass(/light/);
+    await expect(page.locator('#theme-toggle')).toHaveText('Dark');
+  });
+
   test('no FOUC on dark mode load', async ({ page }) => {
     // Set dark preference in localStorage before navigating
     await page.goto('/');
