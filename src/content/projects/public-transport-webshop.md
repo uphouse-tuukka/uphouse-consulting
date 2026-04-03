@@ -2,7 +2,7 @@
 title: "Public Transport Webshop"
 role: "Fullstack Developer"
 stack: ["TypeScript", "Next.js", "React", "Sass", "Azure"]
-duration: "2023–2024"
+duration: "2023–2026"
 outcome: "Shipped a customer-facing ticket purchasing app deployed on Azure."
 order: 1
 ---

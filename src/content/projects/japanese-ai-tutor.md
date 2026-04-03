@@ -2,7 +2,7 @@
 title: "Japanese AI Tutor"
 role: "Solo Developer"
 stack: ["SvelteKit 2", "Svelte 5", "TypeScript", "OpenAI", "TursoSQL", "Vercel"]
-duration: "2025–present"
+duration: "2026–present"
 outcome: "Built an AI-powered language learning app with gamification."
 order: 3
 ---
