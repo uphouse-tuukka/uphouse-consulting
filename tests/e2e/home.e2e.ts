@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test.describe("Home page", () => {
-  test("renders hero with name, role, tagline, and CTA", async ({ page }) => {
+  test("renders hero with company line, tagline, and CTA", async ({ page }) => {
     await page.goto("/");
 
     await expect(page.locator("#main-content h1")).toHaveText(
@@ -9,9 +9,6 @@ test.describe("Home page", () => {
     );
     await expect(
       page.getByText("Software developer behind UpHouse Consulting"),
-    ).toBeVisible();
-    await expect(
-      page.getByText("Software Developer", { exact: true }),
     ).toBeVisible();
     await expect(
       page.getByText("Less complexity, more software."),
@@ -26,7 +23,9 @@ test.describe("Home page", () => {
 
   test("renders bio section", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByText("push back on wasted effort")).toBeVisible();
+    await expect(
+      page.getByText("I think good consulting is about more than technical skill."),
+    ).toBeVisible();
   });
 
   test("renders 3 project cards", async ({ page }) => {
