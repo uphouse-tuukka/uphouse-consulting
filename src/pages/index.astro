@@ -14,7 +14,9 @@ const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile
     <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-heading)] leading-tight">
       {profile.name}
     </h1>
-    <p class="text-xl text-[var(--color-text)]">{profile.role}</p>
+    <p class="text-sm uppercase tracking-[0.18em] text-[var(--color-accent)]">
+      {profile.companyLine}
+    </p>
     <p class="text-lg text-[var(--color-text)]">{profile.tagline}</p>
     <div class="pt-2">
       <a
@@ -36,7 +38,43 @@ const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile
   {/* Bio */}
   <section class="space-y-4">
     <h2 class="text-2xl font-semibold text-[var(--color-heading)] leading-tight">About</h2>
-    <p class="text-[var(--color-text)]">{profile.bio}</p>
+    <p class="text-[var(--color-text)]">
+      I’m a fullstack developer based in Helsinki. I enjoy working closely with
+      teams and helping good work happen, whether that means writing code,
+      supporting decisions, or stepping into the parts of a project that need
+      extra care. 
+    </p>
+    <p class="text-[var(--color-text)]">
+      I think good consulting is about more than technical skill. Clear
+      communication, trust, and how you work with people matter just as much.
+      Outside work, I split my time between nerdy interests, cooking, and
+      lifting heavy things.
+    </p>
+  </section>
+
+  {/* How I work */}
+  <section class="mt-16 space-y-4">
+    <h2 class="text-2xl font-semibold text-[var(--color-heading)] leading-tight">How I work</h2>
+    <ul class="grid gap-3 md:grid-cols-3">
+      <li class="rounded border border-[var(--color-border)] bg-[var(--color-surface)]/40 p-4">
+        <p class="text-sm font-semibold text-[var(--color-heading)]">Start with the real problem</p>
+        <p class="mt-2 text-sm text-[var(--color-text)]">
+          I try to understand what actually needs to change before adding process, scope, or code.
+        </p>
+      </li>
+      <li class="rounded border border-[var(--color-border)] bg-[var(--color-surface)]/40 p-4">
+        <p class="text-sm font-semibold text-[var(--color-heading)]">Cut complexity early</p>
+        <p class="mt-2 text-sm text-[var(--color-text)]">
+          I prefer systems that teams can understand and maintain.
+        </p>
+      </li>
+      <li class="rounded border border-[var(--color-border)] bg-[var(--color-surface)]/40 p-4">
+        <p class="text-sm font-semibold text-[var(--color-heading)]">Ship work people can trust</p>
+        <p class="mt-2 text-sm text-[var(--color-text)]">
+          The goal is maintainable software that helps users, supports teams, and keeps delivering after launch.
+        </p>
+      </li>
+    </ul>
   </section>
 
   {/* Projects */}

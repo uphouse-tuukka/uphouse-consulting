@@ -21,7 +21,7 @@ const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile
       <span class="mx-2">&middot;</span>
       <a href={mailtoHref} class="hover:text-[var(--color-heading)] transition-colors duration-150">Email</a>
     </p>
-    <p class="text-sm text-[var(--color-muted)]">&copy; 2026 {profile.name}</p>
+    <p class="text-sm text-[var(--color-muted)]">&copy; 2026 {profile.name} / {profile.company}</p>
     <p class="text-sm text-[var(--color-muted)]">Built with Astro</p>
   </div>
 </footer>
