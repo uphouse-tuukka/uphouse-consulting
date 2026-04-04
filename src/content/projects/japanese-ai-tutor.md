@@ -9,18 +9,26 @@ order: 3
 
 ## The problem
 
-Existing language learning apps teach generic textbook phrases. I wanted something that teaches practical, real-world Japanese — with AI adapting to my level and goals.
+I started this project because most language-learning apps felt too generic for what I wanted. They were good at repetition, but not very good at adapting to how I actually like to learn. I wanted something that could feel more practical, more personal, and more responsive than a fixed set of exercises.
 
-## What I tried
+## My role
 
-Built a Duolingo-style app from scratch, but with AI as the actual tutor instead of pre-written exercises. Added gamification mechanics for habit building. Used the project as an opportunity to go deep on AI agent orchestrators and workflow patterns.
+This one is entirely my own. I designed and built the product, made the technical choices, and used it as a way to explore both language learning and AI-assisted development in a more hands-on way than reading or experimenting in isolation ever would have allowed.
 
-## What I shipped
+## What the work involved
 
-An MVP language learning app where an AI tutor generates personalized lessons, tracks progress, and adapts difficulty. Built entirely with AI-assisted workflows — the app itself is a case study in working with AI tooling.
+I built a language-learning application where an AI tutor generates personalized lessons, tracks progress, and adjusts difficulty over time. I also added gamification elements because motivation matters just as much as lesson quality when the goal is to build a real habit.
 
-## Outcomes
+From a technical point of view, the project gave me room to go deep on SvelteKit, AI workflows, and agent orchestration patterns. More importantly, it forced me to keep asking whether the product was actually becoming more useful or just more technically interesting. I wanted the app to stay grounded in a real learning need, not drift into being a demo for its own stack.
 
-- MVP ready and in daily personal use
-- Hands-on experience with AI agent orchestration patterns
-- Full-stack SvelteKit application deployed on Vercel
+## What made it tricky
+
+The difficult part was making the AI feel like a genuine improvement instead of a gimmick. It is easy to build something that looks clever in a screenshot. It is much harder to build something you want to come back to every day. That tension shaped a lot of the product decisions.
+
+## What changed
+
+The result is an application that I use myself on a regular basis, which is the best signal I can ask for at this stage. It also gave me direct experience with AI agent orchestration patterns in the context of a real product instead of a detached technical exercise.
+
+## What I took from it
+
+I like building things that sit at the edge of curiosity and usefulness. This project reminded me that personal projects can be serious work too, especially when they force you to test your ideas against your own daily habits.

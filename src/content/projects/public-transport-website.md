@@ -2,7 +2,16 @@
 title: "Public Transport Website"
 role: "Fullstack Developer"
 stack:
-  ["TypeScript", "Next.js", "React", "NestJS", ".NET", "ElasticSearch", "Azure"]
+  [
+    "TypeScript",
+    "Next.js",
+    "React",
+    "NestJS",
+    "C#",
+    ".NET",
+    "ElasticSearch",
+    "Azure",
+  ]
 duration: "2023–2026"
 outcome: "Migrated Next.js 12 to 14, built search service and component library."
 order: 2
@@ -10,21 +19,28 @@ order: 2
 
 ## The problem
 
-A major public transport operator's website needed ongoing development: new features for content producers, electronic forms, and a completely new search service. The codebase also carried significant technical debt.
+I worked on a large public-facing website that was already doing real work for a wide audience, while still needing new features, structural improvements, and better internal tooling. It was not a greenfield project or a single-purpose rebuild. It was a long-running platform that had to keep moving while the underlying pieces changed.
 
-## What I tried
+## My role
 
-Tackled technical debt head-on: migrated Next.js from version 12 to 14, transitioned from the pages router to the app router, and helped to build an internal component library. For the search service, I was part of a two-person team that untangled search from a monolithic .NET backend - where it was intertwined with the CMS and other APIs - and rebuilt it as a dedicated NestJS microservice backed by ElasticSearch.
+My role moved across different kinds of work depending on what the project needed. Some periods were more product-focused, like building features and forms. Other parts were more architectural, like migrations, shared UI work, and search. I liked that range because it meant I could contribute where the project had the most friction instead of staying boxed into one narrow area.
 
-## What I shipped
+## What the work involved
 
-- Next.js 12 to 14 migration with full pages-to-app router transition
-- New site-wide search microservice in NestJS backed by ElasticSearch
-- Electronic forms system for customer appeals
-- Internal component library used across the organization
+One major part of the work was helping move the frontend from Next.js 12 to 14, including the transition from the pages router to the app router. I also helped build an internal component library so the team had more consistency to build on instead of solving the same UI problems repeatedly in different places.
 
-## Outcomes
+Another substantial piece was search. I was part of a two-person effort that pulled it out of a monolithic .NET backend, where it was tied up with the CMS and other APIs, and rebuilt it as a dedicated NestJS service backed by ElasticSearch. Alongside that, I worked on electronic forms and other ongoing product needs, which meant the project never really split into a clean "feature phase" and "technical phase." Both were happening at the same time.
 
-- Reduced technical debt across the frontend codebase
-- Search service handles production traffic
-- Component library adopted by the wider team
+## What made it tricky
+
+What made the work challenging was how wide it was. This was not a project where you could stay neatly inside one specialty. The stack was broad, the technical debt was real, and the day-to-day work could shift quickly from React Hook Form flows to CMS problems and support for content editors, then on to debugging production issues that turned out to be infrastructure-related rather than application bugs.
+
+We were improving a live platform while also adding new things people needed right away, which meant making progress without pretending we could pause the rest of the system until the architecture was perfect. It rewarded being a strong generalist in a very practical sense: being able to step into whatever kind of problem the project needed solved next.
+
+## What changed
+
+By the end of that work, the codebase had a cleaner path forward in several important areas. The frontend stack had moved on, search had been given a more focused shape of its own, and the component library created a better base for shared work across the team. Just as importantly, the website kept serving its purpose while those changes were happening.
+
+## What I took from it
+
+This project reminded me that useful engineering range matters. Some of the best work comes from being willing to move between product delivery, platform improvements, and shared tooling without treating one of them as beneath the other.
