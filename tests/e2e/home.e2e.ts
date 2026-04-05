@@ -87,4 +87,20 @@ test.describe("Home page", () => {
     await expect(switchLink).toBeVisible();
     await expect(switchLink).toHaveAttribute("aria-label", "Open the Finnish version");
   });
+
+  test("renders Finnish home copy", async ({ page }) => {
+    await page.goto("/fi/");
+
+    await expect(page.locator("#main-content h1")).toHaveText("Tuukka Ylöstalo");
+    await expect(page.getByText("Ohjelmistokehittäjä UpHouse Consultingin takana")).toBeVisible();
+    await expect(page.getByText("Vähemmän monimutkaisuutta, enemmän ohjelmistoa.")).toBeVisible();
+    await expect(page.getByRole("link", { name: "Ota yhteyttä" }).first()).toBeVisible();
+  });
+
+  test("keeps Finnish project card links inside /fi/", async ({ page }) => {
+    await page.goto("/fi/");
+
+    const firstCard = page.locator("article").first().locator("a").first();
+    await expect(firstCard).toHaveAttribute("href", /^\/fi\/projects\//);
+  });
 });

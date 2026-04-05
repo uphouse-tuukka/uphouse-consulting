@@ -1,102 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import HomePage from '../components/HomePage.astro';
 import { getCollection } from 'astro:content';
-import profile from '../data/profile.json';
 import { siteCopy } from '../data/site-copy';
 
 const locale = 'en' as const;
 const copy = siteCopy[locale];
-const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
-const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile.ctaSubject)}`;
+const projects = (await getCollection('projects'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map(p => ({
+    title: p.data.title,
+    slug: p.slug,
+    outcome: p.data.outcome,
+    stack: p.data.stack,
+  }));
 ---
 
 <BaseLayout title={copy.meta.homeTitle} description={copy.meta.homeDescription} locale={locale} canonicalPath="/" switchHref="/fi/">
-  {/* Hero */}
-  <section class="pt-16 pb-12 space-y-4">
-    <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-heading)] leading-tight">
-      {profile.name}
-    </h1>
-    <p class="text-sm uppercase tracking-[0.18em] text-[var(--color-accent)]">
-      {profile.companyLine}
-    </p>
-    <p class="text-lg text-[var(--color-text)]">{profile.tagline}</p>
-    <div class="pt-2">
-      <a
-        href={mailtoHref}
-        class="inline-block bg-[var(--color-accent)] text-[var(--color-bg)] font-semibold text-sm py-3 px-8 rounded hover:opacity-90 transition-opacity duration-150"
-      >
-        Contact me
-      </a>
-    </div>
-    <p class="text-sm text-[var(--color-muted)]">
-      <a href={profile.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)" class="hover:text-[var(--color-heading)] transition-colors duration-150">GitHub</a>
-      <span class="mx-2">&middot;</span>
-      <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)" class="hover:text-[var(--color-heading)] transition-colors duration-150">LinkedIn</a>
-      <span class="mx-2">&middot;</span>
-      <a href={mailtoHref} class="hover:text-[var(--color-heading)] transition-colors duration-150">Email</a>
-    </p>
-  </section>
-
-  {/* Bio */}
-  <section class="space-y-4">
-    <h2 class="text-2xl font-semibold text-[var(--color-heading)] leading-tight">About</h2>
-    <p class="text-[var(--color-text)]">
-      I’m a fullstack developer based in Helsinki. I enjoy working closely with
-      teams and helping good work happen, whether that means writing code,
-      supporting decisions, or stepping into the parts of a project that need
-      extra care. 
-    </p>
-    <p class="text-[var(--color-text)]">
-      I think good consulting is about more than technical skill. Clear
-      communication, trust, and how you work with people matter just as much.
-      Outside work, I split my time between nerdy interests, cooking, and
-      lifting heavy things.
-    </p>
-  </section>
-
-  {/* How I work */}
-  <section class="mt-16 space-y-4">
-    <h2 class="text-2xl font-semibold text-[var(--color-heading)] leading-tight">How I work</h2>
-    <ul class="grid gap-3 md:grid-cols-3">
-      <li class="rounded border border-[var(--color-border)] bg-[var(--color-surface)]/40 p-4">
-        <p class="text-sm font-semibold text-[var(--color-heading)]">Start with the real problem</p>
-        <p class="mt-2 text-sm text-[var(--color-text)]">
-          I try to understand what actually needs to change before adding process, scope, or code.
-        </p>
-      </li>
-      <li class="rounded border border-[var(--color-border)] bg-[var(--color-surface)]/40 p-4">
-        <p class="text-sm font-semibold text-[var(--color-heading)]">Cut complexity early</p>
-        <p class="mt-2 text-sm text-[var(--color-text)]">
-          I prefer systems that teams can understand and maintain.
-        </p>
-      </li>
-      <li class="rounded border border-[var(--color-border)] bg-[var(--color-surface)]/40 p-4">
-        <p class="text-sm font-semibold text-[var(--color-heading)]">Ship work people can trust</p>
-        <p class="mt-2 text-sm text-[var(--color-text)]">
-          The goal is maintainable software that helps users, supports teams, and keeps delivering after launch.
-        </p>
-      </li>
-    </ul>
-  </section>
-
-  {/* Projects */}
-  {projects.length > 0 && (
-    <section class="mt-16 md:mt-24 space-y-4">
-      <h2 class="text-2xl font-semibold text-[var(--color-heading)] leading-tight">Projects</h2>
-      <div class="space-y-8">
-        {projects.map((project, i) => (
-          <div style={`--fade-delay: ${i * 100}ms`}>
-            <ProjectCard
-              title={project.data.title}
-              description=""
-              stack={project.data.stack}
-              outcome={project.data.outcome}
-              slug={project.slug}
-            />
-          </div>
-        ))}
-      </div>
-    </section>
-  )}
+  <HomePage locale={locale} projects={projects} />
 </BaseLayout>

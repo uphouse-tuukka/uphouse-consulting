@@ -34,6 +34,32 @@ export const siteCopy = {
       body: "The page you're looking for doesn't exist or has been moved.",
       backHome: "Back to home",
     },
+    home: {
+      companyLine: "Software developer behind UpHouse Consulting",
+      tagline: "Less complexity, more software.",
+      contactCta: "Contact me",
+      aboutHeading: "About",
+      aboutParagraphs: [
+        "I'm a fullstack developer based in Helsinki. I enjoy working closely with teams and helping good work happen, whether that means writing code, supporting decisions, or stepping into the parts of a project that need extra care.",
+        "I think good consulting is about more than technical skill. Clear communication, trust, and how you work with people matter just as much. Outside work, I split my time between nerdy interests, cooking, and lifting heavy things.",
+      ],
+      workHeading: "How I work",
+      workItems: [
+        {
+          title: "Start with the real problem",
+          body: "I try to understand what actually needs to change before adding process, scope, or code.",
+        },
+        {
+          title: "Cut complexity early",
+          body: "I prefer systems that teams can understand and maintain.",
+        },
+        {
+          title: "Ship work people can trust",
+          body: "The goal is maintainable software that helps users, supports teams, and keeps delivering after launch.",
+        },
+      ],
+      projectsHeading: "Projects",
+    },
   },
   fi: {
     meta: {
@@ -66,6 +92,32 @@ export const siteCopy = {
       title: "Sivua ei löytynyt",
       body: "Etsimääsi sivua ei ole olemassa tai se on siirretty.",
       backHome: "Takaisin etusivulle",
+    },
+    home: {
+      companyLine: "Ohjelmistokehittäjä UpHouse Consultingin takana",
+      tagline: "Vähemmän monimutkaisuutta, enemmän ohjelmistoa.",
+      contactCta: "Ota yhteyttä",
+      aboutHeading: "Minusta",
+      aboutParagraphs: [
+        "Olen Helsingissä asuva fullstack-kehittäjä. Viihdyn parhaiten projekteissa, joissa pääsen työskentelemään tiiviisti muun tiimin kanssa ja auttamaan siellä, missä työ eniten sitä tarvitsee.",
+        "Minulle hyvä konsultointi ei ole pelkkää teknistä osaamista. Yhtä tärkeitä ovat selkeä viestintä, luottamus ja se, miten työskentelet muiden kanssa. Vapaa-ajalla aikani jakautuu nörttiharrastusten, ruoanlaiton ja raskaiden asioiden nostamisen välillä.",
+      ],
+      workHeading: "Miten työskentelen",
+      workItems: [
+        {
+          title: "Aloitan oikeasta ongelmasta",
+          body: "Yritän ymmärtää, mitä oikeasti pitää muuttaa ennen kuin lisätään prosessia, scopea tai koodia.",
+        },
+        {
+          title: "Karsin monimutkaisuutta ajoissa",
+          body: "Pidän järjestelmistä, jotka tiimi pystyy ymmärtämään ja pitämään kunnossa.",
+        },
+        {
+          title: "Toimitan työn, johon voi luottaa",
+          body: "Tavoitteena on ylläpidettävä ohjelmisto, joka auttaa käyttäjiä, tukee tiimiä ja kestää käytössä myös julkaisun jälkeen.",
+        },
+      ],
+      projectsHeading: "Projektit",
     },
   },
 } as const;

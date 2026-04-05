@@ -5,14 +5,15 @@ interface Props {
   stack: string[];
   outcome: string;
   slug: string;
+  href?: string;
 }
 
-const { title, stack, outcome, slug } = Astro.props;
+const { title, stack, outcome, slug, href } = Astro.props;
 ---
 
 <article class="fade-up">
   <a
-    href={`/projects/${slug}`}
+    href={href ?? `/projects/${slug}`}
     class="group block rounded border border-[var(--color-border)] p-4 transition-[border-color,transform] duration-150 hover:border-[var(--color-border-hover)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)] md:p-6"
   >
     <h3 class="text-lg font-semibold leading-tight text-[var(--color-heading)] transition-colors duration-150 group-hover:text-[var(--color-accent)]">
