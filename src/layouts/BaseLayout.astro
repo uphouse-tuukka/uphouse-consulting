@@ -34,6 +34,7 @@ const fiPath = locale === 'fi' ? canonicalPath : (switchHref ?? canonicalPath);
       <>
         <link rel="alternate" hreflang="en" href={new URL(enPath, Astro.site).toString()} />
         <link rel="alternate" hreflang="fi" href={new URL(fiPath, Astro.site).toString()} />
+        <link rel="alternate" hreflang="x-default" href={new URL(enPath, Astro.site).toString()} />
       </>
     )}
     <title>{title}</title>

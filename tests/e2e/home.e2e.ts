@@ -103,4 +103,12 @@ test.describe("Home page", () => {
     const firstCard = page.locator("article").first().locator("a").first();
     await expect(firstCard).toHaveAttribute("href", /^\/fi\/projects\//);
   });
+
+  test("Finnish project cards show Finnish content", async ({ page }) => {
+    await page.goto("/fi/");
+
+    // The first project (order:1) is the webshop — its Finnish title contains "verkkokauppa"
+    const firstCard = page.locator("article").first();
+    await expect(firstCard).toContainText("verkkokauppa");
+  });
 });

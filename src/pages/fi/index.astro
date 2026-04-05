@@ -1,19 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HomePage from '../../components/HomePage.astro';
-import { getCollection } from 'astro:content';
+import { getProjectsForLocale } from '../../utils/projects';
 import { siteCopy } from '../../data/site-copy';
 
 const locale = 'fi' as const;
 const copy = siteCopy[locale];
-const projects = (await getCollection('projects'))
-  .sort((a, b) => a.data.order - b.data.order)
-  .map(p => ({
-    title: p.data.title,
-    slug: p.slug,
-    outcome: p.data.outcome,
-    stack: p.data.stack,
-  }));
+const projects = (await getProjectsForLocale(locale)).map(p => ({
+  title: p.data.title,
+  slug: p.slug,
+  outcome: p.data.outcome,
+  stack: p.data.stack,
+}));
 ---
 
 <BaseLayout title={copy.meta.homeTitle} description={copy.meta.homeDescription} locale={locale} canonicalPath="/fi/" switchHref="/">
