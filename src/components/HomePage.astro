@@ -73,10 +73,8 @@ const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile
         <div style={`--fade-delay: ${i * 100}ms`}>
           <ProjectCard
             title={project.title}
-            description=""
             stack={project.stack}
             outcome={project.outcome}
-            slug={project.slug}
             href={getLocalizedProjectPath(locale, project.slug)}
           />
         </div>
