@@ -30,9 +30,15 @@ export function initThemeToggle(): void {
 
   function updateToggle(): void {
     const isLight = document.documentElement.classList.contains("light");
-    const nextMode = isLight ? "Dark" : "Light";
-    toggleElement.textContent = nextMode;
-    toggleElement.setAttribute("aria-label", `${nextMode} mode`);
+    const nextLabel = isLight
+      ? toggleElement.dataset.darkLabel ?? "Dark"
+      : toggleElement.dataset.lightLabel ?? "Light";
+    const nextAria = isLight
+      ? toggleElement.dataset.darkAria ?? "Dark mode"
+      : toggleElement.dataset.lightAria ?? "Light mode";
+
+    toggleElement.textContent = nextLabel;
+    toggleElement.setAttribute("aria-label", nextAria);
     toggleElement.setAttribute("aria-pressed", isLight ? "false" : "true");
   }
 

@@ -1,22 +1,39 @@
 ---
-// Sticky header: site name (left) + dark mode toggle (right).
-// Border-bottom separator. Same background as page.
+import { siteCopy, type Locale } from '../data/site-copy';
+
+interface Props {
+  locale: Locale;
+  switchHref?: string;
+}
+
+const { locale, switchHref } = Astro.props;
+const copy = siteCopy[locale].chrome;
 ---
 
 <header transition:persist class="sticky top-0 z-40 bg-[var(--color-bg)] border-b border-[var(--color-border)]">
-  <div class="max-w-[720px] mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="/" class="text-[var(--color-heading)] font-semibold text-base hover:text-[var(--color-accent)] transition-colors duration-150">
+  <div class="max-w-[720px] mx-auto px-6 py-4 flex items-center justify-between gap-4">
+    <a href={locale === "fi" ? "/fi/" : "/"} class="text-[var(--color-heading)] font-semibold text-base hover:text-[var(--color-accent)] transition-colors duration-150">
       UpHouse Consulting
     </a>
-    <button
-      id="theme-toggle"
-      type="button"
-      role="button"
-      aria-label="Light mode"
-      aria-pressed="true"
-      class="text-sm text-[var(--color-muted)] hover:text-[var(--color-heading)] transition-colors duration-150 px-2 py-1 min-h-[44px] min-w-[44px] flex items-center justify-center"
-    >
-      Light
-    </button>
+    <div class="flex items-center gap-3">
+      {switchHref && (
+        <a href={switchHref} class="text-sm text-[var(--color-muted)] hover:text-[var(--color-heading)] transition-colors duration-150">
+          {copy.switchLocaleLabel}
+        </a>
+      )}
+      <button
+        id="theme-toggle"
+        type="button"
+        data-light-label={copy.themeLightLabel}
+        data-light-aria={copy.themeLightAria}
+        data-dark-label={copy.themeDarkLabel}
+        data-dark-aria={copy.themeDarkAria}
+        aria-label={copy.themeLightAria}
+        aria-pressed="true"
+        class="text-sm text-[var(--color-muted)] hover:text-[var(--color-heading)] transition-colors duration-150 px-2 py-1 min-h-[44px] min-w-[44px] flex items-center justify-center"
+      >
+        {copy.themeLightLabel}
+      </button>
+    </div>
   </div>
 </header>

@@ -4,34 +4,41 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { ClientRouter } from 'astro:transitions';
 import { themeInitScript } from '../scripts/theme-init';
+import type { Locale } from '../data/site-copy';
+import { siteCopy } from '../data/site-copy';
 import '../styles/global.css';
 
 interface Props {
   title: string;
   description?: string;
+  locale: Locale;
+  canonicalPath: string;
+  switchHref?: string;
 }
 
-const { title, description = 'Software Developer based in Helsinki' } = Astro.props;
+const { title, description, locale, canonicalPath, switchHref } = Astro.props;
+const copy = siteCopy[locale];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
+    <meta name="description" content={description ?? copy.meta.defaultDescription} />
+    <link rel="canonical" href={new URL(canonicalPath, Astro.site).toString()} />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script set:html={themeInitScript} />
     <ClientRouter />
   </head>
   <body class="bg-[var(--color-bg)] text-[var(--color-text)] leading-relaxed">
-    <SkipLink />
-    <Header />
+    <SkipLink label={copy.chrome.skipToContent} />
+    <Header locale={locale} switchHref={switchHref} />
     <main id="main-content" class="max-w-[720px] mx-auto px-6">
       <slot />
     </main>
-    <Footer />
+    <Footer locale={locale} />
     <script>
       import { initThemeToggle } from '../scripts/theme-toggle';
       import { initScrollFade } from '../scripts/scroll-fade';

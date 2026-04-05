@@ -62,4 +62,15 @@ test.describe("Home page", () => {
     const href = await skipLink.getAttribute("href");
     expect(href).toBe("#main-content");
   });
+
+  test("renders localized shared chrome on Finnish home", async ({ page }) => {
+    await page.goto("/fi/");
+
+    await expect(page.locator("html")).toHaveAttribute("lang", "fi");
+    await expect(page.getByRole("link", { name: "UpHouse Consulting" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "In English" })).toBeVisible();
+
+    await page.keyboard.press("Tab");
+    await expect(page.getByText("Siirry sisältöön")).toBeVisible();
+  });
 });
