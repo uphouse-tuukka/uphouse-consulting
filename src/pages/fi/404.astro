@@ -1,14 +1,14 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { siteCopy } from '../data/site-copy';
-import { getLocaleFromPathname, getLocalizedHomePath } from '../utils/locale';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { siteCopy } from '../../data/site-copy';
+import { getLocaleFromPathname, getLocalizedHomePath } from '../../utils/locale';
 
 const locale = getLocaleFromPathname(Astro.url.pathname);
 const copy = siteCopy[locale].notFound;
 const homePath = getLocalizedHomePath(locale);
 ---
 
-<BaseLayout title={copy.title} locale={locale} canonicalPath="/404">
+<BaseLayout title={copy.title} locale={locale} canonicalPath="/fi/404">
   <section class="pt-16 pb-12 space-y-4">
     <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-heading)] leading-tight">
       {copy.title}
