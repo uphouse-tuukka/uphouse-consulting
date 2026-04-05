@@ -1,0 +1,20 @@
+# Tuukka Ylöstalo / UpHouse Consulting
+
+> Personal portfolio site for Tuukka Ylöstalo, a Helsinki-based fullstack developer. The site contains a short profile, working principles, and first-person case studies about client work and self-directed product work.
+
+This is a small, curated portfolio site. The homepage is the best starting point if you need a general summary. The project pages are the best place to understand the actual work, role, challenges, and outcomes behind the projects.
+
+Some client work is intentionally anonymized. The case studies are written from Tuukka's perspective and focus on what he worked on, what made the work difficult, and what changed.
+
+## Core pages
+
+- [Home](https://uphouseconsulting.com/): Overview, about section, working style, contact links, and links to project case studies.
+- [Public Transport Webshop](https://uphouseconsulting.com/projects/public-transport-webshop/): Case study about long-running ownership of a customer-facing webshop, accessibility, coordination across company lines, and secure delivery.
+- [Public Transport Website](https://uphouseconsulting.com/projects/public-transport-website/): Case study about broad generalist work across frontend, search, CMS/editor support, migrations, and production issues on a live public-facing platform.
+- [Japanese AI Tutor](https://uphouseconsulting.com/projects/japanese-ai-tutor/): Solo product case study about building an AI-assisted language-learning application with SvelteKit and AI workflows.
+
+## Optional
+
+- [GitHub](https://github.com/uphouse-tuukka): Public code and activity.
+- [LinkedIn](https://linkedin.com/in/tuukka-ylöstalo): Professional profile and background.
+- [Email](mailto:tuukka.ylostalo@outlook.com?subject=Work%20inquiry%20via%20uphouseconsulting.fi): Direct contact.
