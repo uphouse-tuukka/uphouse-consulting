@@ -14,17 +14,20 @@ test.describe('Dark mode', () => {
 
     // Initially dark
     await expect(toggle).toHaveText('Light');
+    await expect(toggle).toHaveAttribute('aria-label', 'Light mode');
     await expect(html).not.toHaveClass(/light/);
 
     // Switch to light
     await toggle.click();
     await expect(html).toHaveClass(/light/);
     await expect(toggle).toHaveText('Dark');
+    await expect(toggle).toHaveAttribute('aria-label', 'Dark mode');
 
     // Switch back to dark
     await toggle.click();
     await expect(html).not.toHaveClass(/light/);
     await expect(toggle).toHaveText('Light');
+    await expect(toggle).toHaveAttribute('aria-label', 'Light mode');
   });
 
   test('persists theme preference across page loads', async ({ page }) => {
@@ -39,6 +42,7 @@ test.describe('Dark mode', () => {
     await page.reload();
     await expect(page.locator('html')).toHaveClass(/light/);
     await expect(toggle).toHaveText('Dark');
+    await expect(toggle).toHaveAttribute('aria-label', 'Dark mode');
   });
 
   test('persists light mode across client-side navigation', async ({ page }) => {
@@ -53,6 +57,7 @@ test.describe('Dark mode', () => {
     await expect(page).toHaveURL(/\/projects\/public-transport-webshop/);
     await expect(page.locator('html')).toHaveClass(/light/);
     await expect(page.locator('#theme-toggle')).toHaveText('Dark');
+    await expect(page.locator('#theme-toggle')).toHaveAttribute('aria-label', 'Dark mode');
   });
 
   test('no FOUC on dark mode load', async ({ page }) => {
