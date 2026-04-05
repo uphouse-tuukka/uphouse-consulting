@@ -68,9 +68,23 @@ test.describe("Home page", () => {
 
     await expect(page.locator("html")).toHaveAttribute("lang", "fi");
     await expect(page.getByRole("link", { name: "UpHouse Consulting" })).toBeVisible();
-    await expect(page.getByRole("link", { name: "In English" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Avaa englanninkielinen versio" })).toBeVisible();
 
     await page.keyboard.press("Tab");
     await expect(page.getByText("Siirry sisältöön")).toBeVisible();
+  });
+
+  test("locale switch link has correct aria-label on Finnish home", async ({ page }) => {
+    await page.goto("/fi/");
+    const switchLink = page.getByRole("link", { name: "Avaa englanninkielinen versio" });
+    await expect(switchLink).toBeVisible();
+    await expect(switchLink).toHaveAttribute("aria-label", "Avaa englanninkielinen versio");
+  });
+
+  test("locale switch link has correct aria-label on English home", async ({ page }) => {
+    await page.goto("/");
+    const switchLink = page.getByRole("link", { name: "Open the Finnish version" });
+    await expect(switchLink).toBeVisible();
+    await expect(switchLink).toHaveAttribute("aria-label", "Open the Finnish version");
   });
 });
