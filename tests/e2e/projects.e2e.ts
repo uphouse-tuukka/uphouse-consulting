@@ -39,4 +39,27 @@ test.describe('Project pages', () => {
     await expect(page.getByText('Page not found')).toBeVisible();
     await expect(page.getByRole('link', { name: /Back to home/i })).toBeVisible();
   });
+
+  test("renders Finnish project page content", async ({ page }) => {
+    await page.goto("/fi/projects/public-transport-webshop");
+
+    await expect(page.locator("#main-content h1")).toHaveText("Joukkoliikenteen verkkokauppa");
+    await expect(page.getByText("Ongelma")).toBeVisible();
+    await expect(page.getByRole("link", { name: "Ota yhteyttä" })).toBeVisible();
+  });
+
+  test("keeps previous and next project navigation inside /fi/", async ({ page }) => {
+    await page.goto("/fi/projects/public-transport-webshop");
+
+    const nextLink = page.getByRole("link", { name: /Joukkoliikenteen verkkosivusto/i });
+    await expect(nextLink).toHaveAttribute("href", "/fi/projects/public-transport-website");
+  });
+
+  test("switches between English and Finnish versions of the same project", async ({ page }) => {
+    await page.goto("/projects/public-transport-webshop");
+    await page.getByRole("link", { name: "Suomeksi" }).click();
+
+    await expect(page).toHaveURL("/fi/projects/public-transport-webshop");
+    await expect(page.locator("#main-content h1")).toHaveText("Joukkoliikenteen verkkokauppa");
+  });
 });

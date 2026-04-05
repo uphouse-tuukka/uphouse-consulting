@@ -14,9 +14,10 @@ interface Props {
   locale: Locale;
   canonicalPath: string;
   switchHref?: string;
+  switchUseAriaLabel?: boolean;
 }
 
-const { title, description, locale, canonicalPath, switchHref } = Astro.props;
+const { title, description, locale, canonicalPath, switchHref, switchUseAriaLabel = true } = Astro.props;
 const copy = siteCopy[locale];
 ---
 
@@ -34,7 +35,7 @@ const copy = siteCopy[locale];
   </head>
   <body class="bg-[var(--color-bg)] text-[var(--color-text)] leading-relaxed">
     <SkipLink label={copy.chrome.skipToContent} />
-    <Header locale={locale} switchHref={switchHref} />
+    <Header locale={locale} switchHref={switchHref} switchUseAriaLabel={switchUseAriaLabel} />
     <main id="main-content" class="max-w-[720px] mx-auto px-6">
       <slot />
     </main>

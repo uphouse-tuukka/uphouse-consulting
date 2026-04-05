@@ -1,4 +1,5 @@
 ---
+projectKey: "japanese-ai-tutor"
 title: "Japanese AI Tutor"
 role: "Solo Developer"
 stack: ["SvelteKit 2", "Svelte 5", "TypeScript", "OpenAI", "TursoSQL", "Vercel"]

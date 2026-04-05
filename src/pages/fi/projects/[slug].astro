@@ -1,11 +1,11 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProjectPage from "../../components/ProjectPage.astro";
-import { getProjectsForLocale } from "../../utils/projects";
-import profile from "../../data/profile.json";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import ProjectPage from "../../../components/ProjectPage.astro";
+import { getProjectsForLocale } from "../../../utils/projects";
+import profile from "../../../data/profile.json";
 
 export async function getStaticPaths() {
-  const projects = await getProjectsForLocale("en");
+  const projects = await getProjectsForLocale("fi");
   return projects.map((project) => ({ params: { slug: project.slug }, props: { project, projects } }));
 }
 
@@ -18,10 +18,10 @@ const nextProject = currentIndex < projects.length - 1 ? { title: projects[curre
 <BaseLayout
   title={`${project.data.title} — ${profile.name}`}
   description={project.data.outcome}
-  locale="en"
-  canonicalPath={`/projects/${project.slug}`}
-  switchHref={`/fi/projects/${project.slug}`}
+  locale="fi"
+  canonicalPath={`/fi/projects/${project.slug}`}
+  switchHref={`/projects/${project.slug}`}
   switchUseAriaLabel={false}
 >
-  <ProjectPage locale="en" project={project} prevProject={prevProject} nextProject={nextProject} />
+  <ProjectPage locale="fi" project={project} prevProject={prevProject} nextProject={nextProject} />
 </BaseLayout>
