@@ -70,4 +70,16 @@ test.describe('Dark mode', () => {
     const html = page.locator('html');
     await expect(html).not.toHaveClass(/light/);
   });
+
+  test('uses localized theme toggle labels on Finnish pages', async ({ page }) => {
+    await page.goto('/fi/');
+
+    const toggle = page.locator('#theme-toggle');
+    await expect(toggle).toHaveText('Vaalea');
+    await expect(toggle).toHaveAttribute('aria-label', 'Vaalea tila');
+
+    await toggle.click();
+    await expect(toggle).toHaveText('Tumma');
+    await expect(toggle).toHaveAttribute('aria-label', 'Tumma tila');
+  });
 });

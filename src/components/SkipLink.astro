@@ -1,11 +1,14 @@
 ---
-// Skip-to-content link for keyboard accessibility.
-// Visually hidden, appears on first Tab press.
+interface Props {
+  label: string;
+}
+
+const { label } = Astro.props;
 ---
 
 <a
   href="#main-content"
   class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--color-accent)] focus:text-[var(--color-bg)] focus:px-4 focus:py-2 focus:rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:ring-offset-2"
 >
-  Skip to content
+  {label}
 </a>

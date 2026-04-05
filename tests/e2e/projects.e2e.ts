@@ -39,4 +39,45 @@ test.describe('Project pages', () => {
     await expect(page.getByText('Page not found')).toBeVisible();
     await expect(page.getByRole('link', { name: /Back to home/i })).toBeVisible();
   });
+
+  test("renders Finnish project page content", async ({ page }) => {
+    await page.goto("/fi/projects/public-transport-webshop");
+
+    await expect(page.locator("#main-content h1")).toHaveText("Joukkoliikenteen verkkokauppa");
+    await expect(page.getByText("Ongelma")).toBeVisible();
+    await expect(page.getByRole("link", { name: "Ota yhteyttä" })).toBeVisible();
+  });
+
+  test("keeps previous and next project navigation inside /fi/", async ({ page }) => {
+    await page.goto("/fi/projects/public-transport-webshop");
+
+    const nextLink = page.getByRole("link", { name: /Joukkoliikenteen verkkosivusto/i });
+    await expect(nextLink).toHaveAttribute("href", "/fi/projects/public-transport-website");
+  });
+
+  test("switches between English and Finnish versions of the same project", async ({ page }) => {
+    await page.goto("/projects/public-transport-webshop");
+    await page.getByRole("link", { name: "Suomeksi" }).click();
+
+    await expect(page).toHaveURL("/fi/projects/public-transport-webshop");
+    await expect(page.locator("#main-content h1")).toHaveText("Joukkoliikenteen verkkokauppa");
+  });
+
+  test("invalid Finnish slug returns 404", async ({ page }) => {
+    const response = await page.goto("/fi/projects/nonexistent-project");
+    expect(response?.status()).toBe(404);
+  });
+
+  test("Finnish home page outputs canonical and alternate hreflang links", async ({ page }) => {
+    await page.goto("/fi/");
+
+    const canonical = page.locator('link[rel="canonical"]');
+    await expect(canonical).toHaveAttribute("href", "https://uphouse-consulting.com/fi/");
+
+    const altEn = page.locator('link[rel="alternate"][hreflang="en"]');
+    await expect(altEn).toHaveAttribute("href", "https://uphouse-consulting.com/");
+
+    const altFi = page.locator('link[rel="alternate"][hreflang="fi"]');
+    await expect(altFi).toHaveAttribute("href", "https://uphouse-consulting.com/fi/");
+  });
 });

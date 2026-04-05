@@ -1,83 +1,26 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-import profile from '../../data/profile.json';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+import { getProjectsForLocale, getLinkedSlug, getAdjacentProjects } from "../../utils/projects";
+import profile from "../../data/profile.json";
 
 export async function getStaticPaths() {
-  const projects = await getCollection('projects');
-  return projects.map((project) => ({
-    params: { slug: project.slug },
-    props: { project },
-  }));
+  const projects = await getProjectsForLocale("en");
+  return projects.map((project) => ({ params: { slug: project.slug }, props: { project, projects } }));
 }
 
-const { project } = Astro.props;
-const { Content } = await project.render();
-
-const allProjects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
-const currentIndex = allProjects.findIndex((p) => p.slug === project.slug);
-const prevProject = currentIndex > 0 ? allProjects[currentIndex - 1] : null;
-const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentIndex + 1] : null;
-
-const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile.ctaSubject)}`;
+const { project, projects } = Astro.props;
+const { prev: prevProject, next: nextProject } = getAdjacentProjects(projects, project.data.projectKey);
+const fiSlug = await getLinkedSlug(project.data.projectKey, "fi");
 ---
 
-<BaseLayout title={`${project.data.title} — ${profile.name}`} description={project.data.outcome}>
-  {/* Project header */}
-  <section class="pt-16 pb-8 space-y-2">
-    <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-heading)] leading-tight">
-      {project.data.title}
-    </h1>
-    <p class="text-[var(--color-muted)]">{project.data.role}</p>
-    <p class="text-[13px] font-mono text-[var(--color-muted)]">
-      {project.data.stack.map((tech: string, i: number) => (
-        <>{i > 0 && <span class="text-[var(--color-border)]"> / </span>}{tech}</>
-      ))}
-    </p>
-    <p class="text-sm text-[var(--color-muted)]">{project.data.duration}</p>
-  </section>
-
-  {/* Case study body */}
-  <article class="prose prose-neutral max-w-none space-y-4
-    [&>h2]:text-2xl [&>h2]:font-semibold [&>h2]:text-[var(--color-heading)] [&>h2]:leading-tight [&>h2]:mt-12 [&>h2]:mb-4
-    [&>p]:text-[var(--color-text)] [&>p]:leading-relaxed
-    [&>ul]:text-[var(--color-text)] [&>ul]:space-y-1 [&>ul]:list-disc [&>ul]:pl-6
-    [&>li]:text-[var(--color-text)]
-  ">
-    <Content />
-  </article>
-
-  {/* Contextual CTA */}
-  <section class="mt-16 pt-8 border-t border-[var(--color-border)]">
-    <p class="text-lg text-[var(--color-heading)]">Want to work together?</p>
-    <div class="mt-4">
-      <a
-        href={mailtoHref}
-        class="inline-block bg-[var(--color-accent)] text-[var(--color-bg)] font-semibold text-sm py-3 px-8 rounded hover:opacity-90 transition-opacity duration-150"
-      >
-        Contact me
-      </a>
-    </div>
-  </section>
-
-  {/* Prev/Next navigation */}
-  <nav aria-label="Project navigation" class="mt-12 pb-8 flex flex-col sm:flex-row sm:justify-between gap-4">
-    {prevProject ? (
-      <a href={`/projects/${prevProject.slug}`} class="text-sm text-[var(--color-muted)] hover:text-[var(--color-heading)] transition-colors duration-150">
-        &larr; {prevProject.data.title}
-      </a>
-    ) : <span />}
-    {nextProject ? (
-      <a href={`/projects/${nextProject.slug}`} class="text-sm text-[var(--color-muted)] hover:text-[var(--color-heading)] transition-colors duration-150 sm:text-right">
-        {nextProject.data.title} &rarr;
-      </a>
-    ) : <span />}
-  </nav>
-
-  {/* Back to home */}
-  <p class="pb-8">
-    <a href="/" class="text-sm text-[var(--color-muted)] hover:text-[var(--color-heading)] transition-colors duration-150">
-      &larr; Back to home
-    </a>
-  </p>
+<BaseLayout
+  title={`${project.data.title} — ${profile.name}`}
+  description={project.data.outcome}
+  locale="en"
+  canonicalPath={`/projects/${project.slug}`}
+  switchHref={fiSlug ? `/fi/projects/${fiSlug}` : "/fi"}
+  switchUseAriaLabel={false}
+>
+  <ProjectPage locale="en" project={project} prevProject={prevProject} nextProject={nextProject} />
 </BaseLayout>

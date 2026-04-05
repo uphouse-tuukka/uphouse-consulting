@@ -6,4 +6,8 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: 'https://uphouse-consulting.com',
+  i18n: {
+    locales: ['en', 'fi'],
+    defaultLocale: 'en',
+  },
 });

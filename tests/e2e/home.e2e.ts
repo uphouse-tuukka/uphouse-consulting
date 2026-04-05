@@ -62,4 +62,53 @@ test.describe("Home page", () => {
     const href = await skipLink.getAttribute("href");
     expect(href).toBe("#main-content");
   });
+
+  test("renders localized shared chrome on Finnish home", async ({ page }) => {
+    await page.goto("/fi/");
+
+    await expect(page.locator("html")).toHaveAttribute("lang", "fi");
+    await expect(page.getByRole("link", { name: "UpHouse Consulting" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Avaa englanninkielinen versio" })).toBeVisible();
+
+    await page.keyboard.press("Tab");
+    await expect(page.getByText("Siirry sisältöön")).toBeVisible();
+  });
+
+  test("locale switch link has correct aria-label on Finnish home", async ({ page }) => {
+    await page.goto("/fi/");
+    const switchLink = page.getByRole("link", { name: "Avaa englanninkielinen versio" });
+    await expect(switchLink).toBeVisible();
+    await expect(switchLink).toHaveAttribute("aria-label", "Avaa englanninkielinen versio");
+  });
+
+  test("locale switch link has correct aria-label on English home", async ({ page }) => {
+    await page.goto("/");
+    const switchLink = page.getByRole("link", { name: "Open the Finnish version" });
+    await expect(switchLink).toBeVisible();
+    await expect(switchLink).toHaveAttribute("aria-label", "Open the Finnish version");
+  });
+
+  test("renders Finnish home copy", async ({ page }) => {
+    await page.goto("/fi/");
+
+    await expect(page.locator("#main-content h1")).toHaveText("Tuukka Ylöstalo");
+    await expect(page.getByText("Ohjelmistokehittäjä UpHouse Consultingin takana")).toBeVisible();
+    await expect(page.getByText("Vähemmän monimutkaisuutta, enemmän ohjelmistoa.")).toBeVisible();
+    await expect(page.getByRole("link", { name: "Ota yhteyttä" }).first()).toBeVisible();
+  });
+
+  test("keeps Finnish project card links inside /fi/", async ({ page }) => {
+    await page.goto("/fi/");
+
+    const firstCard = page.locator("article").first().locator("a").first();
+    await expect(firstCard).toHaveAttribute("href", /^\/fi\/projects\//);
+  });
+
+  test("Finnish project cards show Finnish content", async ({ page }) => {
+    await page.goto("/fi/");
+
+    // The first project (order:1) is the webshop — its Finnish title contains "verkkokauppa"
+    const firstCard = page.locator("article").first();
+    await expect(firstCard).toContainText("verkkokauppa");
+  });
 });
