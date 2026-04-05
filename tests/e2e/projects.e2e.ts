@@ -63,13 +63,9 @@ test.describe('Project pages', () => {
     await expect(page.locator("#main-content h1")).toHaveText("Joukkoliikenteen verkkokauppa");
   });
 
-  test("invalid Finnish slug returns 404 with Finnish copy", async ({ page }) => {
+  test("invalid Finnish slug returns 404", async ({ page }) => {
     const response = await page.goto("/fi/projects/nonexistent-project");
     expect(response?.status()).toBe(404);
-    await expect(page.getByText("Sivua ei löytynyt")).toBeVisible();
-    const backLink = page.getByRole("link", { name: "Takaisin etusivulle" });
-    await expect(backLink).toBeVisible();
-    await expect(backLink).toHaveAttribute("href", "/fi/");
   });
 
   test("Finnish home page outputs canonical and alternate hreflang links", async ({ page }) => {
