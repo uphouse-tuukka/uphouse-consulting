@@ -7,7 +7,6 @@ Personal portfolio site for Tuukka Ylostalo, built as a fast static site with As
 - Astro 5
 - TypeScript
 - Tailwind CSS v4
-- Vitest
 - Playwright
 
 ## Local development
@@ -15,7 +14,7 @@ Personal portfolio site for Tuukka Ylostalo, built as a fast static site with As
 Install dependencies:
 
 ```bash
-npm install --legacy-peer-deps
+npm install
 ```
 
 Start the dev server:
@@ -28,7 +27,6 @@ Run tests:
 
 ```bash
 npm test
-npm run test:e2e
 ```
 
 Build for production:
