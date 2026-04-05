@@ -2,22 +2,36 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { siteCopy } from '../data/site-copy';
 
-const locale = 'en' as const;
-const copy = siteCopy[locale].notFound;
+const en = siteCopy.en.notFound;
+const fi = siteCopy.fi.notFound;
 ---
 
-<BaseLayout title={copy.title} locale={locale} canonicalPath="/404">
+<BaseLayout title={en.title} locale="en" canonicalPath="/404">
   <section class="pt-16 pb-12 space-y-4">
-    <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-heading)] leading-tight">
-      {copy.title}
-    </h1>
-    <p class="text-[var(--color-text)]">
-      {copy.body}
-    </p>
-    <p>
-      <a href="/" class="text-[var(--color-accent)] hover:underline">
-        {copy.backHome}
-      </a>
-    </p>
+    <div id="nf-en">
+      <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-heading)] leading-tight">
+        {en.title}
+      </h1>
+      <p class="text-[var(--color-text)]">{en.body}</p>
+      <p>
+        <a href="/" class="text-[var(--color-accent)] hover:underline">{en.backHome}</a>
+      </p>
+    </div>
+    <div id="nf-fi" hidden>
+      <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-heading)] leading-tight">
+        {fi.title}
+      </h1>
+      <p class="text-[var(--color-text)]">{fi.body}</p>
+      <p>
+        <a href="/fi/" class="text-[var(--color-accent)] hover:underline">{fi.backHome}</a>
+      </p>
+    </div>
   </section>
 </BaseLayout>
+
+<script>
+  if (window.location.pathname.startsWith('/fi')) {
+    document.getElementById('nf-en')!.hidden = true;
+    document.getElementById('nf-fi')!.hidden = false;
+  }
+</script>

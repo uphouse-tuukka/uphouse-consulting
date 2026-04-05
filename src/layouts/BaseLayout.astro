@@ -19,6 +19,8 @@ interface Props {
 
 const { title, description, locale, canonicalPath, switchHref, switchUseAriaLabel = true } = Astro.props;
 const copy = siteCopy[locale];
+const enPath = locale === 'en' ? canonicalPath : (switchHref ?? canonicalPath);
+const fiPath = locale === 'fi' ? canonicalPath : (switchHref ?? canonicalPath);
 ---
 
 <!doctype html>
@@ -28,6 +30,12 @@ const copy = siteCopy[locale];
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description ?? copy.meta.defaultDescription} />
     <link rel="canonical" href={new URL(canonicalPath, Astro.site).toString()} />
+    {switchHref && (
+      <>
+        <link rel="alternate" hreflang="en" href={new URL(enPath, Astro.site).toString()} />
+        <link rel="alternate" hreflang="fi" href={new URL(fiPath, Astro.site).toString()} />
+      </>
+    )}
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script set:html={themeInitScript} />

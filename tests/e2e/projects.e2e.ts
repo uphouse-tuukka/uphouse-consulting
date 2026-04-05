@@ -62,4 +62,26 @@ test.describe('Project pages', () => {
     await expect(page).toHaveURL("/fi/projects/public-transport-webshop");
     await expect(page.locator("#main-content h1")).toHaveText("Joukkoliikenteen verkkokauppa");
   });
+
+  test("invalid Finnish slug returns 404 with Finnish copy", async ({ page }) => {
+    const response = await page.goto("/fi/projects/nonexistent-project");
+    expect(response?.status()).toBe(404);
+    await expect(page.getByText("Sivua ei löytynyt")).toBeVisible();
+    const backLink = page.getByRole("link", { name: "Takaisin etusivulle" });
+    await expect(backLink).toBeVisible();
+    await expect(backLink).toHaveAttribute("href", "/fi/");
+  });
+
+  test("Finnish home page outputs canonical and alternate hreflang links", async ({ page }) => {
+    await page.goto("/fi/");
+
+    const canonical = page.locator('link[rel="canonical"]');
+    await expect(canonical).toHaveAttribute("href", "https://uphouse-consulting.com/fi/");
+
+    const altEn = page.locator('link[rel="alternate"][hreflang="en"]');
+    await expect(altEn).toHaveAttribute("href", "https://uphouse-consulting.com/");
+
+    const altFi = page.locator('link[rel="alternate"][hreflang="fi"]');
+    await expect(altFi).toHaveAttribute("href", "https://uphouse-consulting.com/fi/");
+  });
 });
