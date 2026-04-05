@@ -8,7 +8,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const copy = siteCopy[locale].chrome;
-const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile.ctaSubject)}`;
+const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(copy.ctaSubject)}`;
 ---
 
 <footer class="border-t border-[var(--color-border)] mt-24">

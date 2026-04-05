@@ -23,7 +23,7 @@ const currentIndex = allProjects.findIndex((p) => p.slug === project.slug);
 const prevProject = currentIndex > 0 ? allProjects[currentIndex - 1] : null;
 const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentIndex + 1] : null;
 
-const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile.ctaSubject)}`;
+const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(siteCopy[locale].chrome.ctaSubject)}`;
 ---
 
 <BaseLayout title={`${project.data.title} — ${profile.name}`} description={project.data.outcome} locale={locale} canonicalPath={`/projects/${project.slug}`}>

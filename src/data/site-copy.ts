@@ -22,6 +22,7 @@ export const siteCopy = {
       emailLabel: "Email",
       footerCta: "Let's work together",
       builtWith: "Built with Astro",
+      ctaSubject: "Work inquiry via uphouseconsulting.fi",
     },
     projectPage: {
       workTogether: "Want to work together?",
@@ -81,6 +82,7 @@ export const siteCopy = {
       emailLabel: "Sähköposti",
       footerCta: "Tehdään yhdessä hyvää jälkeä",
       builtWith: "Rakennettu Astrolla",
+      ctaSubject: "Työtiedustelu uphouseconsulting.fi:n kautta",
     },
     projectPage: {
       workTogether: "Olisiko meillä syytä tehdä töitä yhdessä?",

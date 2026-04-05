@@ -20,7 +20,7 @@ interface Props {
 const { locale, projects } = Astro.props;
 const copy = siteCopy[locale].home;
 const chromeCopy = siteCopy[locale].chrome;
-const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile.ctaSubject)}`;
+const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(chromeCopy.ctaSubject)}`;
 ---
 
 <section class="pt-16 pb-12 space-y-4">
