@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectPage from "../../components/ProjectPage.astro";
-import { getProjectsForLocale } from "../../utils/projects";
+import { getProjectsForLocale, getLinkedSlug, getAdjacentProjects } from "../../utils/projects";
 import profile from "../../data/profile.json";
 
 export async function getStaticPaths() {
@@ -10,9 +10,8 @@ export async function getStaticPaths() {
 }
 
 const { project, projects } = Astro.props;
-const currentIndex = projects.findIndex((p: { slug: string }) => p.slug === project.slug);
-const prevProject = currentIndex > 0 ? { title: projects[currentIndex - 1].data.title, slug: projects[currentIndex - 1].slug } : null;
-const nextProject = currentIndex < projects.length - 1 ? { title: projects[currentIndex + 1].data.title, slug: projects[currentIndex + 1].slug } : null;
+const { prev: prevProject, next: nextProject } = getAdjacentProjects(projects, project.data.projectKey);
+const fiSlug = await getLinkedSlug(project.data.projectKey, "fi");
 ---
 
 <BaseLayout
@@ -20,7 +19,7 @@ const nextProject = currentIndex < projects.length - 1 ? { title: projects[curre
   description={project.data.outcome}
   locale="en"
   canonicalPath={`/projects/${project.slug}`}
-  switchHref={`/fi/projects/${project.slug}`}
+  switchHref={fiSlug ? `/fi/projects/${fiSlug}` : "/fi"}
   switchUseAriaLabel={false}
 >
   <ProjectPage locale="en" project={project} prevProject={prevProject} nextProject={nextProject} />
