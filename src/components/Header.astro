@@ -11,7 +11,7 @@ const { locale, switchHref, switchUseAriaLabel = true } = Astro.props;
 const copy = siteCopy[locale].chrome;
 ---
 
-<header transition:persist class="sticky top-0 z-40 bg-[var(--color-bg)] border-b border-[var(--color-border)]">
+<header class="sticky top-0 z-40 bg-[var(--color-bg)] border-b border-[var(--color-border)]">
   <div class="max-w-[720px] mx-auto px-6 py-4 flex items-center justify-between gap-4">
     <a href={locale === "fi" ? "/fi/" : "/"} class="text-[var(--color-heading)] font-semibold text-base hover:text-[var(--color-accent)] transition-colors duration-150">
       UpHouse Consulting

@@ -111,4 +111,28 @@ test.describe("Home page", () => {
     const firstCard = page.locator("article").first();
     await expect(firstCard).toContainText("verkkokauppa");
   });
+
+  test("locale switch updates header links after client-side language change", async ({ page }) => {
+    await page.goto("/");
+
+    const homeLink = page.getByRole("link", { name: "UpHouse Consulting" });
+    const switchLink = page.locator("header a").nth(1);
+
+    await expect(homeLink).toHaveAttribute("href", "/");
+    await expect(switchLink).toHaveText("Suomeksi");
+
+    await switchLink.click();
+
+    await expect(page).toHaveURL("/fi/");
+    await expect(homeLink).toHaveAttribute("href", "/fi/");
+    await expect(switchLink).toHaveText("In English");
+    await expect(switchLink).toHaveAttribute("href", "/");
+
+    await switchLink.click();
+
+    await expect(page).toHaveURL("/");
+    await expect(homeLink).toHaveAttribute("href", "/");
+    await expect(switchLink).toHaveText("Suomeksi");
+    await expect(switchLink).toHaveAttribute("href", "/fi/");
+  });
 });

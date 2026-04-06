@@ -80,4 +80,16 @@ test.describe('Project pages', () => {
     const altFi = page.locator('link[rel="alternate"][hreflang="fi"]');
     await expect(altFi).toHaveAttribute("href", "https://uphouse-consulting.com/fi/");
   });
+
+  test("locale switch preserves the current project after client-side navigation", async ({ page }) => {
+    await page.goto("/");
+
+    await page.locator("article").first().locator("a").first().click();
+    await expect(page).toHaveURL("/projects/public-transport-webshop");
+
+    await page.locator("header a").nth(1).click();
+
+    await expect(page).toHaveURL("/fi/projects/public-transport-webshop");
+    await expect(page.locator("#main-content h1")).toHaveText("Joukkoliikenteen verkkokauppa");
+  });
 });
