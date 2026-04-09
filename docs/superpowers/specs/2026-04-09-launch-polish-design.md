@@ -35,6 +35,8 @@ This keeps canonical and hreflang tags aligned with the launch domain and avoids
 
 - Extend the project content schema with an optional `demoUrl` field
 - Add the public demo URL to both English and Finnish AI Tutor project entries
+- Use this URL:
+  - `https://japanese-learner-sooty.vercel.app/portfolio/challenge`
 - Render the demo link in the project-page header under the existing title / role / stack / duration block
 - Style it as a small secondary external link, not as a primary CTA button
 - Provide locale-aware copy:
@@ -53,6 +55,9 @@ This placement makes the demo discoverable without competing with the contact CT
   - left-side vertical accent divider in the site accent color
   - attribution text in the accent color
   - no large quote icon and no oversized decorative treatment
+- Use these quote texts:
+  - Finnish: `Tuukka on ihailtavan kyvykäs hoitamaan montaa asiaa samanaikaisesti hektisissäkin tilanteissa sekä ratkaisemaan ongelmia oma-aloitteisesti ja ennakoivasti. Lisäksi työn laatu ja monipuolisuus kehittäjänä tekevät hänestä tiimimme todellisen tukipilarin, keneen pystyy aina luottamaan.`
+  - English: `Tuukka is admirably capable of handling many things at once even in hectic situations, and of solving problems independently and proactively. On top of that, the quality and range of his work as a developer make him a real pillar of support for our team, someone we can always rely on.`
 - Attribution should read simply:
   - English: `Product owner`
   - Finnish: `Tuoteomistaja`
@@ -67,7 +72,9 @@ The testimonial stays attached to the project where it was earned, which preserv
   - no looping animation
   - no pulsing halo
   - no icon motion
-- The label should continue to show the next available theme, matching the current behavior
+- The icon and label should both show the next available theme, matching the current behavior:
+  - dark mode active -> sun icon + `Light`
+  - light mode active -> moon icon + `Dark`
 - The control should remain accessible through the existing aria-label pattern
 
 The pill gives the button stronger affordance, while the no-animation decision keeps the UI aligned with the site's restrained aesthetic.
@@ -78,6 +85,9 @@ The pill gives the button stronger affordance, while the no-animation decision k
 - Add one pragmatic sentence to the About section in both locales
 - The tone should present AI as a practical tool, not as a philosophy or sales hook
 - The copy should emphasize using AI-assisted workflows when they genuinely reduce repetitive work or help exploration
+- Use these lines:
+  - English: `I also use AI-assisted workflows when they genuinely help reduce repetitive work or speed up exploration, but I care more about useful outcomes than hype.`
+  - Finnish: `Hyödynnän myös AI-avusteisia työnkulkuja silloin, kun ne oikeasti vähentävät toisteista työtä tai nopeuttavat tutkimista, mutta minulle tärkeämpiä ovat hyödylliset lopputulokset kuin hype.`
 
 This makes AI experience visible to recruiters without weakening the timeless feel of the principles section.
 
@@ -113,7 +123,7 @@ This makes AI experience visible to recruiters without weakening the timeless fe
 ### Deployment config
 
 - Update `astro.config.mjs`
-- Add Vercel redirect configuration if not already present
+- Add redirects in `vercel.json`
 
 ## Error handling and fallbacks
 
