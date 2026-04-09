@@ -32,6 +32,10 @@ Lopputuloksena syntyi tuotannossa käytössä oleva verkkosovellus, joka palveli
 
 Saavutettavuus nousi yhdeksi työn näkyvimmistä tuloksista. Tuotetta auditoitiin ja hiottiin siihen pisteeseen, että se ylsi alan saavutettavuuskilpailun finalistiksi. Samalla sovellus läpäisi myös tietoturva-auditoinnin ilman huomautuksia, mikä oli aivan yhtä tärkeää maksuintegraation sisältävässä sovelluksessa.
 
+> Tuukka on ihailtavan kyvykäs hoitamaan montaa asiaa samanaikaisesti hektisissäkin tilanteissa sekä ratkaisemaan ongelmia oma-aloitteisesti ja ennakoivasti. Lisäksi työn laatu ja monipuolisuus kehittäjänä tekevät hänestä tiimimme todellisen tukipilarin, keneen pystyy aina luottamaan.
+>
+> — Tuoteomistaja
+
 ## Mitä opin
 
 Pidän projekteista, joissa työn vaikutus näkyy ihmisten arjessa ja joilla on selvä käytännön tarkoitus. Tämä projekti muistutti, että arvokkain ohjelmistotyö ei useinkaan ole näyttävintä, vaan huolellista tuotekehitystä, tasaista toimituskykyä ja sitä, että ohjelmisto pysyy ymmärrettävänä myös tekijöilleen.

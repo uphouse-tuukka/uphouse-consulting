@@ -5,6 +5,7 @@ role: "Solo Developer"
 stack: ["SvelteKit 2", "Svelte 5", "TypeScript", "OpenAI", "TursoSQL", "Vercel"]
 duration: "2026–present"
 outcome: "Built an AI-powered language learning app with gamification."
+demoUrl: "https://japanese-learner-sooty.vercel.app/portfolio/challenge"
 order: 3
 ---
 

@@ -33,6 +33,48 @@ test.describe("Project pages", () => {
     await expect(cta).toBeVisible();
   });
 
+  test("renders demo link only on AI tutor project", async ({ page }) => {
+    await page.goto("/projects/japanese-ai-tutor");
+    const demoLinkEn = page.getByRole("link", { name: "Open live demo" });
+    await expect(demoLinkEn).toHaveAttribute(
+      "href",
+      "https://japanese-learner-sooty.vercel.app/portfolio/challenge",
+    );
+
+    await page.goto("/projects/public-transport-webshop");
+    await expect(
+      page.getByRole("link", { name: "Open live demo" }),
+    ).toHaveCount(0);
+
+    await page.goto("/fi/projects/japanese-ai-tutor");
+    const demoLinkFi = page.getByRole("link", { name: "Avaa demo" });
+    await expect(demoLinkFi).toHaveAttribute(
+      "href",
+      "https://japanese-learner-sooty.vercel.app/portfolio/challenge",
+    );
+  });
+
+  test("renders testimonial only on webshop project", async ({ page }) => {
+    await page.goto("/projects/public-transport-webshop");
+    await expect(
+      page.getByText(
+        "Tuukka is admirably capable of handling many things at once even in hectic situations",
+      ),
+    ).toBeVisible();
+    await expect(page.getByText("Product owner")).toBeVisible();
+
+    await page.goto("/projects/japanese-ai-tutor");
+    await expect(page.getByText("Product owner")).toHaveCount(0);
+
+    await page.goto("/fi/projects/public-transport-webshop");
+    await expect(
+      page.getByText(
+        "Tuukka on ihailtavan kyvykäs hoitamaan montaa asiaa samanaikaisesti hektisissäkin tilanteissa",
+      ),
+    ).toBeVisible();
+    await expect(page.getByText("Tuoteomistaja")).toBeVisible();
+  });
+
   test("back to home link works", async ({ page }) => {
     await page.goto("/projects/public-transport-webshop");
     await page.getByRole("link", { name: /Back to home/i }).click();
@@ -56,7 +98,7 @@ test.describe("Project pages", () => {
     await expect(page.locator("#main-content h1")).toHaveText(
       "Joukkoliikenteen verkkokauppa",
     );
-    await expect(page.getByText("Ongelma")).toBeVisible();
+    await expect(page.getByText("Lähtötilanne")).toBeVisible();
     await expect(
       page.getByRole("link", { name: "Ota yhteyttä" }),
     ).toBeVisible();
@@ -101,19 +143,19 @@ test.describe("Project pages", () => {
     const canonical = page.locator('link[rel="canonical"]');
     await expect(canonical).toHaveAttribute(
       "href",
-      "https://uphouse-consulting.com/fi/",
+      "https://uphouseconsulting.fi/fi/",
     );
 
     const altEn = page.locator('link[rel="alternate"][hreflang="en"]');
     await expect(altEn).toHaveAttribute(
       "href",
-      "https://uphouse-consulting.com/",
+      "https://uphouseconsulting.fi/",
     );
 
     const altFi = page.locator('link[rel="alternate"][hreflang="fi"]');
     await expect(altFi).toHaveAttribute(
       "href",
-      "https://uphouse-consulting.com/fi/",
+      "https://uphouseconsulting.fi/fi/",
     );
   });
 

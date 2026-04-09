@@ -7,6 +7,7 @@ const projectSchema = z.object({
   stack: z.array(z.string()),
   duration: z.string(),
   outcome: z.string().max(150),
+  demoUrl: z.string().url().optional(),
   order: z.number(),
 });
 

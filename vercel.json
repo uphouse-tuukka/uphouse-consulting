@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "uphouseconsulting.com"
+        }
+      ],
+      "destination": "https://uphouseconsulting.fi/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "uphouseconsulting.online"
+        }
+      ],
+      "destination": "https://uphouseconsulting.fi/:path*",
+      "permanent": true
+    }
+  ]
+}

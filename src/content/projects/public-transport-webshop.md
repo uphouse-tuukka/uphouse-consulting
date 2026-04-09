@@ -32,6 +32,10 @@ The result was a production application that supported real customer use on the 
 
 Accessibility became one of the clearest signs of that effort. The product was audited and improved to a point where it ended up as a finalist in an industry accessibility competition, which felt meaningful for a public-facing service like this. It also went through security review cleanly, which mattered just as much in a webshop handling transaction integrations.
 
+> Tuukka is admirably capable of handling many things at once even in hectic situations, and of solving problems independently and proactively. On top of that, the quality and range of his work as a developer make him a real pillar of support for our team, someone we can always rely on.
+>
+> — Product owner
+
 ## What I took from it
 
 I like projects where the work is visible, useful, and tied to everyday situations. This one reminded me that some of the most valuable engineering work is not flashy at all. It is careful product work, steady delivery, and making sure the software stays understandable for the people building it.

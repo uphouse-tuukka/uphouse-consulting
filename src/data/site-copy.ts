@@ -27,6 +27,8 @@ export const siteCopy = {
     projectPage: {
       workTogether: "Want to work together?",
       contactCta: "Contact me",
+      demoLinkLabel: "Open live demo",
+      testimonialAttributionProductOwner: "Product owner",
       backHome: "Back to home",
       navLabel: "Project navigation",
     },
@@ -87,6 +89,8 @@ export const siteCopy = {
     projectPage: {
       workTogether: "Voisinko auttaa teidän projektissanne?",
       contactCta: "Ota yhteyttä",
+      demoLinkLabel: "Avaa demo",
+      testimonialAttributionProductOwner: "Tuoteomistaja",
       backHome: "Takaisin etusivulle",
       navLabel: "Projektin navigaatio",
     },

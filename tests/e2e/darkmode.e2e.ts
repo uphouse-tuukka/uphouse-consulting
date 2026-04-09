@@ -10,23 +10,28 @@ test.describe('Dark mode', () => {
   test('toggle switches to light mode and back', async ({ page }) => {
     await page.goto('/');
     const toggle = page.locator('#theme-toggle');
+    const toggleLabel = page.locator('#theme-toggle [data-theme-toggle-label]');
+    const toggleIcon = page.locator('#theme-toggle [data-theme-toggle-icon]');
     const html = page.locator('html');
 
     // Initially dark
-    await expect(toggle).toHaveText('Light');
+    await expect(toggleLabel).toHaveText('Light');
+    await expect(toggleIcon).toHaveText('☀');
     await expect(toggle).toHaveAttribute('aria-label', 'Light mode');
     await expect(html).not.toHaveClass(/light/);
 
     // Switch to light
     await toggle.click();
     await expect(html).toHaveClass(/light/);
-    await expect(toggle).toHaveText('Dark');
+    await expect(toggleLabel).toHaveText('Dark');
+    await expect(toggleIcon).toHaveText('☾');
     await expect(toggle).toHaveAttribute('aria-label', 'Dark mode');
 
     // Switch back to dark
     await toggle.click();
     await expect(html).not.toHaveClass(/light/);
-    await expect(toggle).toHaveText('Light');
+    await expect(toggleLabel).toHaveText('Light');
+    await expect(toggleIcon).toHaveText('☀');
     await expect(toggle).toHaveAttribute('aria-label', 'Light mode');
   });
 
@@ -41,22 +46,23 @@ test.describe('Dark mode', () => {
     // Reload
     await page.reload();
     await expect(page.locator('html')).toHaveClass(/light/);
-    await expect(toggle).toHaveText('Dark');
+    await expect(page.locator('#theme-toggle [data-theme-toggle-label]')).toHaveText('Dark');
     await expect(toggle).toHaveAttribute('aria-label', 'Dark mode');
   });
 
   test('persists light mode across client-side navigation', async ({ page }) => {
     await page.goto('/');
     const toggle = page.locator('#theme-toggle');
+    const toggleLabel = page.locator('#theme-toggle [data-theme-toggle-label]');
 
     await toggle.click();
     await expect(page.locator('html')).toHaveClass(/light/);
-    await expect(toggle).toHaveText('Dark');
+    await expect(toggleLabel).toHaveText('Dark');
 
     await page.getByRole('link', { name: 'Public Transport Webshop' }).first().click();
     await expect(page).toHaveURL(/\/projects\/public-transport-webshop/);
     await expect(page.locator('html')).toHaveClass(/light/);
-    await expect(page.locator('#theme-toggle')).toHaveText('Dark');
+    await expect(page.locator('#theme-toggle [data-theme-toggle-label]')).toHaveText('Dark');
     await expect(page.locator('#theme-toggle')).toHaveAttribute('aria-label', 'Dark mode');
   });
 
@@ -75,11 +81,13 @@ test.describe('Dark mode', () => {
     await page.goto('/fi/');
 
     const toggle = page.locator('#theme-toggle');
-    await expect(toggle).toHaveText('Vaalea');
+    const toggleLabel = page.locator('#theme-toggle [data-theme-toggle-label]');
+
+    await expect(toggleLabel).toHaveText('Vaalea');
     await expect(toggle).toHaveAttribute('aria-label', 'Vaalea tila');
 
     await toggle.click();
-    await expect(toggle).toHaveText('Tumma');
+    await expect(toggleLabel).toHaveText('Tumma');
     await expect(toggle).toHaveAttribute('aria-label', 'Tumma tila');
   });
 });

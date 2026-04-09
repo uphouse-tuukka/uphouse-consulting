@@ -33,11 +33,28 @@ export function initThemeToggle(): void {
     const nextLabel = isLight
       ? toggleElement.dataset.darkLabel ?? "Dark"
       : toggleElement.dataset.lightLabel ?? "Light";
+    const nextIcon = isLight
+      ? toggleElement.dataset.darkIcon ?? "☾"
+      : toggleElement.dataset.lightIcon ?? "☀";
     const nextAria = isLight
       ? toggleElement.dataset.darkAria ?? "Dark mode"
       : toggleElement.dataset.lightAria ?? "Light mode";
+    const iconElement = toggleElement.querySelector<HTMLElement>(
+      "[data-theme-toggle-icon]",
+    );
+    const labelElement = toggleElement.querySelector<HTMLElement>(
+      "[data-theme-toggle-label]",
+    );
 
-    toggleElement.textContent = nextLabel;
+    if (iconElement) {
+      iconElement.textContent = nextIcon;
+    }
+
+    if (labelElement) {
+      labelElement.textContent = nextLabel;
+    } else {
+      toggleElement.textContent = nextLabel;
+    }
     toggleElement.setAttribute("aria-label", nextAria);
     toggleElement.setAttribute("aria-pressed", isLight ? "false" : "true");
   }

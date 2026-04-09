@@ -5,6 +5,7 @@ role: "Soolokehittäjä"
 stack: ["SvelteKit 2", "Svelte 5", "TypeScript", "OpenAI", "TursoSQL", "Vercel"]
 duration: "2026–nykyhetki"
 outcome: "Rakensin tekoälypohjaisen kieltenoppimissovelluksen, joka mukautuu käyttäjän oppimistahtiin."
+demoUrl: "https://japanese-learner-sooty.vercel.app/portfolio/challenge"
 order: 3
 ---
 

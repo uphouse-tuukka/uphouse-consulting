@@ -16,7 +16,7 @@ const copy = siteCopy[locale].chrome;
     <a href={locale === "fi" ? "/fi/" : "/"} class="text-[var(--color-heading)] font-semibold text-base hover:text-[var(--color-accent)] transition-colors duration-150">
       UpHouse Consulting
     </a>
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-3 md:gap-4">
       {switchHref && (
         <a href={switchHref} aria-label={switchUseAriaLabel ? copy.switchLocaleAria : undefined} class="text-sm text-[var(--color-muted)] hover:text-[var(--color-heading)] transition-colors duration-150">
           {copy.switchLocaleLabel}
@@ -29,11 +29,14 @@ const copy = siteCopy[locale].chrome;
         data-light-aria={copy.themeLightAria}
         data-dark-label={copy.themeDarkLabel}
         data-dark-aria={copy.themeDarkAria}
+        data-light-icon="☀"
+        data-dark-icon="☾"
         aria-label={copy.themeLightAria}
         aria-pressed="true"
-        class="text-sm text-[var(--color-muted)] hover:text-[var(--color-heading)] transition-colors duration-150 px-2 py-1 min-h-[44px] min-w-[44px] flex items-center justify-center"
+        class="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]/70 text-sm text-[var(--color-muted)] hover:text-[var(--color-heading)] hover:border-[var(--color-border-hover)] hover:cursor-pointer transition-colors duration-150 px-3 py-2 min-h-[44px]"
       >
-        {copy.themeLightLabel}
+        <span data-theme-toggle-icon aria-hidden="true" class="text-base leading-none">☀</span>
+        <span data-theme-toggle-label>{copy.themeLightLabel}</span>
       </button>
     </div>
   </div>
