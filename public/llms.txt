@@ -4,7 +4,7 @@
 
 This is a small, curated portfolio site. The homepage is the best starting point if you need a general summary. The project pages are the best place to understand the actual work, role, challenges, and outcomes behind the projects.
 
-Some client work is intentionally anonymized. The case studies are written from Tuukka's perspective and focus on what he worked on, what made the work difficult, and what changed.
+Some client work is intentionally anonymized. The case studies are written from Tuukka's perspective and focus on what he worked on, what made the work difficult, and what was the result.
 
 ## Core pages
 

@@ -8,15 +8,15 @@ outcome: "Built an AI-powered language learning app with gamification."
 order: 3
 ---
 
-## The problem
+## Starting point
 
-I started this project because most language-learning apps felt too generic for what I wanted. They were good at repetition, but not very good at adapting to how I actually like to learn. I wanted something that could feel more practical, more personal, and more responsive than a fixed set of exercises.
+I started this project because most language-learning apps felt too generic for what I wanted. They were good at repetition, but not very good at adapting to how I actually like to learn. I wanted something that could feel more practical, more personal, and more responsive than a fixed set of exercises. At the end of the day, I built it for my own needs: I wanted a better way to learn Japanese before my trip.
 
 ## My role
 
 This one is entirely my own. I designed and built the product, made the technical choices, and used it as a way to explore both language learning and AI-assisted development in a more hands-on way than reading or experimenting in isolation ever would have allowed.
 
-## What the work involved
+## What I worked on
 
 I built a language-learning application where an AI tutor generates personalized lessons, tracks progress, and adjusts difficulty over time. I also added gamification elements because motivation matters just as much as lesson quality when the goal is to build a real habit.
 
@@ -26,9 +26,9 @@ From a technical point of view, the project gave me room to go deep on SvelteKit
 
 The difficult part was making the AI feel like a genuine improvement instead of a gimmick. It is easy to build something that looks clever in a screenshot. It is much harder to build something you want to come back to every day. That tension shaped a lot of the product decisions.
 
-## What changed
+## The result
 
-The result is an application that I use myself on a regular basis, which is the best signal I can ask for at this stage. It also gave me direct experience with AI agent orchestration patterns in the context of a real product instead of a detached technical exercise.
+The result is an application that I use myself on a regular basis, which is the best signal I can ask for at this stage. It also gave me direct experience with AI agent orchestration patterns in the context of a real product instead of a detached technical exercise. Those lessons around AI workflows and orchestration have carried into later projects too, whenever they have been relevant.
 
 ## What I took from it
 

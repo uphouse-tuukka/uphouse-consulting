@@ -1,35 +1,35 @@
 ---
 projectKey: "japanese-ai-tutor"
-title: "Japanin kielen AI-opettaja"
-role: "Itsenäinen kehittäjä"
+title: "Japanin kielen tekoälyopettaja"
+role: "Soolokehittäjä"
 stack: ["SvelteKit 2", "Svelte 5", "TypeScript", "OpenAI", "TursoSQL", "Vercel"]
 duration: "2026–nykyhetki"
-outcome: "Rakensin tekoälyyn perustuvan kieltenoppimissovelluksen, jossa on myös pelillistämistä."
+outcome: "Rakensin tekoälypohjaisen kieltenoppimissovelluksen, joka mukautuu käyttäjän oppimistahtiin."
 order: 3
 ---
 
-## Ongelma
+## Lähtötilanne
 
-Aloitin tämän projektin, koska useimmat kieltenoppimissovellukset tuntuivat liian geneerisiltä siihen, mitä itse halusin. Ne olivat hyviä toistossa, mutta huonoja mukautumaan siihen, miten minä oikeasti opin. Halusin jotain käytännöllisempää, henkilökohtaisempaa ja joustavampaa kuin valmiiksi rajatun tehtäväjoukon.
+Aloitin tämän projektin, koska useimmat kieltenoppimissovellukset tuntuivat omaan tarpeeseeni liian geneerisiltä. Ne olivat hyviä toistossa, mutta eivät juuri mukautuneet siihen, miten itse haluan oppia. Halusin jotain käytännöllisempää, henkilökohtaisempaa ja elävämpää kuin valmiiksi rajattu harjoituspolku. Lyhyemmin sanottuna: halusin itselleni paremman tavan opiskella japania ennen matkaani.
 
 ## Roolini
 
-Tämä projekti on kokonaan omaani. Suunnittelin ja rakensin tuotteen itse, tein tekniset valinnat ja käytin sitä tapana tutkia sekä kieltenoppimista että AI-avusteista kehitystä käytännön tasolla.
+Tämä on kokonaan oma projektini. Suunnittelin ja rakensin tuotteen itse, tein tekniset valinnat ja käytin sitä tapana tutkia sekä kieltenoppimista että tekoälyavusteista kehitystä paljon käytännönläheisemmin kuin pelkkä lukeminen tai irralliset kokeilut olisivat mahdollistaneet.
 
-## Mitä työ sisälsi
+## Mitä tein
 
-Rakensin kieltenoppimissovelluksen, jossa AI-opettaja luo henkilökohtaisia oppitunteja, seuraa edistymistä ja säätää vaikeustasoa ajan myötä. Lisäsin mukaan myös pelillistämistä, koska motivaatio on yhtä tärkeää kuin itse oppituntien laatu silloin, kun tavoitteena on oikean tavan rakentaminen.
+Rakensin kieltenoppimissovelluksen, jossa tekoälyopettaja tuottaa käyttäjälle sopivia oppitunteja, seuraa edistymistä ja säätää vaikeustasoa ajan myötä. Mukaan tuli myös pelillistämistä, koska motivaatio on vähintään yhtä tärkeää kuin oppituntien laatu silloin, kun tavoitteena on rakentaa oikea oppimisen rutiini.
 
-Teknisesti projekti antoi mahdollisuuden mennä syvälle SvelteKitiin, AI-työnkulkuihin ja agenttiorganisaation malleihin. Vielä tärkeämpää oli kuitenkin se, että jouduin jatkuvasti kysymään itseltäni, oliko tuotteesta oikeasti tulossa hyödyllisempi vai vain teknisesti kiinnostavampi.
+Teknisesti projekti antoi mahdollisuuden sukeltaa syvälle SvelteKitiin, tekoälytyönkulkuihin ja agenttien orkestrointiin. Vielä olennaisempaa oli kuitenkin se, että jouduin jatkuvasti pohtimaan, oliko tuotteesta oikeasti tulossa hyödyllisempi vai vain teknisesti kiinnostavampi. Halusin, että sovellus pysyy kiinni aidossa oppimistarpeessa eikä muutu oman stackinsa demoksi.
 
 ## Mikä teki työstä hankalaa
 
-Vaikeinta oli saada AI tuntumaan aidolta parannukselta eikä pelkältä tempulta. On helppoa rakentaa jotain, joka näyttää fiksulta kuvakaappauksessa. On paljon vaikeampaa rakentaa jotain, jonka pariin haluaa palata joka päivä. Tämä jännite ohjasi isoa osaa tuotepäätöksistä.
+Vaikeinta oli saada tekoäly tuntumaan oikealta parannukselta eikä pelkältä tempulta. On helppoa rakentaa jotain, joka vain näyttää fiksulta. On paljon vaikeampaa tehdä jotain, jonka pariin haluaa palata päivä toisensa jälkeen ja joka oikeasti vastaa siihen tarpeeseen, jota varten se on tehty.
 
-## Mitä muuttui
+## Lopputulos
 
-Tuloksena syntyi sovellus, jota käytän itse säännöllisesti. Se on tässä vaiheessa paras mahdollinen merkki siitä, että tuotteessa on jotain oikeasti hyödyllistä. Samalla projekti antoi minulle käytännön kokemusta AI-agenttien orkestroinnista oikean tuotteen yhteydessä eikä irrallisena teknisenä kokeena.
+Lopputuloksena syntyi sovellus, jota käytän itse säännöllisesti, ja se on minusta paras mittari siihen, että tuote on oikeasti hyödyllinen. Samalla projekti antoi minulle käytännön kokemusta tekoälyagenttien orkestroinnista osana oikeaa tuotetta, eikä vain irrallisena kokeiluna. Erityisesti tästä saadut opit tekoälytyönkuluista ja orkestroinnista ovat kulkeneet mukana myös myöhempiin projekteihin aina, kun niille on ollut käyttöä.
 
 ## Mitä opin
 
-Pidän tuotteista, jotka liikkuvat uteliaisuuden ja käytännöllisyyden rajalla. Tämä projekti muistutti, että myös henkilökohtainen projekti voi olla vakavaa työtä silloin, kun se pakottaa testaamaan ideoita omia arjen tapoja vasten.
+Oman tarpeen ympärille rakentaminen teki tästä projektista erityisen kiinnostavan. Se muistutti myös, että harrasteprojektissakin hyvän idean muuttaminen toimivaksi tuotteeksi vaatii paljon enemmän kuin alkuinnostuksen.

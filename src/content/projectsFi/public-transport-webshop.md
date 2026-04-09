@@ -4,34 +4,34 @@ title: "Joukkoliikenteen verkkokauppa"
 role: "Fullstack-kehittäjä"
 stack: ["TypeScript", "Next.js", "React", "Sass", "Azure"]
 duration: "2023–2026"
-outcome: "Rakensin asiakkaille suunnatun lippukaupan, joka julkaistiin Azureen."
+outcome: "Rakensin Azureen julkaistun lippukaupan joukkoliikenteen asiakkaille."
 order: 1
 ---
 
-## Ongelma
+## Lähtötilanne
 
-Työskentelin joukkoliikenteen asiakkaille suunnatun verkkokaupan parissa. Sen tehtävä oli mahdollistaa lippujen ostaminen ja matkakortin arvon hallinta verkossa ilman mobiilisovellusta. Kyse oli palvelusta, jota ihmiset käyttävät arjen käytännöllisiin tarpeisiin, mikä teki työstä heti alusta asti konkreettista.
+Työskentelin joukkoliikenteen asiakkaille tarkoitetun verkkokaupan parissa. Sen piti mahdollistaa lippujen ostaminen ja matkakortin arvon hallinta verkossa ilman erillistä mobiilisovellusta. Kyse oli palvelusta, jota ihmiset käyttävät arkisiin tarpeisiin, joten työn konkreettisuus tuntui heti.
 
 ## Roolini
 
-Tiimimme vastasi asiakaspuolen sovelluksesta sekä sen ympärillä olevasta kevyestä backendistä. Pitkän aikaa olin projektin pääkehittäjä, joten työni sisälsi sekä päivittäistä toteutusta että pienempiä rakenteellisia päätöksiä, jotka vaikuttavat siihen, pysyykö sovellus ymmärrettävänä ajan mittaan.
+Tiimimme vastasi asiakaspuolen sovelluksesta ja sitä tukevasta kevyestä backendistä. Olin pitkään projektin ainoa kehittäjä, joten päivittäisen toteutuksen lisäksi vastuullani olivat myös pienet mutta tärkeät rakenteelliset päätökset, joilla sovellus pidettiin ylläpidettävänä ja laajennettavana myös tulevaisuudessa.
 
-## Mitä työ sisälsi
+## Mitä tein
 
-Työ ei ollut vain yksittäisten ominaisuuksien rakentamista. Iso osa tekemisestä oli sitä, että pidin sovellusta tasaisesti eteenpäin liikkuvana ja käytettävänä samalla, kun se palveli oikeita asiakastarpeita. Se tarkoitti lippujen ostamisen virtoja, matkakortin lataamista ja molempien tukemista tilanteissa, joissa ostettiin itselle tai toiselle henkilölle.
+Työ ei ollut vain yksittäisten ominaisuuksien toteuttamista. Iso osa arkea oli sitä, että sovellus pysyi käytettävänä ja kehittyi tasaisesti samalla, kun sen piti palvella oikeita asiakastarpeita. Käytännössä se tarkoitti lippujen ostamisen ja matkakortin lataamisen sujuvoittamista sekä sitä, että molemmat toimivat hyvin myös silloin, kun ostos tehtiin toiselle henkilölle.
 
-Teknisesti sovellus oli tuotannossa oleva Next.js-sovellus, joka ajettiin Docker-imagena Azuressa. Käytännössä työ oli kuitenkin laajempi kuin pelkkä stacki. Jouduin miettimään, mitä rakennetaan seuraavaksi, miten koodi pidetään ymmärrettävänä ja miten tehdään päätöksiä, jotka tuntuvat järkeviltä vielä silloinkin, kun projekti on ehtinyt kasvaa. Saavutettavuus oli mukana koko ajan, ei lisäys lopussa.
+Teknisesti kyse oli tuotannossa pyörivästä Next.js-sovelluksesta, jota ajettiin Docker-imagena Azuressa. Käytännössä työ oli silti paljon muutakin kuin valitun stackin kanssa elämistä. Jouduin miettimään, mitä rakennetaan seuraavaksi, miten koodi pidetään selkeänä ja millaiset päätökset kestävät vielä silloinkin, kun projekti on kasvanut. Saavutettavuus ei ollut viime hetken lisäys, vaan mukana koko ajan.
 
 ## Mikä teki työstä hankalaa
 
-Koska kyseessä oli oikea transaktiotuote, myös tavalliset muutokset vaativat huolellisuutta. Lisäksi verkkokauppa oli vain yksi osa paljon suurempaa uudistusta, jossa oli mukana useita yrityksiä ja konsulttitaloja. Tällaisessa asetelmassa siilot syntyvät helposti. Yksi työn tärkeistä puolista oli pitää ihmiset keskittyneinä samaan lopputulokseen ja saada työ etenemään organisaatiorajojen yli.
+Kyseinen verkkokauppa oli vain yksi osa asiakkaan laajempaa uudistusta, jossa oli mukana useita eri toimijoita. Tällaisessa ympäristössä siiloja syntyy helposti. Yksi tärkeä osa työtä oli pitää ihmiset kiinni samassa lopputuloksessa ja saada tekeminen etenemään yli organisaatiorajojen.
 
-## Mitä muuttui
+## Lopputulos
 
-Lopputuloksena syntyi tuotannossa käytössä oleva verkkosovellus, joka palveli oikeita asiakkaita ja jatkoi kehittymistään sen sijaan, että sitä olisi kohdeltu lyhyenä julkaisuponnistuksena. Minun näkökulmastani tärkeintä oli olla mukana muovaamassa tuotteesta sellainen, jota mahdollisimman moni pystyy käyttämään.
+Lopputuloksena syntyi tuotannossa käytössä oleva verkkosovellus, joka palveli oikeita asiakkaita ja jatkoi kehittymistään sen sijaan, että se olisi jäänyt kertaluonteiseksi julkaisuksi. Omasta näkökulmastani tärkeintä oli olla mukana tekemässä tuotteesta sellainen, että mahdollisimman moni pystyy käyttämään sitä sujuvasti.
 
-Saavutettavuus nousi yhdeksi työn näkyvimmistä merkeistä. Tuotetta auditoitiin ja parannettiin siihen pisteeseen, että se päätyi alan saavutettavuuskilpailun finalistiksi. Samalla se läpäisi myös tietoturvatarkastelun siististi, mikä oli aivan yhtä tärkeää maksuliikennettä käsittelevässä verkkokaupassa.
+Saavutettavuus nousi yhdeksi työn näkyvimmistä tuloksista. Tuotetta auditoitiin ja hiottiin siihen pisteeseen, että se ylsi alan saavutettavuuskilpailun finalistiksi. Samalla sovellus läpäisi myös tietoturva-auditoinnin ilman huomautuksia, mikä oli aivan yhtä tärkeää maksuintegraation sisältävässä sovelluksessa.
 
 ## Mitä opin
 
-Pidän projekteista, joissa työn vaikutus näkyy arjessa ja joissa ohjelmistolla on selvä käytännöllinen tarkoitus. Tämä projekti muistutti, että kaikkein arvokkain ohjelmistotyö ei ole usein näyttävää, vaan huolellista tuotekehitystä, tasaista toimituskykyä ja sitä, että ohjelmisto pysyy ymmärrettävänä myös tekijöilleen.
+Pidän projekteista, joissa työn vaikutus näkyy ihmisten arjessa ja joilla on selvä käytännön tarkoitus. Tämä projekti muistutti, että arvokkain ohjelmistotyö ei useinkaan ole näyttävintä, vaan huolellista tuotekehitystä, tasaista toimituskykyä ja sitä, että ohjelmisto pysyy ymmärrettävänä myös tekijöilleen.

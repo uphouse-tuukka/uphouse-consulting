@@ -6,7 +6,7 @@ const projectSchema = z.object({
   role: z.string(),
   stack: z.array(z.string()),
   duration: z.string(),
-  outcome: z.string().max(120),
+  outcome: z.string().max(150),
   order: z.number(),
 });
 

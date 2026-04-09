@@ -67,7 +67,7 @@ export const siteCopy = {
       defaultDescription: "Ohjelmistokehittäjä Helsingistä",
       homeTitle: "Tuukka Ylöstalo — Ohjelmistokehittäjä",
       homeDescription:
-        "Tuukka Ylöstalon portfolio ja projektit. Helsingissä toimiva ohjelmistokehittäjä UpHouse Consultingin takana.",
+        "Tuukka Ylöstalon portfolio ja valikoituja projekteja. Helsingissä toimiva ohjelmistokehittäjä UpHouse Consultingin takana.",
     },
     chrome: {
       skipToContent: "Siirry sisältöön",
@@ -80,12 +80,12 @@ export const siteCopy = {
       githubAria: "GitHub (avautuu uuteen välilehteen)",
       linkedinAria: "LinkedIn (avautuu uuteen välilehteen)",
       emailLabel: "Sähköposti",
-      footerCta: "Tehdään yhdessä hyvää jälkeä",
+      footerCta: "Tehdään yhdessä toimivaa softaa",
       builtWith: "Rakennettu Astrolla",
-      ctaSubject: "Työtiedustelu uphouseconsulting.fi:n kautta",
+      ctaSubject: "Työtiedustelu sivuston kautta",
     },
     projectPage: {
-      workTogether: "Olisiko meillä syytä tehdä töitä yhdessä?",
+      workTogether: "Voisinko auttaa teidän projektissanne?",
       contactCta: "Ota yhteyttä",
       backHome: "Takaisin etusivulle",
       navLabel: "Projektin navigaatio",
@@ -96,27 +96,27 @@ export const siteCopy = {
       backHome: "Takaisin etusivulle",
     },
     home: {
-      companyLine: "Ohjelmistokehittäjä UpHouse Consultingin takana",
-      tagline: "Vähemmän monimutkaisuutta, enemmän ohjelmistoa.",
+      companyLine: "Ohjelmistokehittäjä, UpHouse Consulting",
+      tagline: "Vähemmän turhaa mutkikkuutta, enemmän toimivaa softaa.",
       contactCta: "Ota yhteyttä",
       aboutHeading: "Minusta",
       aboutParagraphs: [
-        "Olen Helsingissä asuva fullstack-kehittäjä. Viihdyn parhaiten projekteissa, joissa pääsen työskentelemään tiiviisti muun tiimin kanssa ja auttamaan siellä, missä työ eniten sitä tarvitsee.",
-        "Minulle hyvä konsultointi ei ole pelkkää teknistä osaamista. Yhtä tärkeitä ovat selkeä viestintä, luottamus ja se, miten työskentelet muiden kanssa. Vapaa-ajalla aikani jakautuu nörttiharrastusten, ruoanlaiton ja raskaiden asioiden nostamisen välillä.",
+        "Olen Helsingissä asuva fullstack-kehittäjä. Viihdyn projekteissa, joissa pääsen tekemään tiiviisti töitä muun tiimin kanssa ja auttamaan siellä, missä sitä eniten tarvitaan.",
+        "Hyvä konsultointi ei koostu pelkästään teknisestä osaamisesta. Yhtä paljon merkitsevät selkeä viestintä, luottamus ja se, miten ihmisten kanssa tehdään töitä. Vapaa-ajalla aikani kuluu nörtteilyn, ruuanlaiton ja painojen nostelun parissa.",
       ],
-      workHeading: "Miten työskentelen",
+      workHeading: "Miten teen töitä",
       workItems: [
         {
-          title: "Aloitan oikeasta ongelmasta",
-          body: "Yritän ymmärtää, mitä oikeasti pitää muuttaa ennen kuin lisätään prosessia, scopea tai koodia.",
+          title: "Lähden liikkeelle oikeasta ongelmasta",
+          body: "Yritän ensin ymmärtää, mitä oikeasti pitää ratkaista, ennen kuin lisätään prosessia, laajuutta tai koodia.",
         },
         {
-          title: "Karsin monimutkaisuutta ajoissa",
-          body: "Pidän järjestelmistä, jotka tiimi pystyy ymmärtämään ja pitämään kunnossa.",
+          title: "Karsin turhaa monimutkaisuutta ajoissa",
+          body: "Pidän järjestelmistä, jotka tiimi ymmärtää ja joita on mahdollista ylläpitää ilman jatkuvaa säätöä.",
         },
         {
-          title: "Toimitan työn, johon voi luottaa",
-          body: "Tavoitteena on ylläpidettävä ohjelmisto, joka auttaa käyttäjiä, tukee tiimiä ja kestää käytössä myös julkaisun jälkeen.",
+          title: "Teen työtä, johon voi luottaa",
+          body: "Tavoitteena on ylläpidettävä ohjelmisto, joka palvelee käyttäjiä, helpottaa tiimin työtä ja kestää aikaa myös julkaisun jälkeen.",
         },
       ],
       projectsHeading: "Projektit",
