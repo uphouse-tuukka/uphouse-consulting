@@ -11,12 +11,14 @@ test.describe('Dark mode', () => {
     await page.goto('/');
     const toggle = page.locator('#theme-toggle');
     const toggleLabel = page.locator('#theme-toggle [data-theme-toggle-label]');
-    const toggleIcon = page.locator('#theme-toggle [data-theme-toggle-icon]');
+    const lightIcon = page.locator('#theme-toggle [data-theme-toggle-icon-light]');
+    const darkIcon = page.locator('#theme-toggle [data-theme-toggle-icon-dark]');
     const html = page.locator('html');
 
     // Initially dark
     await expect(toggleLabel).toHaveText('Light');
-    await expect(toggleIcon).toHaveText('☀');
+    await expect(lightIcon).toBeVisible();
+    await expect(darkIcon).toBeHidden();
     await expect(toggle).toHaveAttribute('aria-label', 'Light mode');
     await expect(html).not.toHaveClass(/light/);
 
@@ -24,14 +26,16 @@ test.describe('Dark mode', () => {
     await toggle.click();
     await expect(html).toHaveClass(/light/);
     await expect(toggleLabel).toHaveText('Dark');
-    await expect(toggleIcon).toHaveText('☾');
+    await expect(lightIcon).toBeHidden();
+    await expect(darkIcon).toBeVisible();
     await expect(toggle).toHaveAttribute('aria-label', 'Dark mode');
 
     // Switch back to dark
     await toggle.click();
     await expect(html).not.toHaveClass(/light/);
     await expect(toggleLabel).toHaveText('Light');
-    await expect(toggleIcon).toHaveText('☀');
+    await expect(lightIcon).toBeVisible();
+    await expect(darkIcon).toBeHidden();
     await expect(toggle).toHaveAttribute('aria-label', 'Light mode');
   });
 

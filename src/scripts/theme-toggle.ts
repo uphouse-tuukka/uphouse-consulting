@@ -33,21 +33,27 @@ export function initThemeToggle(): void {
     const nextLabel = isLight
       ? toggleElement.dataset.darkLabel ?? "Dark"
       : toggleElement.dataset.lightLabel ?? "Light";
-    const nextIcon = isLight
-      ? toggleElement.dataset.darkIcon ?? "☾"
-      : toggleElement.dataset.lightIcon ?? "☀";
     const nextAria = isLight
       ? toggleElement.dataset.darkAria ?? "Dark mode"
       : toggleElement.dataset.lightAria ?? "Light mode";
-    const iconElement = toggleElement.querySelector<HTMLElement>(
-      "[data-theme-toggle-icon]",
+    const lightIconElement = toggleElement.querySelector(
+      "[data-theme-toggle-icon-light]",
+    );
+    const darkIconElement = toggleElement.querySelector(
+      "[data-theme-toggle-icon-dark]",
     );
     const labelElement = toggleElement.querySelector<HTMLElement>(
       "[data-theme-toggle-label]",
     );
 
-    if (iconElement) {
-      iconElement.textContent = nextIcon;
+    if (lightIconElement && darkIconElement) {
+      if (isLight) {
+        lightIconElement.classList.add("hidden");
+        darkIconElement.classList.remove("hidden");
+      } else {
+        lightIconElement.classList.remove("hidden");
+        darkIconElement.classList.add("hidden");
+      }
     }
 
     if (labelElement) {
