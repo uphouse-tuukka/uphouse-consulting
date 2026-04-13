@@ -159,6 +159,54 @@ test.describe("Project pages", () => {
     );
   });
 
+  test("home page outputs Open Graph and Twitter metadata", async ({ page }) => {
+    await page.goto("/");
+
+    await expect(page.locator('meta[property="og:title"]')).toHaveAttribute(
+      "content",
+      "Tuukka Ylöstalo — Software Developer",
+    );
+    await expect(page.locator('meta[property="og:description"]')).toHaveAttribute(
+      "content",
+      "Portfolio and case studies for Tuukka Ylöstalo, a Helsinki-based software developer behind UpHouse Consulting.",
+    );
+    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute(
+      "content",
+      "https://uphouseconsulting.fi/",
+    );
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+      "content",
+      "https://uphouseconsulting.fi/og-image.png",
+    );
+    await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute(
+      "content",
+      "summary_large_image",
+    );
+    await expect(page.locator('meta[name="twitter:image"]')).toHaveAttribute(
+      "content",
+      "https://uphouseconsulting.fi/og-image.png",
+    );
+  });
+
+  test("project pages keep page-specific metadata with the shared OG image", async ({
+    page,
+  }) => {
+    await page.goto("/projects/public-transport-webshop");
+
+    await expect(page.locator('meta[property="og:title"]')).toHaveAttribute(
+      "content",
+      "Public Transport Webshop — Tuukka Ylöstalo",
+    );
+    await expect(page.locator('meta[property="og:description"]')).toHaveAttribute(
+      "content",
+      "Shipped a customer-facing ticket purchasing app deployed on Azure.",
+    );
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+      "content",
+      "https://uphouseconsulting.fi/og-image.png",
+    );
+  });
+
   test("locale switch preserves the current project after client-side navigation", async ({
     page,
   }) => {

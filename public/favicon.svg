@@ -1,4 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="4" fill="#34d399"/>
-  <text x="16" y="22" font-family="system-ui" font-size="18" font-weight="700" fill="#0a0a0a" text-anchor="middle">U</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="6" fill="#34d399"/>
+  <path
+    d="M7.5 13L16 6.8L24.5 13"
+    stroke="#0a0a0a"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M10 13V19.2C10 21.96 12.24 24.2 15 24.2H17C19.76 24.2 22 21.96 22 19.2V13"
+    stroke="#0a0a0a"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
 </svg>
