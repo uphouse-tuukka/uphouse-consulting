@@ -11,6 +11,5 @@ pnpm-debug.log*
 .DS_Store
 .idea/
 .superpowers/
-docs/
+.private/
 test-results/
-CLAUDE.md 
