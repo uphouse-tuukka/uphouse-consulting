@@ -44,6 +44,24 @@ const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(siteCop
   )}
 </section>
 
+<aside class="mb-10 rounded border border-[var(--color-border)] bg-[var(--color-surface)]/35 p-4 md:p-5" aria-labelledby="at-a-glance-heading">
+  <h2 id="at-a-glance-heading" class="text-sm font-semibold text-[var(--color-heading)]">{copy.atAGlanceHeading}</h2>
+  <dl class="mt-4 space-y-4">
+    <div class="grid gap-1 sm:grid-cols-[9rem_1fr] sm:gap-4">
+      <dt class="font-mono text-xs uppercase leading-5 text-[var(--color-muted)]">{copy.atAGlanceProblem}</dt>
+      <dd class="text-sm leading-5 text-[var(--color-text)]">{project.data.atAGlance.problem}</dd>
+    </div>
+    <div class="grid gap-1 sm:grid-cols-[9rem_1fr] sm:gap-4">
+      <dt class="font-mono text-xs uppercase leading-5 text-[var(--color-muted)]">{copy.atAGlanceContribution}</dt>
+      <dd class="text-sm leading-5 text-[var(--color-text)]">{project.data.atAGlance.contribution}</dd>
+    </div>
+    <div class="grid gap-1 sm:grid-cols-[9rem_1fr] sm:gap-4">
+      <dt class="font-mono text-xs uppercase leading-5 text-[var(--color-muted)]">{copy.atAGlanceResult}</dt>
+      <dd class="text-sm leading-5 text-[var(--color-text)]">{project.data.atAGlance.result}</dd>
+    </div>
+  </dl>
+</aside>
+
 <article class="prose prose-neutral max-w-none space-y-4 [&>h2]:text-2xl [&>h2]:font-semibold [&>h2]:text-[var(--color-heading)] [&>h2]:leading-tight [&>h2]:mt-12 [&>h2]:mb-4 [&>p]:text-[var(--color-text)] [&>p]:leading-relaxed [&>ul]:text-[var(--color-text)] [&>ul]:space-y-1 [&>ul]:list-disc [&>ul]:pl-6 [&>li]:text-[var(--color-text)] [&>blockquote]:my-8 [&>blockquote]:rounded [&>blockquote]:border [&>blockquote]:border-[var(--color-border)] [&>blockquote]:border-l-4 [&>blockquote]:border-l-[var(--color-accent)] [&>blockquote]:bg-[var(--color-surface)]/40 [&>blockquote]:px-5 [&>blockquote]:py-4 [&>blockquote]:not-italic [&>blockquote>p]:my-0 [&>blockquote>p+p]:mt-3 [&>blockquote>p:last-child]:text-sm [&>blockquote>p:last-child]:font-medium [&>blockquote>p:last-child]:text-[var(--color-accent)]">
   <Content />
 </article>

@@ -63,7 +63,7 @@ test.describe('Dark mode', () => {
     await expect(page.locator('html')).toHaveClass(/light/);
     await expect(toggleLabel).toHaveText('Dark');
 
-    await page.getByRole('link', { name: 'Public Transport Webshop' }).first().click();
+    await page.getByRole('link', { name: 'Public Transport Ticketing Portal' }).first().click();
     await expect(page).toHaveURL(/\/projects\/public-transport-webshop/);
     await expect(page.locator('html')).toHaveClass(/light/);
     await expect(page.locator('#theme-toggle [data-theme-toggle-label]')).toHaveText('Dark');

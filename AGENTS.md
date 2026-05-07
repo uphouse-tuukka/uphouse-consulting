@@ -65,6 +65,9 @@ generated output.
   Keep it identical across locales.
 - `order` controls project ordering and previous/next navigation.
 - `outcome` must stay at or below 150 characters because the content schema enforces it.
+- `atAGlance` is required project frontmatter with `problem`, `contribution`, and
+  `result` fields. Keep each field concise and focused on proof/value, not a
+  repeat of the opening prose.
 
 When changing user-visible copy, update both English and Finnish unless the task is
 explicitly locale-specific. Keep case studies written from Tuukka's perspective and

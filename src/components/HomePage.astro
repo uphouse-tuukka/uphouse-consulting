@@ -65,6 +65,25 @@ const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(chromeC
   </ul>
 </section>
 
+<section class="mt-16 space-y-5">
+  <h2 class="text-2xl font-semibold text-[var(--color-heading)] leading-tight">{copy.goodFitHeading}</h2>
+  <p class="text-[var(--color-text)]">{copy.goodFitIntro}</p>
+  <ol class="space-y-5">
+    {copy.goodFitItems.map((item, i) => (
+      <li class="grid gap-2 border-t border-[var(--color-border)] pt-4 sm:grid-cols-[3.5rem_1fr]">
+        <p class="font-mono text-xs leading-5 text-[var(--color-muted)]">{String(i + 1).padStart(2, "0")}</p>
+        <div>
+          <h3 class="text-base font-semibold text-[var(--color-heading)] leading-tight">{item.title}</h3>
+          <p class="mt-1 text-sm text-[var(--color-text)]">{item.body}</p>
+        </div>
+      </li>
+    ))}
+  </ol>
+  <p class="border-l border-[var(--color-border)] pl-4 text-sm text-[var(--color-muted)]">
+    {copy.goodFitAside}
+  </p>
+</section>
+
 {projects.length > 0 && (
   <section class="mt-16 md:mt-24 space-y-4">
     <h2 class="text-2xl font-semibold text-[var(--color-heading)] leading-tight">{copy.projectsHeading}</h2>

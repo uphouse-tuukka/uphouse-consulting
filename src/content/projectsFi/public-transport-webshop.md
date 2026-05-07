@@ -5,8 +5,16 @@ role: "Fullstack-kehittäjä"
 stack: ["TypeScript", "Next.js", "React", "Sass", "Azure"]
 duration: "2023–2026"
 outcome: "Rakensin Azureen julkaistun lippukaupan joukkoliikenteen asiakkaille."
+atAGlance:
+  problem: "Asiakkaille tarkoitettu lippukauppa piti saada toimimaan luotettavasti samalla, kun laajempi uudistus eteni usean toimijan välillä."
+  contribution: "Toimin pitkään projektin pääkehittäjänä ja vein eteenpäin tuotekehitystä, saavutettavuutta, teknisiä päätöksiä ja yhteistyötä organisaatiorajojen yli."
+  result: "Verkkokauppa julkaistiin tuotantoon, läpäisi tietoturva-auditoinnin ilman huomautuksia ja ylsi saavutettavuuskilpailun finalistiksi."
 order: 1
 ---
+
+> Tuukka on ihailtavan kyvykäs hoitamaan montaa asiaa samanaikaisesti hektisissäkin tilanteissa sekä ratkaisemaan ongelmia oma-aloitteisesti ja ennakoivasti. Lisäksi työn laatu ja monipuolisuus kehittäjänä tekevät hänestä tiimimme todellisen tukipilarin, keneen pystyy aina luottamaan.
+>
+> — Tuoteomistaja
 
 ## Lähtötilanne
 
@@ -31,10 +39,6 @@ Kyseinen verkkokauppa oli vain yksi osa asiakkaan laajempaa uudistusta, jossa ol
 Lopputuloksena syntyi tuotannossa käytössä oleva verkkosovellus, joka palveli oikeita asiakkaita ja jatkoi kehittymistään sen sijaan, että se olisi jäänyt kertaluonteiseksi julkaisuksi. Omasta näkökulmastani tärkeintä oli olla mukana tekemässä tuotteesta sellainen, että mahdollisimman moni pystyy käyttämään sitä sujuvasti.
 
 Saavutettavuus nousi yhdeksi työn näkyvimmistä tuloksista. Tuotetta auditoitiin ja hiottiin siihen pisteeseen, että se ylsi alan saavutettavuuskilpailun finalistiksi. Samalla sovellus läpäisi myös tietoturva-auditoinnin ilman huomautuksia, mikä oli aivan yhtä tärkeää maksuintegraation sisältävässä sovelluksessa.
-
-> Tuukka on ihailtavan kyvykäs hoitamaan montaa asiaa samanaikaisesti hektisissäkin tilanteissa sekä ratkaisemaan ongelmia oma-aloitteisesti ja ennakoivasti. Lisäksi työn laatu ja monipuolisuus kehittäjänä tekevät hänestä tiimimme todellisen tukipilarin, keneen pystyy aina luottamaan.
->
-> — Tuoteomistaja
 
 ## Mitä opin
 

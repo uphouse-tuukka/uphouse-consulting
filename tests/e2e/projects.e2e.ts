@@ -5,9 +5,14 @@ test.describe("Project pages", () => {
     await page.goto("/projects/public-transport-webshop");
 
     await expect(page.locator("#main-content h1")).toHaveText(
-      "Public Transport Webshop",
+      "Public Transport Ticketing Portal",
     );
     await expect(page.getByText("Fullstack Developer")).toBeVisible();
+    await expect(page.getByText("At a glance")).toBeVisible();
+    await expect(page.getByText("Problem", { exact: true })).toBeVisible();
+    await expect(
+      page.getByText("passed security review cleanly"),
+    ).toBeVisible();
     await expect(page.getByText("Starting point")).toBeVisible();
   });
 
@@ -54,7 +59,7 @@ test.describe("Project pages", () => {
     );
   });
 
-  test("renders testimonial only on webshop project", async ({ page }) => {
+  test("renders testimonial only on ticketing project", async ({ page }) => {
     await page.goto("/projects/public-transport-webshop");
     await expect(
       page.getByText(
@@ -98,6 +103,8 @@ test.describe("Project pages", () => {
     await expect(page.locator("#main-content h1")).toHaveText(
       "Joukkoliikenteen verkkokauppa",
     );
+    await expect(page.getByText("Lyhyesti")).toBeVisible();
+    await expect(page.getByText("Ongelma", { exact: true })).toBeVisible();
     await expect(page.getByText("Lähtötilanne")).toBeVisible();
     await expect(
       page.getByRole("link", { name: "Ota yhteyttä" }),
@@ -195,11 +202,11 @@ test.describe("Project pages", () => {
 
     await expect(page.locator('meta[property="og:title"]')).toHaveAttribute(
       "content",
-      "Public Transport Webshop — Tuukka Ylöstalo",
+      "Public Transport Ticketing Portal — Tuukka Ylöstalo",
     );
     await expect(page.locator('meta[property="og:description"]')).toHaveAttribute(
       "content",
-      "Shipped a customer-facing ticket purchasing app deployed on Azure.",
+      "Shipped a customer-facing ticketing portal deployed on Azure.",
     );
     await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
       "content",

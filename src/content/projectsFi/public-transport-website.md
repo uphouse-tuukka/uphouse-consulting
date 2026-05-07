@@ -17,6 +17,10 @@ stack:
   ]
 duration: "2023–2026"
 outcome: "Päivitin frontendin Next.js 12:sta versioon 14 ja olin mukana rakentamassa hakupalvelua sekä yhteistä komponenttikirjastoa."
+atAGlance:
+  problem: "Laaja julkinen verkkosivusto tarvitsi uusia ominaisuuksia, editoritukea, parempaa hakua ja teknistä modernisointia samaan aikaan."
+  contribution: "Liikuin frontend-migraation, yhteisten UI-ratkaisujen, hakupalvelun, CMS-tuen, lomakkeiden ja tuotanto-ongelmien välillä."
+  result: "Frontend päivittyi Next.js 12:sta versioon 14, haku irrotettiin omaksi palveluksi ja tiimi sai vahvemman pohjan yhteiselle UI-työlle."
 order: 2
 ---
 

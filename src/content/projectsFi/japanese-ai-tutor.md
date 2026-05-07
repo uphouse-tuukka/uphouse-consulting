@@ -5,6 +5,10 @@ role: "Soolokehittäjä"
 stack: ["SvelteKit 2", "Svelte 5", "TypeScript", "OpenAI", "TursoSQL", "Vercel"]
 duration: "2026–nykyhetki"
 outcome: "Rakensin tekoälypohjaisen kieltenoppimissovelluksen, joka mukautuu käyttäjän oppimistahtiin."
+atAGlance:
+  problem: "Useimmat kieltenoppimissovellukset tuntuivat liian valmiiksi rajatuilta ja geneerisiltä omaan japanin opiskeluun."
+  contribution: "Suunnittelin ja rakensin SvelteKit-tuotteen, jossa on tekoälyn tuottamia oppitunteja, edistymisen seurantaa, vaikeustason säätöä ja rutiinia tukevia mekaniikkoja."
+  result: "Sovelluksesta tuli jotain, mitä käytän itse, ja samalla käytännön testialusta tekoälytyönkuluille ja agenttien orkestroinnille."
 demoUrl: "https://japanese-learner-sooty.vercel.app/portfolio/challenge"
 order: 3
 ---

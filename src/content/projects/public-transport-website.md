@@ -17,6 +17,10 @@ stack:
   ]
 duration: "2023–2026"
 outcome: "Migrated Next.js 12 to 14, built search service and component library."
+atAGlance:
+  problem: "A large public-facing platform needed feature delivery, editor support, search improvements, and technical modernization at the same time."
+  contribution: "I moved between frontend migration, shared UI work, search service development, CMS support, forms, and production debugging."
+  result: "The frontend moved from Next.js 12 to 14, search became a dedicated service, and the team gained a stronger shared component base."
 order: 2
 ---
 

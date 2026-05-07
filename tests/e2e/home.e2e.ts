@@ -30,6 +30,23 @@ test.describe("Home page", () => {
     ).toBeVisible();
   });
 
+  test("renders good fit section without changing project card count", async ({
+    page,
+  }) => {
+    await page.goto("/");
+
+    await expect(page.getByText("Where I'm useful")).toBeVisible();
+    await expect(page.getByText("Long-running product work")).toBeVisible();
+    await expect(page.getByText("Modernization without drama")).toBeVisible();
+    await expect(
+      page.getByText("Greenfield projects with ambition"),
+    ).toBeVisible();
+    await expect(
+      page.getByText("Probably not the best fit for throwaway campaign sites"),
+    ).toBeVisible();
+    await expect(page.locator("article")).toHaveCount(3);
+  });
+
   test("renders 3 project cards", async ({ page }) => {
     await page.goto("/");
     const cards = page.locator("article");
@@ -123,6 +140,10 @@ test.describe("Home page", () => {
     await expect(
       page.getByRole("link", { name: "Ota yhteyttä" }).first(),
     ).toBeVisible();
+    await expect(
+      page.getByText("Millaisissa projekteissa olen parhaimmillani"),
+    ).toBeVisible();
+    await expect(page.getByText("Pitkäjänteinen tuotekehitys")).toBeVisible();
   });
 
   test("keeps Finnish project card links inside /fi/", async ({ page }) => {
@@ -135,7 +156,7 @@ test.describe("Home page", () => {
   test("Finnish project cards show Finnish content", async ({ page }) => {
     await page.goto("/fi/");
 
-    // The first project (order:1) is the webshop — its Finnish title contains "verkkokauppa"
+    // The first project (order:1) keeps its Finnish title with "verkkokauppa"
     const firstCard = page.locator("article").first();
     await expect(firstCard).toContainText("verkkokauppa");
   });

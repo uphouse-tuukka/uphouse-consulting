@@ -25,6 +25,10 @@ export const siteCopy = {
       ctaSubject: "Work inquiry via uphouseconsulting.fi",
     },
     projectPage: {
+      atAGlanceHeading: "At a glance",
+      atAGlanceProblem: "Problem",
+      atAGlanceContribution: "My contribution",
+      atAGlanceResult: "Result",
       workTogether: "Want to work together?",
       contactCta: "Contact me",
       demoLinkLabel: "Open live demo",
@@ -61,6 +65,29 @@ export const siteCopy = {
           body: "The goal is maintainable software that helps users, supports teams, and keeps delivering after launch.",
         },
       ],
+      goodFitHeading: "Where I'm useful",
+      goodFitIntro:
+        "I'm useful when teams need hands-on delivery plus steady technical judgment.",
+      goodFitItems: [
+        {
+          title: "Long-running product work",
+          body: "For products that need steady progress over time: features, fixes, cleanup, and better foundations as part of the same work.",
+        },
+        {
+          title: "Public-facing services",
+          body: "For services where accessibility, reliability, and clear flows matter because people actually depend on them.",
+        },
+        {
+          title: "A developer who thinks beyond the ticket",
+          body: "When the useful move is not just taking the next task, but questioning scope, naming risks, and keeping implementation tied to the product.",
+        },
+        {
+          title: "Greenfield projects with ambition",
+          body: "For new products that need a practical shape early, whether that means AI integrations, unfamiliar domains, or turning a rough idea into something people can use.",
+        },
+      ],
+      goodFitAside:
+        "Probably not the best fit for throwaway campaign sites, purely visual landing pages, or narrow ticket-only roles.",
       projectsHeading: "Projects",
     },
   },
@@ -87,6 +114,10 @@ export const siteCopy = {
       ctaSubject: "Työtiedustelu sivuston kautta",
     },
     projectPage: {
+      atAGlanceHeading: "Lyhyesti",
+      atAGlanceProblem: "Ongelma",
+      atAGlanceContribution: "Oma roolini",
+      atAGlanceResult: "Lopputulos",
       workTogether: "Voisinko auttaa teidän projektissanne?",
       contactCta: "Ota yhteyttä",
       demoLinkLabel: "Avaa demo",
@@ -123,6 +154,29 @@ export const siteCopy = {
           body: "Tavoitteena on ylläpidettävä ohjelmisto, joka palvelee käyttäjiä, helpottaa tiimin työtä ja kestää aikaa myös julkaisun jälkeen.",
         },
       ],
+      goodFitHeading: "Millaisissa projekteissa olen parhaimmillani",
+      goodFitIntro:
+        "Olen parhaimmillani projekteissa, joissa tarvitaan sekä käytännön kehitystyötä että rauhallista teknistä harkintaa.",
+      goodFitItems: [
+        {
+          title: "Pitkäjänteinen tuotekehitys",
+          body: "Pitkään eläviin tuotteisiin, joissa arki on yhdistelmä ominaisuuksia, korjauksia, siivousta ja koodipohjan parantamista.",
+        },
+        {
+          title: "Palvelut, joita oikeasti käytetään",
+          body: "Kun saavutettavuus, luotettavuus ja selkeät käyttäjäpolut eivät ole koristeita vaan osa palvelun arkea.",
+        },
+        {
+          title: "Kehittäjä, joka ajattelee tikettiä pidemmälle",
+          body: "Kun seuraavan tiketin tekeminen ei riitä, vaan pitää myös haastaa epäselvä rajaus, nimetä riskit ja sitoa toteutus tuotteen tarpeisiin.",
+        },
+        {
+          title: "Uudet tuotteet, joilla on kunnianhimoa",
+          body: "Kun ideasta pitää saada käytettävä tuote, oli kyse tekoälyintegraatioista, uudesta domainista tai alkuvaiheen suunnan löytämisestä.",
+        },
+      ],
+      goodFitAside:
+        "En ehkä ole oikea valinta kertakäyttöisille kampanjasivuille, pelkille visuaalisille laskautumissivuille tai rooliin, jossa työ on tarkoituksella pilkottu hyvin kapeiksi tiketeiksi.",
       projectsHeading: "Projektit",
     },
   },

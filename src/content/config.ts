@@ -7,6 +7,11 @@ const projectSchema = z.object({
   stack: z.array(z.string()),
   duration: z.string(),
   outcome: z.string().max(150),
+  atAGlance: z.object({
+    problem: z.string(),
+    contribution: z.string(),
+    result: z.string(),
+  }),
   demoUrl: z.string().url().optional(),
   order: z.number(),
 });

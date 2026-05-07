@@ -5,6 +5,10 @@ role: "Solo Developer"
 stack: ["SvelteKit 2", "Svelte 5", "TypeScript", "OpenAI", "TursoSQL", "Vercel"]
 duration: "2026–present"
 outcome: "Built an AI-powered language learning app with gamification."
+atAGlance:
+  problem: "Most language-learning apps felt too fixed and generic for the way I wanted to study Japanese."
+  contribution: "I designed and built a SvelteKit product with AI-generated lessons, progress tracking, difficulty adjustment, and habit mechanics."
+  result: "The app became something I use myself and a practical testbed for AI workflows and agent orchestration patterns."
 demoUrl: "https://japanese-learner-sooty.vercel.app/portfolio/challenge"
 order: 3
 ---
