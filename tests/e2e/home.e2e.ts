@@ -37,7 +37,9 @@ test.describe("Home page", () => {
 
     await expect(page.getByText("Where I'm useful")).toBeVisible();
     await expect(page.getByText("Long-running product work")).toBeVisible();
-    await expect(page.getByText("Modernization without drama")).toBeVisible();
+    await expect(
+      page.getByText("A developer who thinks beyond the ticket"),
+    ).toBeVisible();
     await expect(
       page.getByText("Greenfield projects with ambition"),
     ).toBeVisible();

@@ -43,6 +43,8 @@ Run Playwright tests:
 npm test
 ```
 
+On the Ubuntu 26.04 Alfred host, `npm test` goes through `scripts/playwright-test.mjs`, which sets Playwright's host-platform override to the Ubuntu 24.04 browser build because Playwright 1.59 has no native `ubuntu26.04-x64` browser target yet.
+
 Preview the production build:
 
 ```bash

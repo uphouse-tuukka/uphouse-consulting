@@ -29,6 +29,8 @@ Run tests:
 npm test
 ```
 
+On the Ubuntu 26.04 Alfred host, `npm test` uses `scripts/playwright-test.mjs` to run Playwright with the Ubuntu 24.04 browser build until Playwright publishes a native `ubuntu26.04-x64` target.
+
 Build for production:
 
 ```bash

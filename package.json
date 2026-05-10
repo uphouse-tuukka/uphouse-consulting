@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "playwright test"
+    "test": "node scripts/playwright-test.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
