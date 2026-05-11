@@ -1,14 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HomePage from '../../components/HomePage.astro';
-import { getProjectsForLocale } from '../../utils/projects';
+import { getProjectsForLocale, getProjectSlug } from "../../utils/projects";
 import { siteCopy } from '../../data/site-copy';
 
 const locale = 'fi' as const;
 const copy = siteCopy[locale];
 const projects = (await getProjectsForLocale(locale)).map(p => ({
   title: p.data.title,
-  slug: p.slug,
+  slug: getProjectSlug(p),
   outcome: p.data.outcome,
   stack: p.data.stack,
 }));

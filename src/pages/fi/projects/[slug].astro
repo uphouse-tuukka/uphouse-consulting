@@ -1,12 +1,12 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import ProjectPage from "../../../components/ProjectPage.astro";
-import { getProjectsForLocale, getLinkedSlug, getAdjacentProjects } from "../../../utils/projects";
+import { getProjectsForLocale, getLinkedSlug, getAdjacentProjects, getProjectSlug } from "../../../utils/projects";
 import profile from "../../../data/profile.json";
 
 export async function getStaticPaths() {
   const projects = await getProjectsForLocale("fi");
-  return projects.map((project) => ({ params: { slug: project.slug }, props: { project, projects } }));
+  return projects.map((project) => ({ params: { slug: getProjectSlug(project) }, props: { project, projects } }));
 }
 
 const { project, projects } = Astro.props;
@@ -18,7 +18,7 @@ const enSlug = await getLinkedSlug(project.data.projectKey, "en");
   title={`${project.data.title} — ${profile.name}`}
   description={project.data.outcome}
   locale="fi"
-  canonicalPath={`/fi/projects/${project.slug}`}
+  canonicalPath={`/fi/projects/${getProjectSlug(project)}`}
   switchHref={enSlug ? `/projects/${enSlug}` : "/"}
   switchUseAriaLabel={false}
 >

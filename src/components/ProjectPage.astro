@@ -2,7 +2,7 @@
 import profile from "../data/profile.json";
 import { siteCopy, type Locale } from "../data/site-copy";
 import { getLocalizedHomePath, getLocalizedProjectPath } from "../utils/locale";
-import type { CollectionEntry } from "astro:content";
+import { render, type CollectionEntry } from "astro:content";
 
 interface ProjectNavLink {
   title: string;
@@ -17,7 +17,7 @@ interface Props {
 }
 
 const { locale, project, prevProject, nextProject } = Astro.props;
-const { Content } = await project.render();
+const { Content } = await render(project);
 const copy = siteCopy[locale].projectPage;
 const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(siteCopy[locale].chrome.ctaSubject)}`;
 ---
