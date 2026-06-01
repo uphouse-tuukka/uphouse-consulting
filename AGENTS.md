@@ -114,6 +114,14 @@ Relevant tests are in `tests/e2e/`:
 
 ## Agent Workflow
 
+Implementation discipline:
+
+- State material assumptions before editing when they affect scope or safety.
+- Prefer the smallest change that satisfies the request.
+- Do not refactor adjacent code, formatting, comments, docs, or APIs unless required.
+- Every changed line should trace to the task, validation, or cleanup caused by the task.
+- Define verification before calling work complete.
+
 - Read this file, `README.md`, and the relevant source files before editing.
 - Use `rg`/`rg --files` for search.
 - Do not overwrite unrelated local changes. Check `git status --short` before and
