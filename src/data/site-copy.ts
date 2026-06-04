@@ -88,7 +88,31 @@ export const siteCopy = {
       ],
       goodFitAside:
         "Probably not the best fit for throwaway campaign sites, purely visual landing pages, or narrow ticket-only roles.",
-      projectsHeading: "Projects",
+      proofHeading: "What the case studies show",
+      proofIntro:
+        "The work below is selected because it shows how I help teams ship, simplify, and make technical decisions people can trust.",
+      proofItems: [
+        {
+          title: "Production public-service delivery",
+          body: "Case-study evidence includes a public transport ticketing portal shipped to production on Azure.",
+        },
+        {
+          title: "Accessibility and security as product quality",
+          body: "The ticketing work includes a clean security review and accessibility finalist recognition, framed without exposing client-sensitive details.",
+        },
+        {
+          title: "Modernization while the service keeps running",
+          body: "Recent work includes a Next.js migration, dedicated search service, and component-library foundations for a live public-facing website.",
+        },
+        {
+          title: "AI product work grounded in daily use",
+          body: "The Japanese AI Tutor case shows AI workflow and product thinking tested through an actual learning tool, not just a demo.",
+        },
+      ],
+      projectsHeading: "Proof from recent work",
+      projectsIntro:
+        "A few examples where the work moved beyond code into delivery, accessibility, modernization, and product judgment.",
+      projectEvidenceLabel: "Evidence",
     },
   },
   fi: {
@@ -177,7 +201,31 @@ export const siteCopy = {
       ],
       goodFitAside:
         "En ehkä ole oikea valinta kertakäyttöisille kampanjasivuille, pelkille visuaalisille laskautumissivuille tai rooliin, jossa työ on tarkoituksella pilkottu hyvin kapeiksi tiketeiksi.",
-      projectsHeading: "Projektit",
+      proofHeading: "Mitä caset näyttävät",
+      proofIntro:
+        "Alla olevat työt on valittu siksi, että ne näyttävät, miten autan tiimejä julkaisemaan, selkeyttämään ja tekemään teknisiä päätöksiä, joihin voi luottaa.",
+      proofItems: [
+        {
+          title: "Tuotantoon vietyjä julkisia palveluita",
+          body: "Case-näyttöön kuuluu Azureen tuotantoon viety julkisen liikenteen lipunmyyntiportaali.",
+        },
+        {
+          title: "Saavutettavuus ja tietoturva osana tuotteen laatua",
+          body: "Lipunmyyntityössä näkyvät puhdas tietoturvakatselmointi ja saavutettavuuden finalistimaininta ilman asiakasta yksilöiviä yksityiskohtia.",
+        },
+        {
+          title: "Modernisointia samalla kun palvelu pysyy käytössä",
+          body: "Viimeaikainen työ sisältää Next.js-migraatiota, erillisen hakupalvelun ja komponenttikirjaston perustaa käytössä olevaan julkiseen verkkopalveluun.",
+        },
+        {
+          title: "Tekoälytuotteita käytännön tarpeeseen",
+          body: "Japanese AI Tutor -case näyttää tekoälytyönkulkuja ja tuoteajattelua oikeassa oppimistyökalussa, ei pelkässä demossa.",
+        },
+      ],
+      projectsHeading: "Näyttöä viimeaikaisesta työstä",
+      projectsIntro:
+        "Muutama esimerkki työstä, jossa toteutus, saavutettavuus, modernisointi ja tuoteajattelu kulkivat yhdessä.",
+      projectEvidenceLabel: "Näyttö",
     },
   },
 } as const;

@@ -84,9 +84,25 @@ const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(chromeC
   </p>
 </section>
 
+<section class="mt-16 space-y-5" aria-labelledby="proof-heading">
+  <h2 id="proof-heading" class="text-2xl font-semibold text-[var(--color-heading)] leading-tight">
+    {copy.proofHeading}
+  </h2>
+  <p class="text-[var(--color-text)]">{copy.proofIntro}</p>
+  <ul class="grid gap-3 md:grid-cols-2">
+    {copy.proofItems.map((item) => (
+      <li class="rounded border border-[var(--color-border)] bg-[var(--color-surface)]/35 p-4">
+        <p class="text-sm font-semibold text-[var(--color-heading)]">{item.title}</p>
+        <p class="mt-2 text-sm text-[var(--color-text)]">{item.body}</p>
+      </li>
+    ))}
+  </ul>
+</section>
+
 {projects.length > 0 && (
-  <section class="mt-16 md:mt-24 space-y-4">
+  <section class="mt-16 space-y-4">
     <h2 class="text-2xl font-semibold text-[var(--color-heading)] leading-tight">{copy.projectsHeading}</h2>
+    <p class="text-[var(--color-text)]">{copy.projectsIntro}</p>
     <div class="space-y-8">
       {projects.map((project, i) => (
         <div style={`--fade-delay: ${i * 100}ms`}>
@@ -94,6 +110,7 @@ const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(chromeC
             title={project.title}
             stack={project.stack}
             outcome={project.outcome}
+            evidenceLabel={copy.projectEvidenceLabel}
             href={getLocalizedProjectPath(locale, project.slug)}
           />
         </div>

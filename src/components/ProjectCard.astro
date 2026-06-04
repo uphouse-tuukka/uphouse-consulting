@@ -3,10 +3,11 @@ interface Props {
   title: string;
   stack: string[];
   outcome: string;
+  evidenceLabel: string;
   href: string;
 }
 
-const { title, stack, outcome, href } = Astro.props;
+const { title, stack, outcome, evidenceLabel, href } = Astro.props;
 ---
 
 <article class="fade-up">
@@ -17,6 +18,9 @@ const { title, stack, outcome, href } = Astro.props;
     <h3 class="text-lg font-semibold leading-tight text-[var(--color-heading)] transition-colors duration-150 group-hover:text-[var(--color-accent)]">
       {title}
     </h3>
+    <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-accent)]">
+      {evidenceLabel}
+    </p>
     <p class="mt-2 text-[var(--color-text)]">{outcome}</p>
     <p class="mt-3 text-[13px] font-mono text-[var(--color-muted)]">
       {stack.map((tech, i) => (
