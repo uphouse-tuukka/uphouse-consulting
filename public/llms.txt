@@ -17,4 +17,4 @@ Some client work is intentionally anonymized. The case studies are written from 
 
 - [GitHub](https://github.com/uphouse-tuukka): Public code and activity.
 - [LinkedIn](https://linkedin.com/in/tuukka-ylöstalo): Professional profile and background.
-- [Email](mailto:tuukka.ylostalo@outlook.com?subject=Work%20inquiry%20via%20uphouseconsulting.fi): Direct contact.
+- [Email](mailto:contact@uphouseconsulting.fi?subject=Work%20inquiry%20via%20uphouseconsulting.fi): Direct contact.
