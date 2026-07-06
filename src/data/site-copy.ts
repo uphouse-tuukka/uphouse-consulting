@@ -156,7 +156,7 @@ export const siteCopy = {
       ],
       goodFitHeading: "Millaisissa projekteissa olen parhaimmillani",
       goodFitIntro:
-        "Olen hyvä valinta, kun tiimi tarvitsee senioritason fullstack-kehittäjän, tasaista etenemistä ja tekijän, joka ajattelee seuraavaa tikettiä pidemmälle.",
+        "Olen hyvä valinta, kun tiimi tarvitsee senioritason fullstack-kehittäjän, joka vie työtä eteenpäin ja ajattelee seuraavaa tikettiä pidemmälle.",
       goodFitItems: [
         {
           title: "Senioritason fullstack-kehittäjä",
@@ -168,7 +168,7 @@ export const siteCopy = {
         },
         {
           title: "Uudet tuotteet ja tekoälyideat",
-          body: "Alkuvaiheen tuotteisiin, joissa ideasta pitää rakentaa toimiva ensiversio ja löytää järkevä tekninen suunta, myös silloin kun mukana on tekoälyä.",
+          body: "Alkuvaiheen tuotteisiin, joissa ideasta pitää rakentaa toimiva ensiversio, löytää järkevä tekninen suunta ja hyödyntää tekoälyintegraatioita silloin, kun ne ovat tuotteelle oikeasti hyödyksi.",
         },
         {
           title: "Kehittäjä, joka ajattelee tikettiä pidemmälle",
