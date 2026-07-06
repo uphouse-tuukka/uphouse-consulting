@@ -18,6 +18,7 @@ test.describe("Home page", () => {
     await expect(cta).toBeVisible();
     const href = await cta.getAttribute("href");
     expect(href).toContain("mailto:");
+    expect(href).toContain("contact@uphouseconsulting.fi");
     expect(href).toContain("subject=");
   });
 
