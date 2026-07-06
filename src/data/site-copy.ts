@@ -67,23 +67,23 @@ export const siteCopy = {
       ],
       goodFitHeading: "Where I'm useful",
       goodFitIntro:
-        "I'm useful when teams need hands-on delivery plus steady technical judgment.",
+        "I'm a good fit when a team needs senior fullstack help, steady delivery, and someone who can think beyond the next ticket.",
       goodFitItems: [
         {
-          title: "Long-running product work",
-          body: "For products that need steady progress over time: features, fixes, cleanup, and better foundations as part of the same work.",
+          title: "Senior fullstack capacity",
+          body: "For teams that need an experienced developer to join product work and start contributing without a long ramp-up.",
         },
         {
-          title: "Public-facing services",
-          body: "For services where accessibility, reliability, and clear flows matter because people actually depend on them.",
+          title: "Existing products that need momentum",
+          body: "For products that need features, fixes, cleanup, and better foundations at the same time.",
+        },
+        {
+          title: "New products and AI ideas",
+          body: "For early products where the work is partly building a useful first version, partly shaping the technical direction, including AI integrations when they make sense.",
         },
         {
           title: "A developer who thinks beyond the ticket",
           body: "When the useful move is not just taking the next task, but questioning scope, naming risks, and keeping implementation tied to the product.",
-        },
-        {
-          title: "Greenfield projects with ambition",
-          body: "For new products that need a practical shape early, whether that means AI integrations, unfamiliar domains, or turning a rough idea into something people can use.",
         },
       ],
       goodFitAside:
@@ -156,23 +156,23 @@ export const siteCopy = {
       ],
       goodFitHeading: "Millaisissa projekteissa olen parhaimmillani",
       goodFitIntro:
-        "Olen parhaimmillani projekteissa, joissa tarvitaan sekä käytännön kehitystyötä että rauhallista teknistä harkintaa.",
+        "Olen hyvä valinta, kun tiimi tarvitsee senioritason fullstack-kehittäjän, joka vie työtä eteenpäin ja ajattelee seuraavaa tikettiä pidemmälle.",
       goodFitItems: [
         {
-          title: "Pitkäjänteinen tuotekehitys",
-          body: "Pitkään eläviin tuotteisiin, joissa arki on yhdistelmä ominaisuuksia, korjauksia, siivousta ja koodipohjan parantamista.",
+          title: "Senioritason fullstack-kehittäjä",
+          body: "Tiimeihin, joissa kokeneen kehittäjän pitää päästä kiinni tuotetyöhön nopeasti ja tehdä hyödyllistä työtä alusta asti.",
         },
         {
-          title: "Palvelut, joita oikeasti käytetään",
-          body: "Kun saavutettavuus, luotettavuus ja selkeät käyttäjäpolut eivät ole koristeita vaan osa palvelun arkea.",
+          title: "Olemassa olevien tuotteiden kehitys",
+          body: "Kun samaan aikaan pitää rakentaa uutta, korjata vanhaa ja vahvistaa koodipohjaa ilman, että kehitys pysähtyy.",
+        },
+        {
+          title: "Uudet tuotteet ja tekoälyideat",
+          body: "Alkuvaiheen tuotteisiin, joissa ideasta pitää rakentaa toimiva ensiversio, löytää järkevä tekninen suunta ja hyödyntää tekoälyintegraatioita silloin, kun ne ovat tuotteelle oikeasti hyödyksi.",
         },
         {
           title: "Kehittäjä, joka ajattelee tikettiä pidemmälle",
-          body: "Kun seuraavan tiketin tekeminen ei riitä, vaan pitää myös haastaa epäselvä rajaus, nimetä riskit ja sitoa toteutus tuotteen tarpeisiin.",
-        },
-        {
-          title: "Uudet tuotteet, joilla on kunnianhimoa",
-          body: "Kun ideasta pitää saada käytettävä tuote, oli kyse tekoälyintegraatioista, uudesta domainista tai alkuvaiheen suunnan löytämisestä.",
+          body: "Kun hyödyllisin panos ei ole vain seuraavan tehtävän tekeminen, vaan epäselvän rajauksen haastaminen, riskien sanoittaminen ja toteutuksen pitäminen kiinni tuotteen tarpeissa.",
         },
       ],
       goodFitAside:

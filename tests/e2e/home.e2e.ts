@@ -36,12 +36,15 @@ test.describe("Home page", () => {
     await page.goto("/");
 
     await expect(page.getByText("Where I'm useful")).toBeVisible();
-    await expect(page.getByText("Long-running product work")).toBeVisible();
+    await expect(page.getByText("Senior fullstack capacity")).toBeVisible();
     await expect(
-      page.getByText("A developer who thinks beyond the ticket"),
+      page.getByText("Existing products that need momentum"),
     ).toBeVisible();
     await expect(
-      page.getByText("Greenfield projects with ambition"),
+      page.getByText("New products and AI ideas"),
+    ).toBeVisible();
+    await expect(
+      page.getByText("A developer who thinks beyond the ticket"),
     ).toBeVisible();
     await expect(
       page.getByText("Probably not the best fit for throwaway campaign sites"),
@@ -145,7 +148,14 @@ test.describe("Home page", () => {
     await expect(
       page.getByText("Millaisissa projekteissa olen parhaimmillani"),
     ).toBeVisible();
-    await expect(page.getByText("Pitkäjänteinen tuotekehitys")).toBeVisible();
+    await expect(
+      page.getByRole("heading", {
+        name: "Senioritason fullstack-kehittäjä",
+      }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Uudet tuotteet ja tekoälyideat" }),
+    ).toBeVisible();
   });
 
   test("keeps Finnish project card links inside /fi/", async ({ page }) => {
