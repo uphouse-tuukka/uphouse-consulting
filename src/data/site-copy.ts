@@ -78,8 +78,8 @@ export const siteCopy = {
           body: "For products that need features, fixes, cleanup, and better foundations at the same time.",
         },
         {
-          title: "New ideas that need a practical first version",
-          body: "For early products where the work is partly building, partly shaping the technical direction.",
+          title: "New products and AI ideas",
+          body: "For early products where the work is partly building a useful first version, partly shaping the technical direction, including AI integrations when they make sense.",
         },
         {
           title: "A developer who thinks beyond the ticket",
@@ -156,19 +156,19 @@ export const siteCopy = {
       ],
       goodFitHeading: "Millaisissa projekteissa olen parhaimmillani",
       goodFitIntro:
-        "Olen hyvä valinta, kun tiimi tarvitsee senioritason fullstack-apua, tasaista toimituskykyä ja kehittäjän, joka ajattelee seuraavaa tikettiä pidemmälle.",
+        "Olen hyvä valinta, kun tiimi tarvitsee senioritason fullstack-kehittäjän, tasaista etenemistä ja tekijän, joka ajattelee seuraavaa tikettiä pidemmälle.",
       goodFitItems: [
         {
-          title: "Senioritason fullstack-apu",
-          body: "Tiimeihin, jotka tarvitsevat kokeneen kehittäjän mukaan tuotetyöhön ilman pitkää käynnistelyä.",
+          title: "Senioritason fullstack-kehittäjä",
+          body: "Tiimeihin, joissa kokeneen kehittäjän pitää päästä kiinni tuotetyöhön nopeasti ja tehdä hyödyllistä työtä alusta asti.",
         },
         {
-          title: "Olemassa olevat tuotteet, joihin tarvitaan vauhtia",
-          body: "Tuotteisiin, joissa pitää viedä eteenpäin ominaisuuksia, korjauksia, siivousta ja parempia perustuksia samaan aikaan.",
+          title: "Olemassa olevien tuotteiden kehitys",
+          body: "Kun samaan aikaan pitää rakentaa uutta, korjata vanhaa ja vahvistaa koodipohjaa ilman, että kehitys pysähtyy.",
         },
         {
-          title: "Uuden idean ensimmäinen käytännön versio",
-          body: "Alkuvaiheen tuotteisiin, joissa työ on yhtä aikaa rakentamista ja teknisen suunnan muotoilua.",
+          title: "Uudet tuotteet ja tekoälyideat",
+          body: "Alkuvaiheen tuotteisiin, joissa ideasta pitää rakentaa toimiva ensiversio ja löytää järkevä tekninen suunta, myös silloin kun mukana on tekoälyä.",
         },
         {
           title: "Kehittäjä, joka ajattelee tikettiä pidemmälle",

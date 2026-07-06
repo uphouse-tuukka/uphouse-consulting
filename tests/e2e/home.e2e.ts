@@ -41,7 +41,7 @@ test.describe("Home page", () => {
       page.getByText("Existing products that need momentum"),
     ).toBeVisible();
     await expect(
-      page.getByText("New ideas that need a practical first version"),
+      page.getByText("New products and AI ideas"),
     ).toBeVisible();
     await expect(
       page.getByText("A developer who thinks beyond the ticket"),
@@ -149,7 +149,12 @@ test.describe("Home page", () => {
       page.getByText("Millaisissa projekteissa olen parhaimmillani"),
     ).toBeVisible();
     await expect(
-      page.getByRole("heading", { name: "Senioritason fullstack-apu" }),
+      page.getByRole("heading", {
+        name: "Senioritason fullstack-kehittäjä",
+      }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Uudet tuotteet ja tekoälyideat" }),
     ).toBeVisible();
   });
 
