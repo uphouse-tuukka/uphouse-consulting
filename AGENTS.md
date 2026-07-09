@@ -72,7 +72,7 @@ generated output.
   repeat of the opening prose.
 
 When changing user-visible copy, update both English and Finnish unless the task is
-explicitly locale-specific. Keep case studies written from Tuukka's perspective and
+explicitly locale-specific. Keep case studies written from the User's perspective and
 keep client-sensitive work anonymized.
 
 ## Internationalization
@@ -135,6 +135,18 @@ Relevant tests are in `tests/e2e/`:
   for current documentation before answering or changing code.
 - If a change introduces a new workflow, command, environment variable, or content
   convention, update this file or `README.md` so the next agent has the map.
+
+### Branch and PR workflow
+
+- For any project work in this repository — including new features, bug fixes,
+  content changes, documentation updates, or agent-policy changes — do not work
+  directly on the default branch.
+- Create a focused feature/fix branch or worktree from the project default branch,
+  make the change there, commit it, push it, and open a GitHub pull request
+  against this repository.
+- When the work is done, provide the User with the PR link in the normal GitHub format,
+  for example `https://github.com/uphouse-tuukka/uphouse-consulting/pull/<number>`.
+- Keep the PR focused and reviewable. Do not merge it without explicit instruction.
 
 ## Known Helpful Context
 
