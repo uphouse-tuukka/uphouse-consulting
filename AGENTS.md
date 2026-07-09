@@ -136,6 +136,18 @@ Relevant tests are in `tests/e2e/`:
 - If a change introduces a new workflow, command, environment variable, or content
   convention, update this file or `README.md` so the next agent has the map.
 
+### Branch and PR workflow
+
+- For any project work in this repository — including new features, bug fixes,
+  content changes, documentation updates, or agent-policy changes — do not work
+  directly on the default branch.
+- Create a focused feature/fix branch or worktree from the project default branch,
+  make the change there, commit it, push it, and open a GitHub pull request
+  against this repository.
+- When the work is done, provide the User with the PR link in the normal GitHub format,
+  for example `https://github.com/uphouse-tuukka/uphouse-consulting/pull/<number>`.
+- Keep the PR focused and reviewable. Do not merge it without explicit instruction.
+
 ## Known Helpful Context
 
 - `public/llms.txt` exists and summarizes the public site for LLM consumers.
