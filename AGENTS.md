@@ -72,7 +72,7 @@ generated output.
   repeat of the opening prose.
 
 When changing user-visible copy, update both English and Finnish unless the task is
-explicitly locale-specific. Keep case studies written from the User's perspective and
+explicitly locale-specific. Keep case studies written from Tuukka's perspective and
 keep client-sensitive work anonymized.
 
 ## Internationalization
