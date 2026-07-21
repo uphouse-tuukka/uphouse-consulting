@@ -11,6 +11,8 @@ Personal portfolio site for Tuukka Ylostalo, built as a fast static site with As
 
 ## Local development
 
+Requires Node.js 22.12.0 or newer.
+
 Install dependencies:
 
 ```bash
