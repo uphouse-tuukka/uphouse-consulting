@@ -5,7 +5,7 @@ Keep changes focused, content-led, and easy to verify.
 
 ## Project Shape
 
-- Stack: Astro 5, TypeScript, Tailwind CSS v4 through the Vite plugin, Playwright.
+- Stack: Astro 7, TypeScript, Tailwind CSS v4 through the Vite plugin, Playwright.
 - Deployment target: static Astro build, configured with `site: "https://uphouseconsulting.fi"` in `astro.config.mjs`.
 - Main routes:
   - English home: `src/pages/index.astro`
