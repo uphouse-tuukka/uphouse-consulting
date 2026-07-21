@@ -4,7 +4,7 @@ Personal portfolio site for Tuukka Ylostalo, built as a fast static site with As
 
 ## Stack
 
-- Astro 5
+- Astro 7
 - TypeScript
 - Tailwind CSS v4
 - Playwright
