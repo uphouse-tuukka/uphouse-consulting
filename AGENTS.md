@@ -114,16 +114,10 @@ Relevant tests are in `tests/e2e/`:
 
 ## Agent Workflow
 
-### Implementation discipline:
+### Engineering guidance
 
-- State material assumptions before editing when they affect scope or safety.
-- Prefer the smallest coherent change that satisfies the request.
-- When fixing a bug, changing code, or adding a feature, inspect the related and surrounding code to understand the full impact.
-- Clean up code that the task makes redundant, duplicated, unreachable, obsolete, or unused. This cleanup is part of the task, not optional refactoring.
-- Do not perform unrelated refactors, formatting changes, comment rewrites, documentation edits, or API changes unless they are required by the task or its direct cleanup.
-- Update relevant tests to match the intended behaviour. Remove tests only when the behaviour they covered is genuinely obsolete or no longer applicable.
-- Every changed line should trace to the task, validation, or cleanup directly caused by the task.
-- Define and run appropriate verification before calling the work complete.
+For implementation, bug fixes, or software verification, read [Engineering discipline](docs/agents/engineering.md).
+Research and planning alone do not require that guide.
 
 - Read this file, `README.md`, and the relevant source files before editing.
 - Use `rg`/`rg --files` for search.
@@ -155,3 +149,8 @@ Relevant tests are in `tests/e2e/`:
   Playwright tests.
 - The production domain in Astro config is `.fi`; make sure public docs, metadata,
   and generated links do not drift across domains without intent.
+
+## Repository edits
+
+Check Git status before and after edits and preserve unrelated user or agent changes.
+Do not manually edit generated files or changelogs, or add agent co-authors to commits.
