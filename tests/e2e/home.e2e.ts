@@ -145,17 +145,17 @@ test.describe("Home page", () => {
       page.getByText("Ohjelmistokehitys ja tekoäly"),
     ).toBeVisible();
     await expect(
-      page.getByText("Rakennan ohjelmistoja ja kehitän tapoja tehdä niitä tekoälyn avulla."),
+      page.getByText("Rakennan ohjelmistoja ja tuon tekoälyn osaksi tiimien kehitystyötä."),
     ).toBeVisible();
     await expect(
       page.getByRole("link", { name: "Ota yhteyttä" }).first(),
     ).toBeVisible();
     await expect(
-      page.getByText("Millaisissa projekteissa olen parhaimmillani"),
+      page.getByText("Missä voin auttaa"),
     ).toBeVisible();
     await expect(
       page.getByRole("heading", {
-        name: "Fullstack-tuotekehitys",
+        name: "Fullstack-kehitys",
       }),
     ).toBeVisible();
     await expect(

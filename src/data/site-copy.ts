@@ -94,10 +94,10 @@ export const siteCopy = {
   },
   fi: {
     meta: {
-      defaultDescription: "Ohjelmistokehitystä ja tekoälyä hyödyntäviä työnkulkuja. Tuukka Ylöstalo, Helsinki, UpHouse Consulting.",
+      defaultDescription: "Ohjelmistokehitystä ja tekoälyä kehitystyön tueksi. Tuukka Ylöstalo, UpHouse Consulting, Helsinki.",
       homeTitle: "Tuukka Ylöstalo | Ohjelmistokehitys ja tekoäly",
       homeDescription:
-        "Rakennan ohjelmistoja ja kehitän tapoja tehdä niitä tekoälyn avulla. Fullstack-kehitystä, tekoälytuotteita ja kehitystyön automatisointia. Helsinki, UpHouse Consulting.",
+        "Rakennan ohjelmistoja ja tuon tekoälyn osaksi tiimien kehitystyötä. Fullstack-kehitystä, tekoälysovelluksia ja kehitystyön automatisointia Helsingistä käsin.",
     },
     chrome: {
       skipToContent: "Siirry sisältöön",
@@ -133,52 +133,52 @@ export const siteCopy = {
     },
     home: {
       companyLine: "Ohjelmistokehitys ja tekoäly",
-      tagline: "Rakennan ohjelmistoja ja kehitän tapoja tehdä niitä tekoälyn avulla.",
+      tagline: "Rakennan ohjelmistoja ja tuon tekoälyn osaksi tiimien kehitystyötä.",
       contactCta: "Ota yhteyttä",
       aboutHeading: "Minusta",
       aboutParagraphs: [
-        "Olen Tuukka, ohjelmistokehittäjä ja konsultti Helsingistä. Autan UpHouse Consultingin kautta tiimejä rakentamaan fullstack-tuotteita ja hyödyntämään tekoälyä kehitystyössä. Minua kiinnostaa koko prosessi, myös työn määrittely, toteutus, katselmointi ja tulosten todentaminen.",
-        "Taustani on ohjelmistoissa, joihin ihmiset luottavat arjessaan. Olen työskennellyt joukkoliikennepalveluiden, laajojen julkisten verkkosivustojen, migraatioiden ja saavutettavuuden parissa. Nykyään rakennan myös tekoälytuotteita ja työnkulkuja, joissa agentit hoitavat kehitystyötä.",
-        "Viihdyn lähellä tuotetta ja sitä rakentavia ihmisiä. Selkeä viestintä ja luottamus merkitsevät minulle yhtä paljon kuin tekniset päätökset. Vapaa-ajalla aikani kuluu nörtteilyn, ruuanlaiton ja painojen nostelun parissa.",
+        "Olen Tuukka, ohjelmistokehittäjä ja konsultti Helsingistä. Autan UpHouse Consultingin kautta tiimejä rakentamaan ohjelmistoja ja ottamaan tekoälyn käyttöön kehitystyössä. Minua kiinnostaa koko matka työn määrittelystä toteutukseen, katselmointiin ja laadun varmistamiseen.",
+        "Olen kehittänyt joukkoliikennepalveluita ja laajoja julkisia verkkosivustoja, joiden on toimittava ihmisten arjessa. Kokemusta on kertynyt myös migraatioista ja saavutettavuudesta. Nykyään rakennan lisäksi tekoälysovelluksia ja järjestelmiä, joissa tekoälyagentit tekevät kehitystyötä.",
+        "Viihdyn työssä, jossa pääsen vaikuttamaan tuotteeseen ja tekemään tiivistä yhteistyötä muiden kanssa. Selkeä viestintä ja luottamus ovat minulle yhtä tärkeitä kuin hyvät tekniset ratkaisut. Vapaa-ajalla nörtteilen, laitan ruokaa ja nostelen painoja.",
       ],
       workHeading: "Miten teen töitä",
       workItems: [
         {
-          title: "Määrittelen, milloin työ on valmis",
-          body: "Lähtökohtana on käyttäjän ongelma ja tulos, jonka voi tarkistaa. Ihmisillä ja agenteilla pitää olla selkeä tavoite ennen toteutusta.",
+          title: "Selkeä tavoite ennen toteutusta",
+          body: "Ennen toteutusta selvitän, mikä käyttäjän ongelma on ja mistä tiedämme sen ratkenneen. Näin sekä ihmiset että tekoälyagentit tietävät, mitä työltä odotetaan.",
         },
         {
-          title: "Suunnittelen työnkulun tekoälyn ympärille",
-          body: "Katson yksittäistä koodaustehtävää pidemmälle. Hyödyllisin muutos voi olla tehtäväjonon, toteutuksen, katselmoinnin ja toimituksen yhdistäminen samaan työnkulkuun.",
+          title: "Tekoäly osaksi koko kehitystyötä",
+          body: "Katson yksittäistä koodaustehtävää pidemmälle. Etsin tapoja yhdistää tehtävien suunnittelu, toteutus, katselmointi ja julkaisu sujuvaksi kokonaisuudeksi tekoälyn avulla.",
         },
         {
-          title: "Teen työtä, johon voi luottaa",
-          body: "Vastaan toimittamastani työstä myös silloin, kun käytän tekoälyä. Ohjelmiston pitää palvella käyttäjiään ja pysyä ylläpidettävänä myös julkaisun jälkeen.",
+          title: "Vastaan työni jäljestä",
+          body: "Tekoälyn käyttö ei siirrä vastuuta pois minulta. Ohjelmiston pitää toimia käyttäjän arjessa ja olla ylläpidettävissä myös julkaisun jälkeen.",
         },
       ],
-      goodFitHeading: "Millaisissa projekteissa olen parhaimmillani",
+      goodFitHeading: "Missä voin auttaa",
       goodFitIntro:
-        "Työskentelen sekä tuotteen että kehitystavan parissa. Voin liittyä olemassa olevaan tiimiin tai ottaa teknisen vastuun alkuvaiheen tuotteesta.",
+        "Autan sekä ohjelmiston rakentamisessa että siinä, miten kehitystyö sujuu. Voin liittyä mukaan tiimiin tai ottaa teknisen vastuun uudesta tuotteesta.",
       goodFitItems: [
         {
-          title: "Fullstack-tuotekehitys",
-          body: "Käytännön kehitystyötä tuotteisiin, joiden pitää toimia myös julkaisun jälkeen. React, Next.js, TypeScript, integraatiot, migraatiot ja tuotannon ongelmien selvittäminen.",
+          title: "Fullstack-kehitys",
+          body: "Toteutan uusia ominaisuuksia, rakennan integraatioita ja ratkon tuotannon ongelmia. Työkaluihini kuuluvat React, Next.js ja TypeScript, ja kokemusta minulla on myös migraatioista.",
         },
         {
           title: "Kehitystyön automatisointi tekoälyllä",
-          body: "Autan tiimejä suunnittelemaan työnkulkuja, joissa tekoälyagentit ovat mukana alusta loppuun. Sovimme, miten työ etenee, missä tarvitaan ihmisen päätös ja miten lopputulos tarkistetaan.",
+          body: "Suunnittelen tiimien kanssa, mitä tekoälyagenteille voi antaa tehtäväksi ja miten työ etenee alusta loppuun. Määrittelemme myös, missä tarvitaan ihmisen päätöksiä ja miten työn laatu varmistetaan.",
         },
         {
-          title: "Tekoälytuotteet",
-          body: "Hyödyllisestä tekoälyideasta sovellus, jota voi kokeilla. Mallin tuottama sisältö yhdistetään tuotteen dataan ja käyttökokemukseen, ja lopputulosta arvioidaan alkuperäistä tarvetta vasten.",
+          title: "Tekoälysovellukset",
+          body: "Rakennan tekoälyideoista sovelluksia, joita pääsee kokeilemaan käytännössä. Yhdistän tekoälyn tuotteen tietoihin ja käyttöliittymään. Kokeilemme, vastaako lopputulos käyttäjän tarpeeseen.",
         },
         {
-          title: "Alkuvaiheen tuotteen tekninen vastuu",
-          body: "Rajataan tarve, kokeillaan ideoita toimivilla prototyypeillä ja rakennetaan ensimmäinen hyödyllinen versio. Olen mukana sekä tuotepäätöksissä että toteutuksessa.",
+          title: "Uuden tuotteen tekninen vastuu",
+          body: "Autan rajaamaan ideasta toteutettavan kokonaisuuden, kokeilen vaihtoehtoja prototyypeillä ja rakennan ensimmäisen käyttökelpoisen version. Olen mukana sekä tuotteen suunnittelussa että toteutuksessa.",
         },
       ],
       goodFitAside:
-        "Kerro, mitä haluatte rakentaa tai missä kehitystyö tökkii. Etsitään yhdessä hyödyllinen lähtökohta.",
+        "Kerro, mitä haluatte rakentaa tai missä kehitystyö tökkii. Mietitään yhdessä, mistä kannattaa aloittaa.",
       projectsHeading: "Valikoituja töitä",
     },
   },

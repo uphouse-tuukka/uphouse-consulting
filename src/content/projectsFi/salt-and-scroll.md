@@ -1,42 +1,58 @@
 ---
 projectKey: "salt-and-scroll"
 title: "Salt & Scroll"
-role: "Tuotesuunnittelu ja tekoälyvetoinen kehitys"
+role: "Tuotesuunnittelu ja kehitys tekoälyagenteilla"
 stack: ["SvelteKit", "TypeScript", "Playwright", "Cloudflare Workers"]
 duration: "2026-nykyhetki"
-outcome: "Rakensin julkisen ruuanlaittosovelluksen tekoälyagenteilla. Tuotepäätökset ja tulosten todentaminen olivat osa työnkulkua."
+outcome: "Rakensin resepti- ja ruuanlaittosovelluksen tekoälyagenteilla. Vastasin itse tuotteen suunnasta ja työn laadun varmistamisesta."
 atAGlance:
-  problem: "Reseptimuistiinpanoni tarvitsivat ruuanlaittoa palvelevan käyttöliittymän ja tavan jakaa valitut reseptit julkaisematta yksityisiä muistiinpanoja."
-  contribution: "Ohjasin tuotetta prototyyppien ja tekoälyagenttien avulla. Työnkulkuun kuuluivat selkeät suunnittelupäätökset, testit ja erilliset katselmoinnit."
-  result: "Julkaistu reseptikirjasto ja ruuanlaittosovellus, jonka toteutusta on tarkistettu selaimessa ja verrattu hyväksyttyyn suunnitelmaan."
+  problem: "Halusin käyttää reseptimuistiinpanojani sujuvammin keittiössä ja jakaa valitsemani reseptit julkaisematta muita yksityisiä muistiinpanojani."
+  contribution: "Suunnittelin tuotteen prototyyppien avulla ja annoin toteutuksen tekoälyagenteille. Laadun varmistin testeillä ja erillisillä katselmoinneilla."
+  result: "Julkaistu reseptikirjasto ja ruuanlaittosovellus, jonka toimivuus on tarkistettu selaimessa ja ulkoasu verrattu hyväksyttyyn suunnitelmaan."
 demoUrl: "https://salt-and-scroll.uphouse-tuukka.workers.dev/"
 order: 2
 ---
 
 ## Lähtötilanne
 
-Säilytän reseptejä Obsidianissa, mutta hyvä muistiinpano ja hyvä ruuanlaittokäyttöliittymä ovat eri asioita. Halusin puhelimella toimivan sovelluksen, jossa ainekset ja ohjeet pysyvät käden ulottuvilla. Lisäksi halusin jakaa itse valitsemani reseptit julkisessa kirjastossa.
+Säilytän reseptejä Obsidianissa, mutta muistiinpanojen selaaminen ei ole kätevin tapa seurata reseptiä ruokaa laittaessa.
+Halusin puhelimella käytettävän sovelluksen, jossa ainekset ja ohjeet ovat helposti saatavilla, sekä julkisen reseptikirjaston itse valitsemilleni resepteille.
 
 ## Roolini
 
-Rakensin Salt & Scrollin lukematta sen sovelluskoodia. Vastasin tuotteen suunnasta, päätöksistä ja lopputuloksen arvioinnista. Agentit hoitivat toteutuksen työnkulussa, jonka rakensin toimivien prototyyppien, selkeiden vaatimusten ja todentamisen ympärille.
+Rakensin Salt & Scrollin lukematta sen sovelluskoodia itse.
+Vastasin siitä, mitä rakennetaan, tein tuotetta koskevat päätökset ja arvioin lopputuloksen.
+Tekoälyagentit toteuttivat sovelluksen toimivien prototyyppien ja selkeiden vaatimusten pohjalta.
+Suunnittelin myös, miten niiden työn laatu tarkistetaan.
 
-Vertailin ruuanlaittonäkymän toimivia vaihtoehtoja oikeilla resepteillä ja valitsin suunnan. Hyväksytystä prototyypistä tuli vertailukohta, jota toteutuksen piti vastata.
+Kokeilin ruuanlaittonäkymän eri prototyyppejä oikeilla resepteillä ja valitsin niistä sopivimman.
+Valitusta prototyypistä tuli malli, johon toteutusta verrattiin.
 
-## Miten tein työstä todennettavaa
+## Miten varmistin työn laadun
 
-Työnkulkuun kuuluivat automaattiset testit, selaintarkistukset ja erilliset katselmoinnit vaatimuksia vasten. Visuaalisissa tarkistuksissa sovellusta verrattiin hyväksyttyyn esimerkkiin sen sijaan, että toteutuksen oma ulkoasu olisi kelvannut vertailukohdaksi.
+Kehitystyöhön kuuluivat automaattiset testit, selaimessa tehdyt tarkistukset ja erilliset katselmoinnit vaatimuksia vasten.
+Ulkoasua verrattiin hyväksyttyyn prototyyppiin, ei siihen, mitä agentti sattui tuottamaan.
 
-Yhdessä katselmoinnissa löytyi valikko, joka peitti ruuanlaiton ohjaimia kapealla näytöllä suurennetulla tekstillä. Korjaukselle tehtiin selainregressiotesti ja erillinen uudelleentarkistus. Tällaista näyttöä haluan ennen muutoksen hyväksymistä.
+Yhdessä katselmoinnissa löytyi valikko, joka peitti ruuanlaittonäkymän painikkeita kapealla näytöllä, kun tekstiä oli suurennettu.
+Korjaus tarkistettiin erikseen, ja ongelman varalle lisättiin selaintesti, jotta se ei pääsisi palaamaan.
+Tällaisia konkreettisia tarkistuksia haluan muutosten hyväksymisen tueksi.
 
-Myös julkaisemisella oli selkeä raja. Vain erikseen valitut reseptit saivat siirtyä yksityisistä muistiinpanoista julkisiksi. Julkaisuprosessi tarkisti tuotetut tiedostot.
+Myös reseptien julkaisu piti rajata tarkasti.
+Vain erikseen valitsemani reseptit saivat päätyä julkisiksi.
+Julkaisuprosessi tarkisti syntyneet tiedostot sen sijaan, että kaikkia muistiinpanoja olisi käsitelty julkisena sisältönä.
 
 ## Lopputulos
 
-Salt & Scroll on julkaistu reseptikirjasto ja ruuanlaittosovellus. Se on staattinen verkkosovellus, jonka ruuanlaittotila tallentuu selaimeen. Tekoälytyö liittyy sen kehitystapaan.
+Salt & Scroll on julkaistu reseptikirjasto ja ruuanlaittosovellus.
+Se on staattinen verkkosovellus, jossa ruuanlaiton aikaiset merkinnät tallentuvat omaan selaimeen.
+Tekoälyä käytettiin kehitystyössä, ei sovelluksen ominaisuutena.
 
-Projekti antoi käytännön tavan kehittää ohjelmistoa ilman, että oma rivikohtainen koodinlukuni olisi hyväksymismenetelmä. Tuotepäätökset pysyivät minulla. Testit, erilliset katselmoinnit ja toimivan käyttöliittymän tarkistukset tuottivat näyttöä toteutuksen laadusta.
+Projektissa kokeilin käytännössä, miten voin varmistaa ohjelmiston laadun lukematta itse jokaista koodiriviä.
+Tuotetta koskevat päätökset pysyivät minulla.
+Toteutuksen laatua arvioitiin testien, erillisten katselmointien ja toimivan käyttöliittymän perusteella.
 
 ## Mitä opin
 
-Kun agenteille antaa enemmän vastuuta, myös kehittäjän työ muuttuu. Käytän enemmän huomiota ongelmaan, päätöksiin ja siihen, miten tulos tarkistetaan. Työnkulun pitää tehdä virheet näkyviksi ennen kuin sille voi antaa suurempia kokonaisuuksia.
+Kun agenteille antaa enemmän vastuuta, oma työ painottuu eri asioihin.
+Keskityn enemmän ratkaistavaan ongelmaan, tuotetta koskeviin päätöksiin ja siihen, miten lopputulos tarkistetaan.
+Ennen kuin agenteille voi antaa suurempia kokonaisuuksia, kehitystavan on autettava löytämään myös niiden tekemät virheet.

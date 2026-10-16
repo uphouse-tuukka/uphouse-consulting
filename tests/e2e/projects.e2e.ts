@@ -73,7 +73,7 @@ test.describe("Project pages", () => {
     await expect(page.getByRole("link", { name: "Open live demo" })).toHaveCount(0);
     await page.getByRole("link", { name: "Suomeksi" }).click();
     await expect(page).toHaveURL("/fi/projects/wayrunner");
-    await expect(page.locator("#main-content")).toContainText("Toimiva oma järjestelmä");
+    await expect(page.locator("#main-content")).toContainText("omaan käyttööni rakentamani järjestelmä");
   });
 
   test("renders testimonial only on ticketing project", async ({ page }) => {
