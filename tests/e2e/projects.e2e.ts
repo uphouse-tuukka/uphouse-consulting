@@ -19,15 +19,14 @@ test.describe("Project pages", () => {
   test("prev/next navigation works", async ({ page }) => {
     await page.goto("/projects/public-transport-webshop");
 
-    // First project: no prev link, has next
     const nextLink = page.getByRole("link", {
-      name: /Public Transport Website/i,
+      name: /Salt & Scroll/i,
     });
     await expect(nextLink).toBeVisible();
     await nextLink.click();
 
     await expect(page.locator("#main-content h1")).toHaveText(
-      "Public Transport Website",
+      "Salt & Scroll",
     );
   });
 
@@ -38,7 +37,7 @@ test.describe("Project pages", () => {
     await expect(cta).toBeVisible();
   });
 
-  test("renders demo link only on AI tutor project", async ({ page }) => {
+  test("links to live products and omits a demo for private systems", async ({ page }) => {
     await page.goto("/projects/japanese-ai-tutor");
     const demoLinkEn = page.getByRole("link", { name: "Open live demo" });
     await expect(demoLinkEn).toHaveAttribute(
@@ -57,6 +56,24 @@ test.describe("Project pages", () => {
       "href",
       "https://japanese-learner-sooty.vercel.app/portfolio/challenge",
     );
+
+    await page.goto("/projects/salt-and-scroll");
+    await expect(page.getByRole("link", { name: "Open live demo" })).toHaveAttribute(
+      "href",
+      "https://salt-and-scroll.uphouse-tuukka.workers.dev/",
+    );
+    await page.getByRole("link", { name: "Suomeksi" }).click();
+    await expect(page).toHaveURL("/fi/projects/salt-and-scroll");
+    await expect(page.getByRole("link", { name: "Avaa demo" })).toHaveAttribute(
+      "href",
+      "https://salt-and-scroll.uphouse-tuukka.workers.dev/",
+    );
+
+    await page.goto("/projects/wayrunner");
+    await expect(page.getByRole("link", { name: "Open live demo" })).toHaveCount(0);
+    await page.getByRole("link", { name: "Suomeksi" }).click();
+    await expect(page).toHaveURL("/fi/projects/wayrunner");
+    await expect(page.locator("#main-content")).toContainText("Toimiva oma järjestelmä");
   });
 
   test("renders testimonial only on ticketing project", async ({ page }) => {
@@ -117,11 +134,11 @@ test.describe("Project pages", () => {
     await page.goto("/fi/projects/public-transport-webshop");
 
     const nextLink = page.getByRole("link", {
-      name: /Joukkoliikenteen verkkosivusto/i,
+      name: /Salt & Scroll/i,
     });
     await expect(nextLink).toHaveAttribute(
       "href",
-      "/fi/projects/public-transport-website",
+      "/fi/projects/salt-and-scroll",
     );
   });
 
@@ -171,11 +188,11 @@ test.describe("Project pages", () => {
 
     await expect(page.locator('meta[property="og:title"]')).toHaveAttribute(
       "content",
-      "Tuukka Ylöstalo — Software Developer",
+      "Tuukka Ylöstalo | Software engineering & AI workflows",
     );
     await expect(page.locator('meta[property="og:description"]')).toHaveAttribute(
       "content",
-      "Portfolio and case studies for Tuukka Ylöstalo, a Helsinki-based software developer behind UpHouse Consulting.",
+      "I build software and the AI workflows that help teams deliver it. Full-stack development, AI products, and agent-driven delivery. Based in Helsinki.",
     );
     await expect(page.locator('meta[property="og:url"]')).toHaveAttribute(
       "content",

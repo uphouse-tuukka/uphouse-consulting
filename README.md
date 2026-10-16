@@ -31,6 +31,8 @@ Run tests:
 npm test
 ```
 
+The test server uses `--ignore-lock` so Astro stays in the foreground under coding agents and Playwright owns the server lifecycle.
+
 Build for production:
 
 ```bash
@@ -47,6 +49,7 @@ npm run preview
 
 - Profile and global metadata: `src/data/profile.json`
 - Case studies: `src/content/projects/`
+- Finnish case studies: `src/content/projectsFi/`
 
 ## Notes
 

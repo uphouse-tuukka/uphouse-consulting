@@ -10,7 +10,7 @@ atAGlance:
   contribution: "I designed and built a SvelteKit product with AI-generated lessons, progress tracking, difficulty adjustment, and habit mechanics."
   result: "The app became something I use myself and a practical testbed for AI workflows and agent orchestration patterns."
 demoUrl: "https://japanese-learner-sooty.vercel.app/portfolio/challenge"
-order: 3
+order: 5
 ---
 
 ## Starting point
