@@ -73,7 +73,7 @@ test.describe("Project pages", () => {
     await expect(page.getByRole("link", { name: "Open live demo" })).toHaveCount(0);
     await page.getByRole("link", { name: "Suomeksi" }).click();
     await expect(page).toHaveURL("/fi/projects/wayrunner");
-    await expect(page.locator("#main-content")).toContainText("omaan käyttööni rakentamani järjestelmä");
+    await expect(page.locator("#main-content")).toContainText("Kehitän järjestelmää edelleen omaan käyttööni.");
   });
 
   test("renders testimonial only on ticketing project", async ({ page }) => {
@@ -159,7 +159,7 @@ test.describe("Project pages", () => {
     expect(response?.status()).toBe(404);
   });
 
-  test("Finnish home page outputs canonical and alternate hreflang links", async ({
+  test("Finnish home page outputs localized metadata and canonical links", async ({
     page,
   }) => {
     await page.goto("/fi/");
@@ -181,6 +181,17 @@ test.describe("Project pages", () => {
       "href",
       "https://uphouseconsulting.fi/fi/",
     );
+
+    for (const selector of [
+      'meta[name="description"]',
+      'meta[property="og:description"]',
+      'meta[name="twitter:description"]',
+    ]) {
+      await expect(page.locator(selector)).toHaveAttribute(
+        "content",
+        "Toimivaa softaa ja tekoälystä käytännön hyötyä. Tuukka Ylöstalo, fullstack-kehittäjä ja konsultti Helsingistä.",
+      );
+    }
   });
 
   test("home page outputs Open Graph and Twitter metadata", async ({ page }) => {

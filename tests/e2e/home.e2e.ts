@@ -145,7 +145,7 @@ test.describe("Home page", () => {
       page.getByText("Ohjelmistokehitys ja tekoäly"),
     ).toBeVisible();
     await expect(
-      page.getByText("Rakennan ohjelmistoja ja tuon tekoälyn osaksi tiimien kehitystyötä."),
+      page.getByText("Toimivaa softaa ja tekoälystä käytännön hyötyä."),
     ).toBeVisible();
     await expect(
       page.getByRole("link", { name: "Ota yhteyttä" }).first(),
@@ -160,6 +160,12 @@ test.describe("Home page", () => {
     ).toBeVisible();
     await expect(
       page.getByRole("heading", { name: "Kehitystyön automatisointi tekoälyllä" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Tekoälysovellukset" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Uuden tuotteen suunnittelu ja toteutus" }),
     ).toBeVisible();
   });
 

@@ -97,7 +97,7 @@ export const siteCopy = {
       defaultDescription: "Ohjelmistokehitystä ja tekoälyä kehitystyön tueksi. Tuukka Ylöstalo, UpHouse Consulting, Helsinki.",
       homeTitle: "Tuukka Ylöstalo | Ohjelmistokehitys ja tekoäly",
       homeDescription:
-        "Rakennan ohjelmistoja ja tuon tekoälyn osaksi tiimien kehitystyötä. Fullstack-kehitystä, tekoälysovelluksia ja kehitystyön automatisointia Helsingistä käsin.",
+        "Toimivaa softaa ja tekoälystä käytännön hyötyä. Tuukka Ylöstalo, fullstack-kehittäjä ja konsultti Helsingistä.",
     },
     chrome: {
       skipToContent: "Siirry sisältöön",
@@ -133,23 +133,22 @@ export const siteCopy = {
     },
     home: {
       companyLine: "Ohjelmistokehitys ja tekoäly",
-      tagline: "Rakennan ohjelmistoja ja tuon tekoälyn osaksi tiimien kehitystyötä.",
+      tagline: "Toimivaa softaa ja tekoälystä käytännön hyötyä.",
       contactCta: "Ota yhteyttä",
       aboutHeading: "Minusta",
       aboutParagraphs: [
-        "Olen Tuukka, ohjelmistokehittäjä ja konsultti Helsingistä. Autan UpHouse Consultingin kautta tiimejä rakentamaan ohjelmistoja ja ottamaan tekoälyn käyttöön kehitystyössä. Minua kiinnostaa koko matka työn määrittelystä toteutukseen, katselmointiin ja laadun varmistamiseen.",
-        "Olen kehittänyt joukkoliikennepalveluita ja laajoja julkisia verkkosivustoja, joiden on toimittava ihmisten arjessa. Kokemusta on kertynyt myös migraatioista ja saavutettavuudesta. Nykyään rakennan lisäksi tekoälysovelluksia ja järjestelmiä, joissa tekoälyagentit tekevät kehitystyötä.",
-        "Viihdyn työssä, jossa pääsen vaikuttamaan tuotteeseen ja tekemään tiivistä yhteistyötä muiden kanssa. Selkeä viestintä ja luottamus ovat minulle yhtä tärkeitä kuin hyvät tekniset ratkaisut. Vapaa-ajalla nörtteilen, laitan ruokaa ja nostelen painoja.",
+        "Olen Helsingissä asuva fullstack-kehittäjä ja konsultti. Olen kehittänyt muun muassa joukkoliikennepalveluita ja laajoja julkisia verkkosivustoja. Nykyään kehitän myös tekoälysovelluksia ja autan tiimejä hyödyntämään tekoälyagentteja kehitystyössä.",
+        "Viihdyn projekteissa, joissa tehdään tiiviisti töitä yhdessä. Arvostan selkeää viestintää ja luottamusta yhtä paljon kuin teknistä osaamista. Vapaa-ajalla nörtteilen, laitan ruokaa ja nostelen painoja.",
       ],
       workHeading: "Miten teen töitä",
       workItems: [
         {
           title: "Selkeä tavoite ennen toteutusta",
-          body: "Ennen toteutusta selvitän, mikä käyttäjän ongelma on ja mistä tiedämme sen ratkenneen. Näin sekä ihmiset että tekoälyagentit tietävät, mitä työltä odotetaan.",
+          body: "Selvitän ensin, mitä käyttäjä tarvitsee. Sovitaan sen pohjalta, mitä tehdään ja miten lopputuloksen toimivuus varmistetaan.",
         },
         {
           title: "Tekoäly osaksi koko kehitystyötä",
-          body: "Katson yksittäistä koodaustehtävää pidemmälle. Etsin tapoja yhdistää tehtävien suunnittelu, toteutus, katselmointi ja julkaisu sujuvaksi kokonaisuudeksi tekoälyn avulla.",
+          body: "Suunnittelen kehitystyötä niin, että agenteille voi antaa yksittäistä koodaustehtävää laajempia kokonaisuuksia. Samalla sovitaan, missä tarvitaan ihmisen päätöksiä ja miten tulokset tarkistetaan.",
         },
         {
           title: "Vastaan työni jäljestä",
@@ -158,22 +157,22 @@ export const siteCopy = {
       ],
       goodFitHeading: "Missä voin auttaa",
       goodFitIntro:
-        "Autan sekä ohjelmiston rakentamisessa että siinä, miten kehitystyö sujuu. Voin liittyä mukaan tiimiin tai ottaa teknisen vastuun uudesta tuotteesta.",
+        "Autan sekä ohjelmiston rakentamisessa että siinä, miten kehitystyötä tehdään. Voin liittyä mukaan tiimiin tai ottaa teknisen vastuun uudesta tuotteesta.",
       goodFitItems: [
         {
           title: "Fullstack-kehitys",
-          body: "Toteutan uusia ominaisuuksia, rakennan integraatioita ja ratkon tuotannon ongelmia. Työkaluihini kuuluvat React, Next.js ja TypeScript, ja kokemusta minulla on myös migraatioista.",
+          body: "Toteutan uusia ominaisuuksia, rakennan integraatioita ja ratkon tuotannon ongelmia. Työskentelen tarpeen mukaan sekä käyttöliittymän että taustajärjestelmien parissa.",
         },
         {
           title: "Kehitystyön automatisointi tekoälyllä",
-          body: "Suunnittelen tiimien kanssa, mitä tekoälyagenteille voi antaa tehtäväksi ja miten työ etenee alusta loppuun. Määrittelemme myös, missä tarvitaan ihmisen päätöksiä ja miten työn laatu varmistetaan.",
+          body: "Autan tiimejä ottamaan tekoälyagentit osaksi kehitystyötä. Sovimme, mitä niille annetaan tehtäväksi, missä tarvitaan ihmisen päätöksiä ja miten työn laatu varmistetaan.",
         },
         {
           title: "Tekoälysovellukset",
-          body: "Rakennan tekoälyideoista sovelluksia, joita pääsee kokeilemaan käytännössä. Yhdistän tekoälyn tuotteen tietoihin ja käyttöliittymään. Kokeilemme, vastaako lopputulos käyttäjän tarpeeseen.",
+          body: "Kehitän tekoälyä hyödyntäviä ominaisuuksia uusiin ja olemassa oleviin palveluihin. Huolehdin siitä, että ne toimivat osana palvelua ja niistä on käyttäjälle hyötyä.",
         },
         {
-          title: "Uuden tuotteen tekninen vastuu",
+          title: "Uuden tuotteen suunnittelu ja toteutus",
           body: "Autan rajaamaan ideasta toteutettavan kokonaisuuden, kokeilen vaihtoehtoja prototyypeillä ja rakennan ensimmäisen käyttökelpoisen version. Olen mukana sekä tuotteen suunnittelussa että toteutuksessa.",
         },
       ],

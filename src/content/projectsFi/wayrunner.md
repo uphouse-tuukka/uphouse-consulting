@@ -4,49 +4,44 @@ title: "Wayrunner"
 role: "Järjestelmäsuunnittelu ja kehitys"
 stack: ["Python", "Tekoälyagentit", "GitHub", "Automaattiset tarkistukset"]
 duration: "2026-nykyhetki"
-outcome: "Rakensin järjestelmän, joka vie tekoälyagenttien työn määrittelystä toteutuksen, katselmoinnin ja hyväksymisen kautta pull requestiin."
+outcome: "Rakensin agenttien työtä ohjaavan järjestelmän, jota voin käyttää oman tekoälyassistenttini kautta myös silloin, kun en ole koneella."
 atAGlance:
-  problem: "Vaikka agentit hoitivat koodauksen, minun piti yhä koordinoida työtä, tarkistaa tulokset ja selvittää, miten keskeytynyttä työtä jatketaan."
-  contribution: "Rakensin järjestelmän, joka koordinoi agenttien työtä. Toteutus, tulosten erillinen hyväksyminen ja ihmisen päätökset ovat omia vaiheitaan."
-  result: "Omassa käytössä oleva järjestelmä, jolla on tehty rajattuja koeajoja ja testattu keskeytyksistä palautumista. Mukana on yhteys omaan tekoälyassistenttiini."
+  problem: "Agentit hoitivat koodauksen, mutta työn koordinointi ja tulosten tarkistaminen jäivät minulle."
+  contribution: "Suunnittelin ja rakensin järjestelmän, joka ohjaa agenttien työtä ja huolehtii tulosten erillisestä tarkistamisesta."
+  result: "Voin seurata agenttien työtä ja antaa lisäohjeita oman tekoälyassistenttini kautta myös silloin, kun en ole koneella."
 order: 3
 ---
 
 ## Lähtötilanne
 
-Halusin antaa tekoälyagenteille kokonaisia tehtäviä yksittäisten koodauspyyntöjen sijaan.
-Pelkkä koodin tuottaminen ei riittänyt: järjestelmän piti ymmärtää, mitä halusin, ohjata työ toteutuksen ja katselmoinnin läpi sekä tarkistaa, että lopputulos vastasi pyyntöä.
+Koodauksen pystyin jo antamaan agenteille, mutta työn koordinointi ja tulosten tarkistaminen jäivät minulle.
+Halusin järjestelmän, joka huolehtii myös työn etenemisestä ja auttaa jatkamaan keskeytyneitä tehtäviä.
 
-Wayrunner on ensimmäinen rakentamani järjestelmä, joka ohjaa tekoälyagenttien tekemää ohjelmistokehitystä.
-Se vie työn määrittelystä toteutukseen, katselmointiin ja hyväksymistarkistuksiin asti.
-Lopuksi muutokset toimitetaan pull requestina.
+Rakensin Wayrunnerin ohjaamaan agenttien työtä tehtävänannosta tarkistettuun pull requestiin.
 
 ## Valmis ei vielä tarkoita toimivaa
 
-Agentin ilmoitus työn valmistumisesta ei vielä kerro, onko tulos oikein.
-Siksi Wayrunner käsittelee toteutusta ehdotuksena, joka pitää tarkistaa erikseen.
-Katselmointi- ja hyväksymisvaiheissa varmistetaan, että juuri tarkistettavana oleva koodiversio vastaa pyyntöä, ennen kuin työ etenee.
+Agentin ilmoitus työn valmistumisesta ei vielä riitä.
+Ennen hyväksymistä toteutus katselmoidaan ja tarkistetaan, että se vastaa tehtävänantoa.
 
 Järjestelmän on osattava myös pysähtyä.
-Korjausyrityksiä on rajallinen määrä.
-Jos tarkistusten tuloksia puuttuu, tuotetta koskeva päätös on auki tai järjestelmän toiminnassa on häiriö, tilanteelle on oma käsittelytapansa.
-Samaa tehtävää ei vain yritetä loputtomasti uudelleen.
+Jos tulosta ei voida hyväksyä, korjauskierroksia tehdään vain rajattu määrä.
+Puuttuvat tarkistukset, avoimet päätökset ja toimintahäiriöt käsitellään erikseen.
 
-## Päätökset ihmiselle, keskeytykset hallintaan
+## Työn ohjaaminen ja seuranta
 
-Yhdistin Wayrunnerin Alfrediin, henkilökohtaiseen tekoälyassistenttiini, jotta työtä koskevat kysymykset ja vastaukseni pysyvät tallessa oikean tehtävän yhteydessä.
-Rakensin Alfredin jo ennen Grok Botia, joten pääsin toki myös toimimaan omana IT-tukenani.
-Assistentti hoitaa keskustelun, mutta Wayrunner pitää kirjaa työn etenemisestä ja vastaa hyväksymistarkistuksista.
+Alfred on henkilökohtainen tekoälyassistenttini, jonka kautta annan Wayrunnerille tehtäviä ja vastaan sen kysymyksiin.
 
-Keskeytyksen jälkeen pitää pystyä selvittämään, mihin työ jäi.
-Tallennettujen tulosten ja palautumistietojen perusteella järjestelmä erottaa, voiko työtä jatkaa, pitääkö aloittaa uusi yritys vai tarvitaanko minulta päätös.
+Wayrunner tallentaa työn etenemisen ja tulokset.
+Jos työ keskeytyy, tallessa on tieto siitä, mitä on jo tehty ja mitä seuraavaksi tarvitaan.
 
 ## Lopputulos
 
-Dokumentoiduissa, rajatuissa koeajoissa on käyty läpi toteutus, erillinen katselmointi, hyväksyminen ja muutosten toimittaminen pull requestina.
-Assistenttiyhteyttä on kokeiltu sekä keskusteluissa että uudelleenkäynnistysten yhteydessä.
-Wayrunner on omaan käyttööni rakentamani järjestelmä, jonka kehitys jatkuu.
+Wayrunner hoitaa agenttien työn koordinointia, joten minun ei tarvitse ohjata jokaista vaihetta erikseen.
+Voin seurata työtä ja antaa lisäohjeita Alfredin kautta myös silloin, kun en ole koneella.
+Kehitän järjestelmää edelleen omaan käyttööni.
 
-Projekti on selkeyttänyt sitä, mitä laajempien kokonaisuuksien antaminen tekoälyagenteille vaatii.
-Ensin pitää määritellä, milloin työ on valmis ja miten tulokset tarkistetaan.
-Tuotetta koskevat päätökset ja vastuu siitä, mitä agentit saavat tehdä, pysyvät minulla.
+## Mitä opin
+
+Agenttien hyöty ei synny vain siitä, kuinka nopeasti ne kirjoittavat koodia.
+Minulle olennaista on, kuinka paljon työtä ne pystyvät viemään eteenpäin ilman jatkuvaa ohjaamista.
