@@ -1,6 +1,6 @@
 # Tuukka Ylöstalo / UpHouse Consulting
 
-> Personal portfolio site for Tuukka Ylöstalo, a Helsinki-based fullstack developer. The site contains a short profile, working principles, fit areas for collaboration, and first-person case studies about client work and self-directed product work.
+> Personal portfolio site for Tuukka Ylöstalo, a Helsinki-based software engineer and consultant behind UpHouse Consulting. He builds full-stack products and AI development workflows, including agent-driven implementation, review, and verification.
 
 This is a small, curated portfolio site. The homepage is the best starting point if you need a general summary of Tuukka's work style, collaboration fit, and contact details. The project pages are the best place to understand the actual work, role, challenges, and outcomes behind the projects.
 
@@ -9,9 +9,11 @@ Some client work is intentionally anonymized. The case studies are written from 
 ## Core pages
 
 - [Home](https://uphouseconsulting.fi/): Overview, about section, working style, collaboration fit, contact links, and links to project case studies.
+- [Salt & Scroll](https://uphouseconsulting.fi/projects/salt-and-scroll/): Personal cooking product built through AI-led development, with product direction, approved prototypes, separate reviews, and browser verification. AI is used in development, not as a runtime product feature.
+- [Wayrunner](https://uphouseconsulting.fi/projects/wayrunner/): Personal agent-driven delivery system connecting specifications, implementation, separate acceptance checks, recovery, and human decisions. Under active development, with recorded isolated validation runs.
 - [Public Transport Ticketing Portal](https://uphouseconsulting.fi/projects/public-transport-webshop/): Case study about long-running ownership of a customer-facing ticketing portal, accessibility, coordination across company lines, and secure delivery.
 - [Public Transport Website](https://uphouseconsulting.fi/projects/public-transport-website/): Case study about broad generalist work across frontend, search, CMS/editor support, migrations, and production issues on a live public-facing platform.
-- [Japanese AI Tutor](https://uphouseconsulting.fi/projects/japanese-ai-tutor/): Solo product case study about building an AI-assisted language-learning application with SvelteKit and AI workflows.
+- [Japanese AI Tutor](https://uphouseconsulting.fi/projects/japanese-ai-tutor/): Solo product case study about integrating AI-generated lessons into a SvelteKit language-learning application used by its creator.
 
 ## Optional
 

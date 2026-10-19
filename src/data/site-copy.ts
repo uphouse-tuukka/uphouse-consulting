@@ -4,10 +4,10 @@ export type Locale = (typeof locales)[number];
 export const siteCopy = {
   en: {
     meta: {
-      defaultDescription: "Software Developer based in Helsinki",
-      homeTitle: "Tuukka Ylöstalo — Software Developer",
+      defaultDescription: "Software engineering and AI development workflows. Tuukka Ylöstalo, Helsinki, UpHouse Consulting.",
+      homeTitle: "Tuukka Ylöstalo | Software engineering & AI workflows",
       homeDescription:
-        "Portfolio and case studies for Tuukka Ylöstalo, a Helsinki-based software developer behind UpHouse Consulting.",
+        "I build software and the AI workflows that help teams deliver it. Full-stack development, AI products, and agent-driven delivery. Based in Helsinki.",
     },
     chrome: {
       skipToContent: "Skip to content",
@@ -42,61 +42,62 @@ export const siteCopy = {
       backHome: "Back to home",
     },
     home: {
-      companyLine: "Software developer behind UpHouse Consulting",
-      tagline: "Less complexity, more software.",
+      companyLine: "Software engineering & AI development workflows",
+      tagline: "I build software and the AI workflows that help teams deliver it.",
       contactCta: "Contact me",
       aboutHeading: "About",
       aboutParagraphs: [
-        "I'm a fullstack developer based in Helsinki. I enjoy working closely with teams and helping good work happen, whether that means writing code, supporting decisions, or stepping into the parts of a project that need extra care.",
-        "I think good consulting is about more than technical skill. Clear communication, trust, and how you work with people matter just as much. Outside work, I split my time between nerdy interests, cooking, and lifting heavy things.",
+        "I'm Tuukka, a software engineer and consultant based in Helsinki. Through UpHouse Consulting, I help teams build full-stack products and put AI to work across development. I'm interested in the whole process, including how work is defined, implemented, reviewed, and verified.",
+        "My background is in software people rely on, including public transport services, large public websites, migrations, and accessibility. Today I also build agent-driven development systems and AI-powered products.",
+        "I like working close to the product and the people building it. Clear communication and trust matter as much to me as the technical decisions. Outside work, I split my time between nerdy interests, cooking, and lifting heavy things.",
       ],
       workHeading: "How I work",
       workItems: [
         {
-          title: "Start with the real problem",
-          body: "I try to understand what actually needs to change before adding process, scope, or code.",
+          title: "Define what done means",
+          body: "Start with the user's problem and a result we can check. Give people and agents a clear target before implementation begins.",
         },
         {
-          title: "Cut complexity early",
-          body: "I prefer systems that teams can understand and maintain.",
+          title: "Design the workflow around AI",
+          body: "I look beyond a single coding task. The useful opportunity may be connecting the backlog, implementation, review, and delivery into one workflow.",
         },
         {
           title: "Ship work people can trust",
-          body: "The goal is maintainable software that helps users, supports teams, and keeps delivering after launch.",
+          body: "I take responsibility for what I ship, including work built with AI. The software needs to work for its users and remain maintainable after launch.",
         },
       ],
       goodFitHeading: "Where I'm useful",
       goodFitIntro:
-        "I'm a good fit when a team needs senior fullstack help, steady delivery, and someone who can think beyond the next ticket.",
+        "I work on the product itself and on how the team delivers it. That can mean joining an existing team or taking ownership of an early product.",
       goodFitItems: [
         {
-          title: "Senior fullstack capacity",
-          body: "For teams that need an experienced developer to join product work and start contributing without a long ramp-up.",
+          title: "Full-stack product engineering",
+          body: "Hands-on development for products that need to keep working. React, Next.js, TypeScript, integrations, migrations, and the production issues that come with them.",
         },
         {
-          title: "Existing products that need momentum",
-          body: "For products that need features, fixes, cleanup, and better foundations at the same time.",
+          title: "AI development workflows",
+          body: "I help teams design end-to-end workflows around agentic development. That includes how work moves through the process, where people make decisions, and how results are checked.",
         },
         {
-          title: "New products and AI ideas",
-          body: "For early products where the work is partly building a useful first version, partly shaping the technical direction, including AI integrations when they make sense.",
+          title: "AI-powered products",
+          body: "Turn a useful AI idea into an application people can try. Connect model output to the product's data and user experience, and check whether it solves the intended problem.",
         },
         {
-          title: "A developer who thinks beyond the ticket",
-          body: "When the useful move is not just taking the next task, but questioning scope, naming risks, and keeping implementation tied to the product.",
+          title: "Early products with technical ownership",
+          body: "Work through the scope, test ideas with working prototypes, and build the first useful release. I stay involved in the product decisions as well as the implementation.",
         },
       ],
       goodFitAside:
-        "Probably not the best fit for throwaway campaign sites, purely visual landing pages, or narrow ticket-only roles.",
-      projectsHeading: "Projects",
+        "Tell me what you need to build or where your development process gets stuck. We can work out a useful starting point.",
+      projectsHeading: "Selected work",
     },
   },
   fi: {
     meta: {
-      defaultDescription: "Ohjelmistokehittäjä Helsingistä",
-      homeTitle: "Tuukka Ylöstalo — Ohjelmistokehittäjä",
+      defaultDescription: "Ohjelmistokehitystä ja tekoälyä kehitystyön tueksi. Tuukka Ylöstalo, UpHouse Consulting, Helsinki.",
+      homeTitle: "Tuukka Ylöstalo | Ohjelmistokehitys ja tekoäly",
       homeDescription:
-        "Tuukka Ylöstalon portfolio ja valikoituja projekteja. Helsingissä toimiva ohjelmistokehittäjä UpHouse Consultingin takana.",
+        "Toimivaa softaa ja tekoälystä käytännön hyötyä. Tuukka Ylöstalo, fullstack-kehittäjä ja konsultti Helsingistä.",
     },
     chrome: {
       skipToContent: "Siirry sisältöön",
@@ -131,53 +132,53 @@ export const siteCopy = {
       backHome: "Takaisin etusivulle",
     },
     home: {
-      companyLine: "Ohjelmistokehittäjä, UpHouse Consulting",
-      tagline: "Vähemmän turhaa mutkikkuutta, enemmän toimivaa softaa.",
+      companyLine: "Ohjelmistokehitys ja tekoäly",
+      tagline: "Toimivaa softaa ja tekoälystä käytännön hyötyä.",
       contactCta: "Ota yhteyttä",
       aboutHeading: "Minusta",
       aboutParagraphs: [
-        "Olen Helsingissä asuva fullstack-kehittäjä. Viihdyn projekteissa, joissa pääsen tekemään tiiviisti töitä muun tiimin kanssa ja auttamaan siellä, missä sitä eniten tarvitaan.",
-        "Hyvä konsultointi ei koostu pelkästään teknisestä osaamisesta. Yhtä paljon merkitsevät selkeä viestintä, luottamus ja se, miten ihmisten kanssa tehdään töitä. Vapaa-ajalla aikani kuluu nörtteilyn, ruuanlaiton ja painojen nostelun parissa.",
+        "Olen Helsingissä asuva fullstack-kehittäjä ja konsultti. Olen kehittänyt muun muassa joukkoliikennepalveluita ja laajoja julkisia verkkosivustoja. Nykyään kehitän myös tekoälysovelluksia ja autan tiimejä hyödyntämään tekoälyagentteja kehitystyössä.",
+        "Viihdyn projekteissa, joissa tehdään tiiviisti töitä yhdessä. Arvostan selkeää viestintää ja luottamusta yhtä paljon kuin teknistä osaamista. Vapaa-ajalla nörtteilen, laitan ruokaa ja nostelen painoja.",
       ],
       workHeading: "Miten teen töitä",
       workItems: [
         {
-          title: "Lähden liikkeelle oikeasta ongelmasta",
-          body: "Yritän ensin ymmärtää, mitä oikeasti pitää ratkaista, ennen kuin lisätään prosessia, laajuutta tai koodia.",
+          title: "Selkeä tavoite ennen toteutusta",
+          body: "Selvitän ensin, mitä käyttäjä tarvitsee. Sovitaan sen pohjalta, mitä tehdään ja miten lopputuloksen toimivuus varmistetaan.",
         },
         {
-          title: "Karsin turhaa monimutkaisuutta ajoissa",
-          body: "Pidän järjestelmistä, jotka tiimi ymmärtää ja joita on mahdollista ylläpitää ilman jatkuvaa säätöä.",
+          title: "Tekoäly osaksi koko kehitystyötä",
+          body: "Suunnittelen kehitystyötä niin, että agenteille voi antaa yksittäistä koodaustehtävää laajempia kokonaisuuksia. Samalla sovitaan, missä tarvitaan ihmisen päätöksiä ja miten tulokset tarkistetaan.",
         },
         {
-          title: "Teen työtä, johon voi luottaa",
-          body: "Tavoitteena on ylläpidettävä ohjelmisto, joka palvelee käyttäjiä, helpottaa tiimin työtä ja kestää aikaa myös julkaisun jälkeen.",
+          title: "Vastaan työni jäljestä",
+          body: "Tekoälyn käyttö ei siirrä vastuuta pois minulta. Ohjelmiston pitää toimia käyttäjän arjessa ja olla ylläpidettävissä myös julkaisun jälkeen.",
         },
       ],
-      goodFitHeading: "Millaisissa projekteissa olen parhaimmillani",
+      goodFitHeading: "Missä voin auttaa",
       goodFitIntro:
-        "Olen hyvä valinta, kun tiimi tarvitsee senioritason fullstack-kehittäjän, joka vie työtä eteenpäin ja ajattelee seuraavaa tikettiä pidemmälle.",
+        "Autan sekä ohjelmiston rakentamisessa että siinä, miten kehitystyötä tehdään. Voin liittyä mukaan tiimiin tai ottaa teknisen vastuun uudesta tuotteesta.",
       goodFitItems: [
         {
-          title: "Senioritason fullstack-kehittäjä",
-          body: "Tiimeihin, joissa kokeneen kehittäjän pitää päästä kiinni tuotetyöhön nopeasti ja tehdä hyödyllistä työtä alusta asti.",
+          title: "Fullstack-kehitys",
+          body: "Toteutan uusia ominaisuuksia, rakennan integraatioita ja ratkon tuotannon ongelmia. Työskentelen tarpeen mukaan sekä käyttöliittymän että taustajärjestelmien parissa.",
         },
         {
-          title: "Olemassa olevien tuotteiden kehitys",
-          body: "Kun samaan aikaan pitää rakentaa uutta, korjata vanhaa ja vahvistaa koodipohjaa ilman, että kehitys pysähtyy.",
+          title: "Kehitystyön automatisointi tekoälyllä",
+          body: "Autan tiimejä ottamaan tekoälyagentit osaksi kehitystyötä. Sovimme, mitä niille annetaan tehtäväksi, missä tarvitaan ihmisen päätöksiä ja miten työn laatu varmistetaan.",
         },
         {
-          title: "Uudet tuotteet ja tekoälyideat",
-          body: "Alkuvaiheen tuotteisiin, joissa ideasta pitää rakentaa toimiva ensiversio, löytää järkevä tekninen suunta ja hyödyntää tekoälyintegraatioita silloin, kun ne ovat tuotteelle oikeasti hyödyksi.",
+          title: "Tekoälysovellukset",
+          body: "Kehitän tekoälyä hyödyntäviä ominaisuuksia uusiin ja olemassa oleviin palveluihin. Huolehdin siitä, että ne toimivat osana palvelua ja niistä on käyttäjälle hyötyä.",
         },
         {
-          title: "Kehittäjä, joka ajattelee tikettiä pidemmälle",
-          body: "Kun hyödyllisin panos ei ole vain seuraavan tehtävän tekeminen, vaan epäselvän rajauksen haastaminen, riskien sanoittaminen ja toteutuksen pitäminen kiinni tuotteen tarpeissa.",
+          title: "Uuden tuotteen suunnittelu ja toteutus",
+          body: "Autan rajaamaan ideasta toteutettavan kokonaisuuden, kokeilen vaihtoehtoja prototyypeillä ja rakennan ensimmäisen käyttökelpoisen version. Olen mukana sekä tuotteen suunnittelussa että toteutuksessa.",
         },
       ],
       goodFitAside:
-        "En ehkä ole oikea valinta kertakäyttöisille kampanjasivuille, pelkille visuaalisille laskautumissivuille tai rooliin, jossa työ on tarkoituksella pilkottu hyvin kapeiksi tiketeiksi.",
-      projectsHeading: "Projektit",
+        "Kerro, mitä haluatte rakentaa tai missä kehitystyö tökkii. Mietitään yhdessä, mistä kannattaa aloittaa.",
+      projectsHeading: "Valikoituja töitä",
     },
   },
 } as const;

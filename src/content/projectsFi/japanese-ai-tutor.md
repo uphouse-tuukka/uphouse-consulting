@@ -10,7 +10,7 @@ atAGlance:
   contribution: "Suunnittelin ja rakensin SvelteKit-tuotteen, jossa on tekoälyn tuottamia oppitunteja, edistymisen seurantaa, vaikeustason säätöä ja rutiinia tukevia mekaniikkoja."
   result: "Sovelluksesta tuli jotain, mitä käytän itse, ja samalla käytännön testialusta tekoälytyönkuluille ja agenttien orkestroinnille."
 demoUrl: "https://japanese-learner-sooty.vercel.app/portfolio/challenge"
-order: 3
+order: 5
 ---
 
 ## Lähtötilanne

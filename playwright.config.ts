@@ -4,7 +4,7 @@ export default defineConfig({
   testDir: 'tests/e2e',
   testMatch: '**/*.e2e.ts',
   webServer: {
-    command: 'npm run preview -- --host 127.0.0.1 --port 4323',
+    command: 'npm run preview -- --host 127.0.0.1 --port 4323 --ignore-lock',
     port: 4323,
     reuseExistingServer: false,
   },

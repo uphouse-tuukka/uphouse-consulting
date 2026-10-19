@@ -8,10 +8,10 @@ test.describe("Home page", () => {
       "Tuukka Ylöstalo",
     );
     await expect(
-      page.getByText("Software developer behind UpHouse Consulting"),
+      page.getByText("Software engineering & AI development workflows"),
     ).toBeVisible();
     await expect(
-      page.getByText("Less complexity, more software."),
+      page.getByText("I build software and the AI workflows that help teams deliver it."),
     ).toBeVisible();
 
     const cta = page.getByRole("link", { name: "Contact me" }).first();
@@ -26,37 +26,41 @@ test.describe("Home page", () => {
     await page.goto("/");
     await expect(
       page.getByText(
-        "I think good consulting is about more than technical skill.",
+        "I'm Tuukka, a software engineer and consultant based in Helsinki.",
       ),
     ).toBeVisible();
   });
 
-  test("renders good fit section without changing project card count", async ({
+  test("renders product engineering and AI workflow fit areas", async ({
     page,
   }) => {
     await page.goto("/");
 
     await expect(page.getByText("Where I'm useful")).toBeVisible();
-    await expect(page.getByText("Senior fullstack capacity")).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Full-stack product engineering" })).toBeVisible();
     await expect(
-      page.getByText("Existing products that need momentum"),
+      page.getByRole("heading", { name: "AI development workflows", exact: true }),
     ).toBeVisible();
     await expect(
-      page.getByText("New products and AI ideas"),
+      page.getByRole("heading", { name: "AI-powered products" }),
     ).toBeVisible();
     await expect(
-      page.getByText("A developer who thinks beyond the ticket"),
+      page.getByRole("heading", { name: "Early products with technical ownership" }),
     ).toBeVisible();
     await expect(
-      page.getByText("Probably not the best fit for throwaway campaign sites"),
+      page.getByText("Tell me what you need to build or where your development process gets stuck."),
     ).toBeVisible();
-    await expect(page.locator("article")).toHaveCount(3);
+    await expect(page.locator("article")).toHaveCount(5);
   });
 
-  test("renders 3 project cards", async ({ page }) => {
+  test("leads with the ticketing portal and keeps the AI tutor last", async ({ page }) => {
     await page.goto("/");
     const cards = page.locator("article");
-    await expect(cards).toHaveCount(3);
+    await expect(cards).toHaveCount(5);
+    await expect(cards.nth(0)).toContainText("Public Transport Ticketing Portal");
+    await expect(cards.nth(1)).toContainText("Salt & Scroll");
+    await expect(cards.nth(2)).toContainText("Wayrunner");
+    await expect(cards.nth(4)).toContainText("Japanese AI Tutor");
   });
 
   test("project card links to case study", async ({ page }) => {
@@ -138,24 +142,30 @@ test.describe("Home page", () => {
       "Tuukka Ylöstalo",
     );
     await expect(
-      page.getByText("Ohjelmistokehittäjä, UpHouse Consulting"),
+      page.getByText("Ohjelmistokehitys ja tekoäly"),
     ).toBeVisible();
     await expect(
-      page.getByText("Vähemmän turhaa mutkikkuutta, enemmän toimivaa softaa."),
+      page.getByText("Toimivaa softaa ja tekoälystä käytännön hyötyä."),
     ).toBeVisible();
     await expect(
       page.getByRole("link", { name: "Ota yhteyttä" }).first(),
     ).toBeVisible();
     await expect(
-      page.getByText("Millaisissa projekteissa olen parhaimmillani"),
+      page.getByText("Missä voin auttaa"),
     ).toBeVisible();
     await expect(
       page.getByRole("heading", {
-        name: "Senioritason fullstack-kehittäjä",
+        name: "Fullstack-kehitys",
       }),
     ).toBeVisible();
     await expect(
-      page.getByRole("heading", { name: "Uudet tuotteet ja tekoälyideat" }),
+      page.getByRole("heading", { name: "Kehitystyön automatisointi tekoälyllä" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Tekoälysovellukset" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Uuden tuotteen suunnittelu ja toteutus" }),
     ).toBeVisible();
   });
 
@@ -169,7 +179,6 @@ test.describe("Home page", () => {
   test("Finnish project cards show Finnish content", async ({ page }) => {
     await page.goto("/fi/");
 
-    // The first project (order:1) keeps its Finnish title with "verkkokauppa"
     const firstCard = page.locator("article").first();
     await expect(firstCard).toContainText("verkkokauppa");
   });
